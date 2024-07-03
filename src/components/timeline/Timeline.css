@@ -1,0 +1,60 @@
+.timeline-container {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  
+  .details {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .timeline {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: #f0f0f0;
+    padding: 10px 0;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin: 0 30px;
+    cursor: pointer;
+  }
+  
+  .timeline-icon {
+    width: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-icon.hovered {
+    transform: scale(1.2);
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }
+  
+  .tooltip img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto 5px;
+  }
+  
+  .tooltip span {
+    font-size: 12px;
+  }
+  
