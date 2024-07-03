@@ -1,12 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useLocation, useRoutes } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { AuthProvider } from './context/AuthContext';
+
+import './App.css'
 import NavBar from './components/nav/NavBar';
 import Home from './pages/Home';
 import Work from './pages/Work';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Manager from './pages/manager/Manager';
-
 import PrivateRoute from './components/manager/PrivateRoute';
 import ManagerBlogs from './pages/manager/ManagerBlogs';
 import ManagerAddBlog from './pages/manager/ManagerAddBlog';
@@ -15,29 +18,33 @@ import ManagerPosts from './pages/manager/ManagerPosts';
 import ManagerAddPost from './pages/manager/ManagerAddPost';
 import UpdatePost from './pages/manager/UpdatePost';
 
-import { AuthProvider } from './context/AuthContext';
-
 const App = () => {
+  const location = useLocation();
+
+  const element = useRoutes([
+    { path: "/", element: <Home /> },
+    { path: "/work", element: <Work /> },
+    { path: "/about", element: <About /> },
+    { path: "/blog", element: <Blog /> },
+    { path: "/manager", element: <Manager /> },
+    { path: "/manager/blog", element: <PrivateRoute element={<ManagerBlogs />} /> },
+    { path: "/manager/add-blog", element: <PrivateRoute element={<ManagerAddBlog />} /> },
+    { path: "/manager/posts", element: <PrivateRoute element={<ManagerPosts />} /> },
+    { path: "/manager/add-post", element: <PrivateRoute element={<ManagerAddPost />} /> },
+    { path: "/manager/update-post/:id", element: <PrivateRoute element={<UpdatePost />} /> },
+    { path: "/manager/update-blog/:id", element: <PrivateRoute element={<UpdateBlog />} /> },
+  ]);
+
+  if (!element) return null;
+
   return (
     <AuthProvider>
-      <Router>
-        <div className="App">
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/manager" element={<Manager />} />
-            <Route path="/manager/blog" element={<PrivateRoute element={<ManagerBlogs />} />} />
-            <Route path="/manager/add-blog" element={<PrivateRoute element={<ManagerAddBlog />} />} />
-            <Route path="/manager/posts" element={<PrivateRoute element={<ManagerPosts />} />} />
-            <Route path="/manager/add-post" element={<PrivateRoute element={<ManagerAddPost />} />} />
-            <Route path="/manager/update-post/:id" element={<PrivateRoute element={<UpdatePost />} />} />
-            <Route path="/manager/update-blog/:id" element={<PrivateRoute element={<UpdateBlog />} />} />
-          </Routes>
-        </div>
-      </Router>
+      <div className="App">
+        <NavBar />
+        <AnimatePresence mode="wait" initial={false}>
+          {React.cloneElement(element, { key: location.pathname })}
+        </AnimatePresence>
+      </div>
     </AuthProvider>
   );
 };
