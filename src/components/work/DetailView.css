@@ -1,0 +1,30 @@
+.detail-parent{
+    display: flex;
+}
+
+.detail-container{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.detail-title{
+    padding-left: 2em;
+}
+
+.detail-img{
+    max-width: 50%;
+    padding: 3rem;
+}
+
+.detail-description{}
+
+.detail-skill{}
+
+.detail-link{}  
+
+.test{
+    max-width: 55%;
+}
+

@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import About from './pages/About';
 import Blog from './pages/Blog';
+import Contact from './pages/Contact';
 import Manager from './pages/manager/Manager';
 import PrivateRoute from './components/manager/PrivateRoute';
 import ManagerBlogs from './pages/manager/ManagerBlogs';
@@ -26,6 +27,7 @@ const App = () => {
     { path: "/work", element: <Work /> },
     { path: "/about", element: <About /> },
     { path: "/blog", element: <Blog /> },
+    { path: "/contact", element: <Contact /> },
     { path: "/manager", element: <Manager /> },
     { path: "/manager/blog", element: <PrivateRoute element={<ManagerBlogs />} /> },
     { path: "/manager/add-blog", element: <PrivateRoute element={<ManagerAddBlog />} /> },
