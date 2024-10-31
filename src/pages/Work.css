@@ -3,33 +3,52 @@
     flex-wrap: wrap;
     gap: 3em;
     padding: 4em;
-    justify-content: center; /* Center-align cards on larger screens */
+    justify-content: center; /* Center-align cards */
 }
 
 .thumbnail {
     flex: 1 1 calc(30% - 20px);
-    aspect-ratio: 4 / 3;       
-    overflow: hidden;          /* Ensure contents stay within the card */
-    border-radius: 1.8rem;     /* Apply rounded corners */
-    background-color: #f0f0f0; /* Fallback background color */
+    aspect-ratio: 16 / 9;       
+    overflow: hidden;
+    border-radius: 1.8rem;
+    background-color: #f0f0f0;
+    border: solid black 1.5px;
+
 }
 
-/* Image styling to fit within the thumbnail */
+.thumbnail:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Image styling */
 .thumbnail img {
     width: 100%;
     height: 100%;
-    object-fit: cover;         /* Ensures the image fills without stretching */
+    object-fit: cover;
     border-radius: 1.8rem;
 }
 
-/* Adjustments for different screen sizes using media queries */
+/* Force 2-column layout when only 1 card is left in a row on large screens */
+@media (min-width: 1200px) {
+    .card-container > :nth-last-child(1):nth-child(3n + 1),
+    .card-container > :nth-last-child(1):nth-child(3n + 2) {
+        flex: 1 1 calc(49% - 20px); /* Adjust to two columns */
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
 
+/* Medium screen: Adjust to two columns */
 @media (max-width: 1200px) {
     .thumbnail {
         flex: 1 1 calc(49% - 20px);
     }
 }
 
+/* Small screen: Single column */
 @media (max-width: 750px) {
     .thumbnail {
         flex: 1 1 100%;
@@ -37,9 +56,10 @@
 }
 
 .card-title {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.90);
     padding: 1em;
-    border-radius: 1.8rem 1.8rem 0 0 ;
+    border-radius: 1.8rem 1.8rem 0 0;
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
+    color:white;
 }

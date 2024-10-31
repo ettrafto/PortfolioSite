@@ -3,7 +3,7 @@ import { useEffect } from "react";
 // Import the static image
 import tempThumbnail from './ProjectData/images/temp.JPG';
 
-function Thumbnail({ id, projectName, setSelected }) {
+function Thumbnail({ id, projectName, projectThumbnail, setSelected }) {
     useEffect(() => {
         const img = new Image();
         img.src = tempThumbnail; // Preload the bigger version
@@ -15,7 +15,7 @@ function Thumbnail({ id, projectName, setSelected }) {
             layoutId={id}
             style={{
                 backgroundSize: "cover",
-                backgroundImage: `url(${tempThumbnail})`,
+                backgroundImage: `url(${projectThumbnail})`,
                 borderRadius: "30px",
                 overflow: "hidden", // Ensure image respects the border-radius
                 cursor: "pointer"   // Add a pointer cursor for better UX

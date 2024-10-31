@@ -1,0 +1,50 @@
+/* Styles for the container */
+.construction-container {
+    margin: 10% auto;
+    padding: 20px;
+    max-width: 300px;  /* Restrict maximum width for larger screens */
+    border: 2px solid #dcdcdc;  /* Light border around the card */
+    border-radius: 8px;  /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease;  /* Slight hover effect */
+}
+
+
+/* Styles for the image */
+.construction-container img {
+    max-width: 80%;  /* Responsive size, relative to the container */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Styles for the heading */
+.construction-container h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .construction-container {
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .construction-container h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .construction-container {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .construction-container img {
+        max-width: 70%;
+    }
+}

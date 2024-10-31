@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useIsPresent } from "framer-motion";
+import ContactForm from '../components/contact/ContactForm';
 
 
 const Contact = () => {
@@ -16,8 +17,7 @@ const Contact = () => {
         />
     
       <div>
-        <h1>Contact</h1>
-        {/* Add your Contact page content here */}
+        <ContactForm />
       </div>
     </>
 

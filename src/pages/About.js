@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion, useIsPresent } from "framer-motion";
 
+import UnderContsrtuction from '../components/contact/util/UnderConstruction';
+
 
 const About = () => {
   const isPresent = useIsPresent();
@@ -15,10 +17,7 @@ const About = () => {
           className="privacy-screen"
         />
     
-      <div>
-        <h1>About</h1>
-        {/* Add your about page content here */}
-      </div>
+      <UnderContsrtuction/>
     </>
 
   );

@@ -18,7 +18,7 @@ const generateNoisePath = (cx, cy, r, resolution, t, nInt, nAmp) => {
   return path;
 };
 
-const PerlinNoiseCircle = ({ resolution = 2060, nInt = 3.3, nAmp = 0.12 }) => {
+const PerlinNoiseCircle = ({ resolution = 2060, nInt = 6, nAmp = 0.12 }) => {
   const [t, setT] = useState(0);
   const [path, setPath] = useState("");
   const [size, setSize] = useState({ width: 400, height: 400, r: 160 });

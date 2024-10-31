@@ -31,6 +31,7 @@ const Work = () => {
                   className="card"
                   key={project.id}
                   id={project.id}
+                  projectThumbnail = {project.thumbnail}
                   projectName={project.title}
                   imageUrl={project.thumbnail}
                   setSelected={setSelected}
@@ -44,6 +45,6 @@ const Work = () => {
     </>
 );
 }
-
+ 
 
 export default Work;
