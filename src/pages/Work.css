@@ -1,18 +1,45 @@
-.card-container{
+.card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 3em;
     padding: 4em;
-}
-.thumbnail{
-    flex: 1 1 calc(25% - 20px);
+    justify-content: center; /* Center-align cards on larger screens */
 }
 
-.card-title{
-    background-color: white;
-    background-color: rgba(255, 255, 255,.8);
+.thumbnail {
+    flex: 1 1 calc(30% - 20px);
+    aspect-ratio: 4 / 3;       
+    overflow: hidden;          /* Ensure contents stay within the card */
+    border-radius: 1.8rem;     /* Apply rounded corners */
+    background-color: #f0f0f0; /* Fallback background color */
+}
+
+/* Image styling to fit within the thumbnail */
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* Ensures the image fills without stretching */
+    border-radius: 1.8rem;
+}
+
+/* Adjustments for different screen sizes using media queries */
+
+@media (max-width: 1200px) {
+    .thumbnail {
+        flex: 1 1 calc(49% - 20px);
+    }
+}
+
+@media (max-width: 750px) {
+    .thumbnail {
+        flex: 1 1 100%;
+    }
+}
+
+.card-title {
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 1em;
-    border-radius: 1.8rem 1.8rem 0em 0em;
-
+    border-radius: 1.8rem 1.8rem 0 0 ;
+    text-align: center;
+    font-weight: bolder;
 }
-

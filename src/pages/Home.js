@@ -18,18 +18,19 @@ const Home = () => {
       />
       <div className='home-container1'>
         <div className='name-container'>
-          <h1 className='name'>Evan</h1>
-          <h1 className='name'>Trafton</h1>
-          <div className='details'>Lorem Ipsum</div>
+          <h1 className='fname'>Evan</h1>
+          <h1 className='lname'>Trafton</h1>
+          <div className='details'>Aspiring Full Stack Developer</div>
         </div>
 
         <PerlinNoiseCircle className="profile"/>
 
       </div>
       <div className='home-container2'>
-        <div className='venn-diagram-container'></div>
-        <div className='interests-container'>interests</div>
-
+        <div className='venn-diagram-container'>
+          
+        </div>
+        <div className='interests-container'></div>
 
       </div>
 

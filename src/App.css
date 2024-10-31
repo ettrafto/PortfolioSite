@@ -12,3 +12,14 @@
   background-color: black;
   z-index: 3;
 }
+/* Customize scrollbar appearance */
+*::-webkit-scrollbar {
+  width: 10px; /* Adjust scrollbar width */
+  background-color: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(253, 253, 253, 0.3);
+  border-radius: 10px;
+  z-index: 200;
+}

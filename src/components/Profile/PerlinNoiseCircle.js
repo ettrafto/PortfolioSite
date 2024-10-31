@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimationFrame } from "framer-motion";
 import noise from "./PerlinNoise";
-import profileImg from '../../images/profile.JPG';
+import profileImg from './profile.JPG';
+import './PerlinNoise.css'
 
 const generateNoisePath = (cx, cy, r, resolution, t, nInt, nAmp) => {
   let path = "";
@@ -17,17 +18,18 @@ const generateNoisePath = (cx, cy, r, resolution, t, nInt, nAmp) => {
   return path;
 };
 
-const PerlinNoiseCircle = ({ resolution = 260, nInt = 9, nAmp = 0.12 }) => {
+const PerlinNoiseCircle = ({ resolution = 2060, nInt = 3.3, nAmp = 0.12 }) => {
   const [t, setT] = useState(0);
   const [path, setPath] = useState("");
   const [size, setSize] = useState({ width: 400, height: 400, r: 160 });
 
-  const updateSize = () => {
-    const newWidth = window.innerWidth * 0.5;
-    const newHeight = window.innerHeight * 0.5;
-    const newR = Math.min(newWidth, newHeight) / 2 * 1.5;
-    setSize({ width: newWidth, height: newHeight, r: newR });
-  };
+const updateSize = () => {
+  const newWidth = window.innerWidth * 0.5;
+  const newHeight = window.innerWidth * 0.27;
+  const newR = Math.min(newWidth, newHeight) * 0.75; // Reduce multiplier for better fitting
+  setSize({ width: newWidth, height: newHeight, r: newR });
+};
+
 
   useEffect(() => {
     window.addEventListener("resize", updateSize);
@@ -44,7 +46,7 @@ const PerlinNoiseCircle = ({ resolution = 260, nInt = 9, nAmp = 0.12 }) => {
   });
 
   return (
-    <div style={{ position: "relative", width: size.width, height: size.height*1.7 }}>
+    <div className='' style={{ position: "relative", width: size.width, height: size.height*1.7 }}>
       <svg width={size.width} height={size.height*1.7} viewBox={`0 0 ${size.width} ${size.height}`}>
         <motion.path
           d={path}

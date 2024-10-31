@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 // Import the static image
-import tempThumbnail from '../../images/temp.JPG';
+import tempThumbnail from './ProjectData/images/temp.JPG';
 
 function Thumbnail({ id, projectName, setSelected }) {
     useEffect(() => {
@@ -13,10 +13,16 @@ function Thumbnail({ id, projectName, setSelected }) {
         <motion.div
             className="thumbnail"
             layoutId={id}
-            style={{ backgroundSize:"cover", backgroundImage: `url(${tempThumbnail})`, borderRadius: "1.8rem", height: "20em", width: "25em" }}
+            style={{
+                backgroundSize: "cover",
+                backgroundImage: `url(${tempThumbnail})`,
+                borderRadius: "30px",
+                overflow: "hidden", // Ensure image respects the border-radius
+                cursor: "pointer"   // Add a pointer cursor for better UX
+            }}
             onTap={() => setSelected(id)}
         >
-            <div className="card-title" >{projectName}</div>
+            <div className="card-title">{projectName}</div>
         </motion.div>
     );
 }

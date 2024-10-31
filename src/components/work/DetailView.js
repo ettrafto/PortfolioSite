@@ -1,38 +1,23 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
-import tempThumbnail from '../../images/temp.JPG';
-
+import projects from './ProjectData/projects.js'
 import './DetailView.css';
+import ImgGallery from "./ImgGallery.js";
 
-
-const projects = [
-    {
-      id: "1",
-      title: "Project One",
-      description: "A brief description of Project One. This project involves creating a dynamic website using modern web technologies.",
-      thumbnail: tempThumbnail,
-      skills: ["JavaScript", "React", "CSS", "Framer Motion"],
-      liveLink: "https://live-project-one.com",
-      gitLink: "https://github.com/username/project-one",
-      date: "2023-07-01",
-      iconImg: "https://link-to-icon-image.com/icon1"
-    },
-    {
-      id: "2",
-      title: "Project Two",
-      description: "An overview of Project Two. This project focuses on developing a mobile application with cross-platform capabilities.",
-      thumbnail: tempThumbnail,
-      skills: ["Kotlin", "Swift", "React Native"],
-      liveLink: "https://live-project-two.com",
-      gitLink: "https://github.com/username/project-two",
-      date: "2023-05-15",
-      iconImg: "https://link-to-icon-image.com/icon2"
-    },
-    // Add more projects as needed
-  ];
 
 function DetailView({ selected, onClose }) {
     const project = projects.find((p) => p.id === selected);
+
+    // Prevent background scrolling when DetailView is open
+    useEffect(() => {
+        document.body.classList.add("no-scroll");
+
+        // Clean up by removing the class when component unmounts
+        return () => {
+            document.body.classList.remove("no-scroll");
+        };
+    }, []);
 
     if (!project) return null;
 
@@ -45,7 +30,7 @@ function DetailView({ selected, onClose }) {
                 exit={{ opacity: 0 }}
                 transition={{ delay: 0.15 }}
                 onTap={onClose}
-                style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0, 0, 0, 0.8)", zIndex:"2" }}
+                style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0, 0, 0, 0.8)", zIndex:"1000" }}
             />
 
 
@@ -53,8 +38,8 @@ function DetailView({ selected, onClose }) {
             <motion.div
                 className="detail-view"
                 layoutId={selected}
-                initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.8, y: 50,borderRadius: "30px" }}
+                animate={{ opacity: 1, scale: 1, y: 0,borderRadius: "30px" }}
                 exit={{ opacity: 0, scale: 0.8, y: 50 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 style={{
@@ -63,25 +48,60 @@ function DetailView({ selected, onClose }) {
                     left: "15%",
                     transform: "translate(-50%, -50%)",
                     width: "70%",
-                    height: "70%",    
+                    height: "80%",
+                    overflowY: "auto",
                     background: "white", 
-                    borderRadius: "1.8em", 
-                    zIndex: "3" }}
-                onTap={onClose}
+                    borderRadius: "30px", 
+                    zIndex: "1001" }}
             >
-            <h2 className="detail-title">{project.title}</h2>
+            <div className="header-container">
+                <div className="header">
+                    <h2 className="detail-title">{project.title}</h2>
+                    <h3 className="detail-date">{project.date}</h3>
+                </div>
+
+                <div className="header-links">
+
+                    {/* If their is not a live-link then icon is disabled */}
+                    {project.liveLink ? (
+                        <a href={project.liveLink}>
+                            <img  src='icons/website.png' alt='website-icon'/>
+                        </a>
+                    ) : (
+                        <a>
+                            <img src="/icons/website.png" alt="Live Link Icon" className="icon-disabled" />
+                        </a>
+                    )}
+                    <a href={project.gitLink}>
+                        <img  src='icons/github.png' alt='github-icon'/>
+                    </a>
+
+                </div>
+            </div>
 
             <div className="detail-parent">
-                <img className="detail-img" src={project.thumbnail}/>
+                <div className="detail-img-container">
+                    <img className="detail-img" src={project.thumbnail}/>
+                </div>
                 <div className="detail-container">
-                    <p className="detail-description">{project.description}</p>
-                    {/* SKILLS TODO */}
-                    <a href="google.com" target="_blank" rel="noopener noreferrer">View Project</a>
 
+                    <p className="detail-description">{project.description}</p>
+
+                    <div className="skills-container">
+                        <ul className="skills-list">
+
+                            {project.skills.map((skill, index) => (
+                                <li key={index} className="skill-item">{skill}</li>
+                            ))}
+
+                        </ul>
+                    </div>
 
                 </div>
                 
             </div>
+            <ImgGallery images = {project.images}/>
+
             </motion.div>
         </>
     );
