@@ -20,7 +20,7 @@ const Home = () => {
         <div className='name-container'>
           <h1 className='fname'>Evan</h1>
           <h1 className='lname'>Trafton</h1>
-          <div className='details'>Aspiring Full Stack Developer</div>
+          <div className='details'>Full Stack Developer</div>
         </div>
 
         <PerlinNoiseCircle className="profile"/>

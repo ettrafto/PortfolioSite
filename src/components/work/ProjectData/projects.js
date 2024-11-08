@@ -55,7 +55,41 @@ const projects = [
     gitLink: "https://github.com/ettrafto/mysafari",
     date: "Fall 2023",
     images: ['/images/mysafari4.png','/images/mysafari2.png','/images/mysafari3.png']
+},
+{
+    id: "6",
+    title: "Mastermind",
+    description:'I recreated the classic board game mastermind in React! Click Above to play!',
+    thumbnail: '/images/mastermind.png',
+    skills: ["React","CSS"],
+    liveLink: "https://evantrafton.com/mastermind",
+    gitLink: "https://github.com/ettrafto/mastermind",
+    date: "Summer 2024",
+    images: [] 
+},
+{
+  id: "7",
+  title: "Photosift",
+  description: "",
+  thumbnail: '/images/photosift1.png',
+  skills: ["Javascript", "CSS", "Human-Computer-Interaction"],
+  liveLink: "",
+  gitLink: "",  
+  date: "Fall 2023",
+  images: ['/images/photosift2.png']
 }
+/*,
+{
+  id: "8",
+  title: "Are We Cyborgs?",
+  description: "",
+  thumbnail: '/images/mysafari1.png',
+  skills: ["D3", "React", "CSS"],
+  liveLink: "",
+  gitLink: "https://github.com/ettrafto/Are-We-Cyborgs-DataNarrative",
+  date: "Fall 2023",
+  images: ['/images/mysafari4.png','/images/mysafari2.png','/images/mysafari3.png']
+}*/
 ];
 
 export default projects;

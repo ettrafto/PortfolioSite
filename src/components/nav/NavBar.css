@@ -5,94 +5,81 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 1% 20px;
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.nav-name-container {
+  flex: 0 0 15%; /* Take up 15% of navbar width */
+}
+
+.nav-name {
+  color: #e1e1e1;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: left;
+}
+
+.nav-links {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-grow: 1;
+  list-style-type: none;
+  padding: 0 15%;
+  margin: 0;
 }
 
-.navbar li {
-  display: inline;
-  padding: 1em 3em;
+.nav-links li {
+  flex: 1; /* Make each li take equal space */
 }
 
-.navbar a {
+.nav-links li span {
+  display: flex;
+  justify-content: center; /* Center the link text */
+}
+
+.navbar li span a {
   font-size: 18px;
   color: #e1e1e1;
   font-family: inherit;
   font-weight: 800;
   cursor: pointer;
-  position: relative;
-  border: none;
-  background: none;
   text-transform: uppercase;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
+  transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
   text-decoration: none;
+  position: relative; /* Required for ::after positioning */
 }
 
-.navbar a:focus,
-.navbar a:hover {
+/* Hover color change */
+.navbar li span a:hover,
+.navbar li span a:focus {
   color: #fff;
 }
 
-.navbar a:focus:after,
-.navbar a:hover:after {
-  width: 100%;
-  left: 0%;
-}
-
-.navbar a:after {
+/* Underline animation */
+.navbar li span a::after {
   content: "";
-  pointer-events: none;
+  position: absolute;
   bottom: -2px;
   left: 50%;
-  position: absolute;
-  width: 0%;
+  width: 0%; /* Start with a width of 0% */
   height: 2px;
   background-color: #fff;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
+  transition: width 400ms cubic-bezier(0.25, 0.8, 0.25, 1), left 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(-50%);
 }
 
-/* MEDIA QUERIES */
-
-/* Adjust for tablets (up to 768px) */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navbar li {
-    padding: 1em;
-  }
-
-  .navbar a {
-    font-size: 16px;
-  }
+.navbar li span a:hover::after {
+  width: 100%; /* Expand to full width on hover */
+  left: 50%;
 }
 
-/* Adjust for mobile devices (up to 480px) */
-@media (max-width: 480px) {
-  .navbar ul {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .navbar li {
-    padding: 0.8em;
-  }
-
-  .navbar a {
-    font-size: 14px;
-  }
+/* Style for the icons on the right */
+.icons-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex: 0 0 15%; /* Take up 15% of navbar width */
+  justify-content: flex-end; /* Align icons to the right */
 }

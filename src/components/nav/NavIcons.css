@@ -1,0 +1,17 @@
+.icons-container {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    align-items: center;
+}
+
+.icons-container a img {
+    width: 24px; /* Set the width of the images */
+    height: 24px; /* Set the height of the images */
+    object-fit: contain; /* Ensures the image scales properly */
+    cursor: pointer; /* Makes icons look clickable */
+    transition: transform 0.3s; /* Adds a slight zoom effect on hover */
+}
+
+.icons-container a img:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}

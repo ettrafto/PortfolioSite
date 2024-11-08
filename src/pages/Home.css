@@ -24,9 +24,9 @@
 }
 
 .fname, .lname {
-    font-size: 800%;
+    font-size: 900%;
     font-family: inherit;
-    font-weight: 700;
+    font-weight: 750;
     margin: auto;
 }
 
@@ -35,7 +35,8 @@
     font-size: 200%;
     font-family: inherit;
     font-weight: 400;
-    padding-top: 2em;
+    padding-top: 8%;
+    padding-left: 4%;
 }
 
 .perlin-bubble {
