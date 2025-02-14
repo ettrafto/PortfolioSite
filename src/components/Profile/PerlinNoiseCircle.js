@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimationFrame } from "framer-motion";
 import noise from "./PerlinNoise";
-import profileImg from './profile.JPG';
+import profileImg from './californiaPic.webp';
 import './PerlinNoise.css'
 
 const generateNoisePath = (cx, cy, r, resolution, t, nInt, nAmp) => {

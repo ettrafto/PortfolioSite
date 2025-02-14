@@ -32,7 +32,7 @@ const Card = () => {
 
       {isExpaned && (
         <>
-          <motion.img {...animated} src="./images/img1.png" alt="demo image" />
+          <motion.img {...animated} src="./images/img1.webp" alt="demo image" />
 
           <motion.p {...animated}>
             Perferendis dolorem! Voluptate iste reprehenderit voluptatem,

@@ -6,7 +6,7 @@ const Modal = ({ onClose }) => {
         <div className='modal-overlay' onClick={onClose}>
             <div className='modal-content' onClick={onClose}>
                 <div className='resume-content'>
-                    <img src='/images/resume.png'/>
+                    <img src='/images/resume.webp'/>
                 </div>
             </div>
         </div>

@@ -69,15 +69,15 @@ function DetailView({ selected, onClose }) {
                     <div className="header-links">
                         {project.liveLink ? (
                             <a href={project.liveLink}>
-                                <img src="icons/website.png" alt="website-icon" />
+                                <img src="icons/website.webp" alt="website-icon" />
                             </a>
                         ) : (
                             <a>
-                                <img src="/icons/website.png" alt="Live Link Icon" className="icon-disabled" />
+                                <img src="/icons/website.webp" alt="Live Link Icon" className="icon-disabled" />
                             </a>
                         )}
                         <a href={project.gitLink}>
-                            <img src="icons/github.png" alt="github-icon" />
+                            <img src="icons/github.webp" alt="github-icon" />
                         </a>
                     </div>
                 </div>

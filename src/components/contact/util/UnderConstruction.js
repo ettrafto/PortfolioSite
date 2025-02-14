@@ -4,7 +4,7 @@ import './UnderConstruction.css';
 const UnderConstruction = () => {
     return (
         <div className='construction-container'>
-            <img src='icons/construction.png' alt='Under Construction Icon' />
+            <img src='icons/construction.webp' alt='Under Construction Icon' />
             <h2>Under Construction</h2>
         </div>
     );

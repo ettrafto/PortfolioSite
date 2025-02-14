@@ -6,16 +6,16 @@ const skillType = {
 };
 
 const timelineData = [
-  { id: 1, title: 'Spy.py', date: '2023-01-01', iconImg: '/icons/spyglass.png', img: '', description: 'Spy.py description', skills: '', link: '', gitLink:'' },
-  { id: 2, title: 'PhotoSift', date: '2023-07-01', iconImg: '/icons/sort.png', img: '', description: 'Photosift description', skills: '', link: '', gitLink:'' },
-  { id: 3, title: 'MySafari', date: '2022-01-01', iconImg: '/icons/mySafari.png', img: '', description: 'MySafari description', skills: '', link: '', gitLink:''},
-  { id: 4, title: 'ScubaDiver', date: '', iconImg: '/icons/scubaDiver.png', img: '', description: 'ScubaDiver description', skills: '', link: '', gitLink:''},
-  { id: 5, title: 'OurOutdoors', date: '', iconImg: '/icons/ourOutdoors.png', img: '', description: 'OurOutdoors description', skills: '', link: '', gitLink:''},
-  { id: 6, title: 'Are We Cyborgs?', date: '', iconImg: '/icons/cyborgs.png', img: '', description: 'Are We Cyborgs? description', skills: '', link: '', gitLink:''},
-  { id: 7, title: 'Mastermind', date: '', iconImg: '/icons/mastermind.png', img: '', description: 'Mastermind description', skills: '', link: '', gitLink:''},
-  { id: 8, title: 'Timelock', date: '', iconImg: '/icons/timelock.png', img: '', description: 'Timelock description', skills: '', link: '', gitLink:''},
-  //{ id: 9, title: 'Portfolio', date: '', iconImg: '/icons/portfolio.png', img: '', description: 'Portfolio description', skills: '', link: '', gitLink:''},
-  //{ id: 9, title: 'Whoop Stuff', date: '', iconImg: '/icons/whoop.png', img: '', description: 'Whoop description', skills: '', link: '', gitLink:''}
+  { id: 1, title: 'Spy.py', date: '2023-01-01', iconImg: '/icons/spyglass.webp', img: '', description: 'Spy.py description', skills: '', link: '', gitLink:'' },
+  { id: 2, title: 'PhotoSift', date: '2023-07-01', iconImg: '/icons/sort.webp', img: '', description: 'Photosift description', skills: '', link: '', gitLink:'' },
+  { id: 3, title: 'MySafari', date: '2022-01-01', iconImg: '/icons/mySafari.webp', img: '', description: 'MySafari description', skills: '', link: '', gitLink:''},
+  { id: 4, title: 'ScubaDiver', date: '', iconImg: '/icons/scubaDiver.webp', img: '', description: 'ScubaDiver description', skills: '', link: '', gitLink:''},
+  { id: 5, title: 'OurOutdoors', date: '', iconImg: '/icons/ourOutdoors.webp', img: '', description: 'OurOutdoors description', skills: '', link: '', gitLink:''},
+  { id: 6, title: 'Are We Cyborgs?', date: '', iconImg: '/icons/cyborgs.webp', img: '', description: 'Are We Cyborgs? description', skills: '', link: '', gitLink:''},
+  { id: 7, title: 'Mastermind', date: '', iconImg: '/icons/mastermind.webp', img: '', description: 'Mastermind description', skills: '', link: '', gitLink:''},
+  { id: 8, title: 'Timelock', date: '', iconImg: '/icons/timelock.webp', img: '', description: 'Timelock description', skills: '', link: '', gitLink:''},
+  //{ id: 9, title: 'Portfolio', date: '', iconImg: '/icons/portfolio.webp', img: '', description: 'Portfolio description', skills: '', link: '', gitLink:''},
+  //{ id: 9, title: 'Whoop Stuff', date: '', iconImg: '/icons/whoop.webp', img: '', description: 'Whoop description', skills: '', link: '', gitLink:''}
 
 
   // Add more events as needed

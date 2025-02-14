@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 // Import the static image
-import tempThumbnail from './ProjectData/images/temp.JPG';
+//import tempThumbnail from './ProjectData/images/temp.webp';
 
 function Thumbnail({ id, projectName, projectThumbnail, setSelected }) {
     useEffect(() => {
         const img = new Image();
-        img.src = tempThumbnail; // Preload the bigger version
+        //img.src = tempThumbnail; // Preload the bigger version
     }, []);
 
     return (
