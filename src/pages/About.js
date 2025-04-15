@@ -18,6 +18,12 @@ const About = () => {
         />
     
       <UnderContsrtuction/>
+
+      <div className="about-page">
+        <div className="about-page__headline">
+          
+        </div>
+      </div>
     </>
 
   );
