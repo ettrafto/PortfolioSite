@@ -1,25 +1,25 @@
-.icons-container {
+.contact-icons-container {
     display: flex;
-    gap: 15px; /* Space between icons */
+    gap: 4%; /* Space between icons */
     align-items: center;
+    justify-content: center;
 }
 
-.icons-container a img {
-    width: 24px; /* Set the width of the images */
-    height: 24px; /* Set the height of the images */
+.contact-icons-container a img {
+    width: 6em; /* Set the width of the images */
+    height: 6em; /* Set the height of the images */
     object-fit: contain; /* Ensures the image scales properly */
     cursor: pointer; /* Makes icons look clickable */
     transition: transform 0.3s; /* Adds a slight zoom effect on hover */
 }
 
-.icons-container a img:hover {
+.contact-icons-container a img:hover {
     transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
-
-.icons-container a img:active {
+.contact-icons-container a img:active {
     transform: scale(0.9); /* Slightly shrinks the icon when clicked */
 }
-.icons-container a img:focus {
+.contact-icons-container a img:focus {
     outline: none; /* Removes the default focus outline */
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5); /* Adds a custom focus ring */
 }

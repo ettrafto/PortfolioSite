@@ -1,0 +1,71 @@
+.about-page{}
+.about-page-image-container{
+    max-width: 50%;
+}
+.about-page-image{
+    max-width: 100%;
+}
+.about-page-text{
+    width:50%;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 200%;
+    text-align: left;
+    line-height: 1.5;
+    color: #333;
+}
+.about-page-text-sub{
+    width:100%;
+}
+
+
+
+
+.about-page-container{
+    display:flex;
+    flex-direction: row;
+    width:90%;
+    margin:5%;
+}
+
+.container1 {
+
+}
+
+
+.about-page-title{}
+.about-page-title-sub{}
+.about-page-job{}
+
+
+.container2{
+
+}
+.text1{}
+
+
+.container3{
+
+}
+.text2{}
+
+
+
+.container4{
+
+}   
+.text3{}
+
+
+.container5{
+
+}
+.text4{}
+
+
+
+.container6{
+
+}
+.text5{}

@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
+    "emailjs-com": "^3.2.0",
     "express": "^4.21.1",
     "framer-motion": "^11.2.12",
     "p5": "^1.9.4",
