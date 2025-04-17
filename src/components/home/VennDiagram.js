@@ -1,37 +1,134 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { motion, useSpring } from 'framer-motion';
 
-const VennDiagram = () => {
-  const CustomCircle = ({ x, y, fill }) => (
-    <g transform={`translate(${x}, ${y})`}>
-      <circle cx="50" cy="50" r="50" fill={"#00000000"} stroke='black' strokeWidth={'4px'} opacity="1" />
-    </g>
-  );
+// 🌀 Individual Circle Component with animated label
+const CircleWithMotion = ({
+  label,
+  baseX,
+  baseY,
+  color,
+  mousePos,
+  labelOffsetX = 0,
+  labelOffsetY = 0,
+}) => {
+  // springs for circle center
+  const x = useSpring(baseX, { stiffness: 100, damping: 20 });
+  const y = useSpring(baseY, { stiffness: 100, damping: 20 });
+
+  // update springs on mouse move
+  useEffect(() => {
+    const dx = mousePos.x - baseX;
+    const dy = mousePos.y - baseY;
+    const distance = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
+    const maxOffset = 20;
+    const strength = 0.3;
+
+    const offsetX = dx * strength * Math.min(1, maxOffset / distance);
+    const offsetY = dy * strength * Math.min(1, maxOffset / distance);
+
+    x.set(baseX + offsetX);
+    y.set(baseY + offsetY);
+  }, [mousePos, baseX, baseY, x, y]);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-white">
-      <svg width="400" height="300" viewBox="0 0 400 300">
-        {/* Circles */}
-        <CustomCircle x={100} y={100} />
-        <CustomCircle x={160} y={100} />
-        <CustomCircle x={130} y={50} />
+    <g>
+      {/* Animated circle */}
+      <motion.circle
+        cx={x}
+        cy={y}
+        r="70"
+        fill="none"
+        stroke="black"
+        strokeWidth="2"
+      />
+      {/* Animated label with same springs + manual offset */}
+      <motion.text
+        x={x}
+        y={y}
+        transform={`translate(${labelOffsetX}, ${labelOffsetY})`}
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize="14"
+        fill="#000"
+      >
+        {label}
+      </motion.text>
+    </g>
+  );
+};
 
-        {/* Labels */}
-        <text x={115} y={170} fontSize="14" fontWeight="bold" fill="#000">
-          Code
-        </text>
-        <text x={205} y={170} fontSize="14" fontWeight="bold" fill="#000">
-          Design
-        </text>
-        <text x={155} y={85} fontSize="14" fontWeight="bold" fill="#000">
-          Creative
-        </text>
+// 🎯 Main Diagram Component
+const VennDiagram = () => {
+  const svgRef = useRef(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-        {/* Center Label */}
-        <text x={167} y={142} fontSize="18" fontWeight="bold" fill="#000">
-          ME
-        </text>
-      </svg>
-    </div>
+  const circles = [
+    { label: 'Code', baseX: 140, baseY: 150, color: 'red', labelOffsetX: -30, labelOffsetY: 0 },
+    { label: 'Design', baseX: 220, baseY: 150, color: 'green', labelOffsetX: 30, labelOffsetY: 0 },
+    { label: 'Creative', baseX: 180, baseY: 90, color: 'blue', labelOffsetX: 0, labelOffsetY: -30 },
+  ];
+
+  // springs for the central "ME" label
+  const centerBaseX = 180;
+  const centerBaseY = 135;
+  const centerX = useSpring(centerBaseX, { stiffness: 100, damping: 20 });
+  const centerY = useSpring(centerBaseY, { stiffness: 100, damping: 20 });
+
+  // track mouse position inside SVG
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+
+    const handleMouseMove = (e) => {
+      const rect = svg.getBoundingClientRect();
+      setMousePos({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    };
+
+    svg.addEventListener('mousemove', handleMouseMove);
+    return () => svg.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  // update center label springs on mouse move
+  useEffect(() => {
+    const dx = mousePos.x - centerBaseX;
+    const dy = mousePos.y - centerBaseY;
+    const distance = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
+    const maxOffset = 20;
+    const strength = 0.3;
+
+    const offsetX = dx * strength * Math.min(1, maxOffset / distance);
+    const offsetY = dy * strength * Math.min(1, maxOffset / distance);
+
+    centerX.set(centerBaseX + offsetX);
+    centerY.set(centerBaseY + offsetY);
+  }, [mousePos, centerX, centerY]);
+
+  return (
+    <svg
+      ref={svgRef}
+      viewBox="0 0 400 300"
+      className="w-full max-w-[600px] h-auto"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      {circles.map((circle, idx) => (
+        <CircleWithMotion key={idx} {...circle} mousePos={mousePos} />
+      ))}
+
+      {/* Animated central "ME" label */}
+      <motion.text
+        x={centerX} 
+        y={centerY}
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize="14"
+        fill="#000"
+      >
+        ME
+      </motion.text>
+    </svg>
   );
 };
 

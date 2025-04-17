@@ -3,6 +3,7 @@
     gap: 4%; /* Space between icons */
     align-items: center;
     justify-content: center;
+    padding-bottom:10%;
 }
 
 .contact-icons-container a img {

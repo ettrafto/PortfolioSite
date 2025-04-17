@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion, useIsPresent } from "framer-motion";
+
 import ContactForm from '../components/contact/ContactForm';
 import './Contact.css';
+
+import resumePdf from "../assets/evan-trafton-resume.pdf";
 
 
 const Contact = () => {
@@ -21,22 +24,38 @@ const Contact = () => {
         <ContactForm />
       </div>
       <div className="contact-icons-container">
-  
-          <a href='https://github.com/ettrafto'>
-              <img src='/icons/github.webp'/>
-          </a>
+        <a
+          href="https://github.com/ettrafto"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/icons/github.webp" alt="GitHub" />
+        </a>
 
-          <a href='https://www.linkedin.com/in/evan-trafton'>
-            <img src='/icons/linkedIn.webp'/>
-          </a>
+        <a
+          href="https://www.linkedin.com/in/evan-trafton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/icons/linkedIn.webp" alt="LinkedIn" />
+        </a>
 
-          <a href='/files/evan-trafton-resume.pdf' download>
-            <img src='/icons/resume.webp'/>
-          </a>
+        <a
+          href={resumePdf}
+          download="Evan_Trafton_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/icons/resume.webp" alt="Resume" />
+        </a>
 
-          <a href='https://www.youtube.com/@evantrafton9213'>
-            <img src='/icons/youtube.webp'/>
-          </a>
+        <a
+          href="https://www.youtube.com/@evantrafton9213"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/icons/youtube.png" alt="YouTube" />
+        </a>
       </div>
     </>
 

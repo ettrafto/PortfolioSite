@@ -1,15 +1,27 @@
 .about-page{}
+
 .about-page-image-container{
     max-width: 50%;
+    margin:auto;
+    align-items: center;
+
+    
 }
 .about-page-image{
-    max-width: 100%;
+    max-width: 80%;
+    border-radius: 10%;
+    display:flex;
+    justify-content: center;
+    margin:auto;
+
+
 }
 .about-page-text{
+    display:flex;
+    flex-direction: column;
     width:50%;
-
-    padding-left: 5%;
-    padding-right: 5%;
+    justify-content: center;
+    padding: 8%;
     font-size: 200%;
     text-align: left;
     line-height: 1.5;
@@ -33,10 +45,33 @@
 
 }
 
-
-.about-page-title{}
-.about-page-title-sub{}
-.about-page-job{}
+.text1{
+    
+}
+.about-page-title{
+    font-size: 140%;
+    font-family: inherit;
+    font-weight: 400;
+    width:100%;
+    text-align: center;
+    padding-bottom: 5%;
+    color: #333;
+}
+.about-page-job{
+    font-size: 175%;
+    font-family: inherit;
+    font-weight: 600;
+    width:100%;
+    text-align: center;
+    color: #333;
+}
+.sub-title{
+    font-size: 125%;
+    font-family: inherit;
+    font-weight: 500;
+    width:100%;
+    color: #333;
+}
 
 
 .container2{

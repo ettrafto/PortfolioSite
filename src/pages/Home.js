@@ -28,67 +28,81 @@ const Home = () => {
           <PerlinNoiseCircle className="profile"/>
 
         </div>
-        <div className='home-container2'>
-          <div className='venn-diagram-container'>
-            {/* VENN DIAGRAM */}
+
+
+        <div className="home-container2">
+          <div className="venn-diagram-container">
             <VennDiagram />
           </div>
-          <div className='skills-container'>
-            <div className='skills-title'>Skills</div>
-            <div className='skills-list'>
-              <div className='skills-list-languages'>
-              <div className='skills-list-title'>Languages</div>
-                <div className='skill'>Python</div>
-                <div className='skill'>JavaScript</div>
-                <div className='skill'>TypeScript</div>
-                <div className='skill'>PHP</div>
-                <div className='skill'>HTML</div>
-                <div className='skill'>CSS</div>
-                <div className='skill'>C++</div>
-                <div className='skill'>Java</div>
-                <div className='skill'>Rest-APIs</div>
+
+          <div className="skills-container">
+            <div className="home-skills-list">
+              <div className="skills-list-section">
+                <div className='skill-list-sub'>
+                  <div className="skills-list-title">Languages</div>
+
+                  <div className="skill">Python</div> 
+                  <div className="skill">JavaScript</div>
+                  <div className="skill">TypeScript</div>
+                  <div className="skill">PHP</div>
+                  <div className="skill">HTML</div>
+                  <div className="skill">CSS</div>
+                  <div className="skill">C++</div>
+                  <div className="skill">Java</div>
+                  <div className="skill">REST‑APIs</div>
+                </div>
+                
+                <div className='skill-list-sub'>
+                  <div className="skills-list-title">Professional</div>
+                  <div className="skill">Agile</div>
+                  <div className="skill">Scrum</div>
+                  <div className="skill">Project Management</div>
+                  <div className="skill">Roadmapping</div>
+                  <div className="skill">User Research</div> 
+                </div>
+
+                <div className="skill-list-sub">
+                  <div className="skills-list-title">Creative</div>
+                  <div className="skill">Figma</div>
+                  <div className="skill">Illustrator</div>
+                  <div className="skill">After Effects</div>
+                  <div className="skill">Photoshop</div>
+                  <div className="skill">Lightroom</div>
+                  <div className="skill">XD</div>
+                </div>
               </div>
 
-              <div className='skills-list-frontend'>
-                <div className='skills-list-title'>Frontend</div>
-                <div className='skill'>Node.js</div>
-                <div className='skill'>React</div>
-                <div className='skill'>Express</div>
+
+              <div className="skills-list-section">
+                <div className="skill-list-sub2">
+
+                <div className="skills-list-title">Frontend</div>
+                <div className="skill">Node.js</div>
+                <div className="skill">React</div>
+                <div className="skill">Express</div>
+                <div className="skill">Framer-Motion</div>
 
               </div>
 
-              <div className='skills-list-backend'>
-                <div className='skills-list-title'>Backend</div>
-                <div className='skill'>SQL</div>
-                <div className='skill'>SQLite</div>
-                <div className='skill'>mySQL</div>
-                <div className='skill'>MongoDB</div>
-                <div className='skill'>Mongoose</div>
+                <div className="skill-list-sub2">
+
+                <div className="skills-list-title">Backend</div>
+                <div className="skill">SQL</div>
+                <div className="skill">SQLite</div>
+                <div className="skill">MySQL</div>
+                <div className="skill">MongoDB</div>
+                <div className="skill">Mongoose</div>
+              </div>
               </div>
 
-              <div className='skills-list-creative'>
-                <div className='skills-list-title'>Creative</div>
-                <div className='skill'>Figma</div>
-                <div className='skill'>Adobe Illustrator</div>
-                <div className='skill'>Adobe After Effects</div>
-                <div className='skill'>Adobe PhotoShop</div>
-                <div className='skill'>Adobe Lightroom</div>
-                <div className='skill'>Adobe XD</div>
-              </div>
 
-              <div className='skills-list-professional'>
-                <div className='skills-list-title'>Professional</div>
-                <div className='skill'>Agile</div>
-                <div className='skill'>Scrum</div>
-                <div className='skill'>Project Management</div>
-                <div className='skill'>Roadmapping</div>
-                <div className='skill'>User Research</div> 
-              </div>
-   
+
+
+              
             </div>
           </div>
-
         </div>
+
         <div className='home-container3'>
 
           <div className='education-container'>
