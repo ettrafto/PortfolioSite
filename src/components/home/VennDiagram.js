@@ -20,8 +20,8 @@ const CircleWithMotion = ({
     const dx = mousePos.x - baseX;
     const dy = mousePos.y - baseY;
     const distance = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
-    const maxOffset = 20;
-    const strength = 0.3;
+    const maxOffset = 100;
+    const strength = 0.25;
 
     const offsetX = dx * strength * Math.min(1, maxOffset / distance);
     const offsetY = dy * strength * Math.min(1, maxOffset / distance);

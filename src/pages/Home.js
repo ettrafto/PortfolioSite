@@ -75,29 +75,22 @@ const Home = () => {
 
               <div className="skills-list-section">
                 <div className="skill-list-sub2">
-
-                <div className="skills-list-title">Frontend</div>
-                <div className="skill">Node.js</div>
-                <div className="skill">React</div>
-                <div className="skill">Express</div>
-                <div className="skill">Framer-Motion</div>
-
-              </div>
+                  <div className="skills-list-title">Frontend</div>
+                  <div className="skill">Node.js</div>
+                  <div className="skill">React</div>
+                  <div className="skill">Express</div>
+                  <div className="skill">Framer-Motion</div>
+                </div>
 
                 <div className="skill-list-sub2">
-
-                <div className="skills-list-title">Backend</div>
-                <div className="skill">SQL</div>
-                <div className="skill">SQLite</div>
-                <div className="skill">MySQL</div>
-                <div className="skill">MongoDB</div>
-                <div className="skill">Mongoose</div>
+                  <div className="skills-list-title">Backend</div>
+                  <div className="skill">SQL</div>
+                  <div className="skill">SQLite</div>
+                  <div className="skill">MySQL</div>
+                  <div className="skill">MongoDB</div>
+                  <div className="skill">Mongoose</div>
+                </div>
               </div>
-              </div>
-
-
-
-
               
             </div>
           </div>
@@ -113,8 +106,8 @@ const Home = () => {
               </div>
               <div className='degree'>B.S. Computer Science</div>
               <div className='minor'>Minor in Applied Design</div>
-
             </div>
+            
             <div className='uvm-logo'>
               <img src='/images/logos/uvm-logo.png' alt="UVM Logo" className='uvm-logo-img'/>
             </div>
