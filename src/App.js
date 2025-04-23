@@ -22,6 +22,22 @@ import ManagerPosts from './pages/manager/ManagerPosts';
 import ManagerAddPost from './pages/manager/ManagerAddPost';
 import UpdatePost from './pages/manager/UpdatePost';
 */
+
+
+
+
+/*
+TODO:
+- Add a loading screen for the app
+- Refactor Cards + Add featured projects section to the home page
+- add mobile support
+- Update project data
+- finish home page
+- Add animations to all pages
+- add interactive perlin circle
+
+
+*/
 const App = () => {
   const location = useLocation();
 
