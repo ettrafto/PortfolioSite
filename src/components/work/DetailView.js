@@ -20,7 +20,7 @@ function DetailView({ selected, onClose }) {
 
     if (!project) return null;
 
-    return (
+    return ( 
         <>
             <motion.div
                 className="overlay"

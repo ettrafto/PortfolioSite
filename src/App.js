@@ -6,7 +6,7 @@ import { AuthProvider } from './context/AuthContext';
 import './App.css'
 import NavBar from './components/nav/NavBar';
 import Home from './pages/Home';
-import HomeAlt from './pages/Home-alt';
+/* import HomeAlt from './pages/Home-alt'; */
 import Work from './pages/Work';
 import About from './pages/About';
 import Blog from './pages/Blog';

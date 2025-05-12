@@ -26,7 +26,7 @@ const About = () => {
             <div className="about-page-title">My name is Evan and I'm a </div>
             <div className="about-page-job">Developer</div>
             <div className="about-page-job">&</div>
-            <div className="about-page-job">Designer</div>          
+            <div className="about-page-job">Designer</div>     
           </div>
           <div className='about-page-image-container'>
             <img className='about-page-image' src='/images/about-me/hawaiiPic.webp' alt="Evan in front of a buddist temple in Hawaii" />
@@ -59,11 +59,11 @@ const About = () => {
           <div className="about-page-text text4">
             <div className='sub-title'>Interests</div>
             <ul>
-              <li>user interface design</li>
-              <li>system design</li>
-              <li>human-computer interaction</li>
-              <li>data visualization</li>
-              <li>project management</li>
+              <li>User Interface Design</li>
+              <li>System Design</li>
+              <li>Human-Computer Interaction</li>
+              <li>Data Visualization</li>
+              <li>Project Management</li>
             </ul>
           </div>
         </div>

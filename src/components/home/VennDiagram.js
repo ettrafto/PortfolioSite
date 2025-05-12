@@ -12,16 +12,16 @@ const CircleWithMotion = ({
   labelOffsetY = 0,
 }) => {
   // springs for circle center
-  const x = useSpring(baseX, { stiffness: 100, damping: 20 });
-  const y = useSpring(baseY, { stiffness: 100, damping: 20 });
+  const x = useSpring(baseX, { stiffness: 70, damping: 20 });
+  const y = useSpring(baseY, { stiffness: 70, damping: 20 });
 
   // update springs on mouse move
   useEffect(() => {
     const dx = mousePos.x - baseX;
     const dy = mousePos.y - baseY;
     const distance = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
-    const maxOffset = 100;
-    const strength = 0.25;
+    const maxOffset = 45;
+    const strength = 0.5;
 
     const offsetX = dx * strength * Math.min(1, maxOffset / distance);
     const offsetY = dy * strength * Math.min(1, maxOffset / distance);
@@ -48,7 +48,7 @@ const CircleWithMotion = ({
         transform={`translate(${labelOffsetX}, ${labelOffsetY})`}
         textAnchor="middle"
         dominantBaseline="middle"
-        fontSize="14"
+        fontSize="12"
         fill="#000"
       >
         {label}
@@ -63,8 +63,8 @@ const VennDiagram = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   const circles = [
-    { label: 'Code', baseX: 140, baseY: 150, color: 'red', labelOffsetX: -30, labelOffsetY: 0 },
-    { label: 'Design', baseX: 220, baseY: 150, color: 'green', labelOffsetX: 30, labelOffsetY: 0 },
+    { label: 'Technical', baseX: 140, baseY: 150, color: 'red', labelOffsetX: -30, labelOffsetY: 20 },
+    { label: 'Professional', baseX: 220, baseY: 150, color: 'green', labelOffsetX: 30, labelOffsetY: 20 },
     { label: 'Creative', baseX: 180, baseY: 90, color: 'blue', labelOffsetX: 0, labelOffsetY: -30 },
   ];
 
@@ -76,28 +76,29 @@ const VennDiagram = () => {
 
   // track mouse position inside SVG
   useEffect(() => {
-    const svg = svgRef.current;
-    if (!svg) return;
-
     const handleMouseMove = (e) => {
+      const svg = svgRef.current;
+      if (!svg) return;
+  
       const rect = svg.getBoundingClientRect();
       setMousePos({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
       });
     };
-
-    svg.addEventListener('mousemove', handleMouseMove);
-    return () => svg.removeEventListener('mousemove', handleMouseMove);
+  
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+  
 
   // update center label springs on mouse move
   useEffect(() => {
     const dx = mousePos.x - centerBaseX;
     const dy = mousePos.y - centerBaseY;
     const distance = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
-    const maxOffset = 20;
-    const strength = 0.3;
+    const maxOffset = 45;
+    const strength = 0.5;
 
     const offsetX = dx * strength * Math.min(1, maxOffset / distance);
     const offsetY = dy * strength * Math.min(1, maxOffset / distance);
@@ -126,8 +127,7 @@ const VennDiagram = () => {
         fontSize="14"
         fill="#000"
       >
-        ME
-      </motion.text>
+Not Joe      </motion.text>
     </svg>
   );
 };

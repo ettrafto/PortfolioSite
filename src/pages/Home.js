@@ -4,6 +4,7 @@ import { motion, useIsPresent } from "framer-motion";
 import './Home.css';
 import PerlinNoiseCircle from '../components/Profile/PerlinNoiseCircle';
 import VennDiagram from '../components/home/VennDiagram';
+import Accordion from '../components/home/Accordian';
 
 const Home = () => {
   const isPresent = useIsPresent();
@@ -37,11 +38,8 @@ const Home = () => {
 
           <div className="skills-container">
             <div className="home-skills-list">
-              <div className="skills-list-section">
-                <div className='skill-list-sub'>
-                  <div className="skills-list-title">Languages</div>
-
-                  <div className="skill">Python</div> 
+                <Accordion title="Languages">
+                  <div className="skill">Python</div>
                   <div className="skill">JavaScript</div>
                   <div className="skill">TypeScript</div>
                   <div className="skill">PHP</div>
@@ -50,50 +48,43 @@ const Home = () => {
                   <div className="skill">C++</div>
                   <div className="skill">Java</div>
                   <div className="skill">REST‑APIs</div>
-                </div>
-                
-                <div className='skill-list-sub'>
-                  <div className="skills-list-title">Professional</div>
+                </Accordion>
+
+                <Accordion title="Professional">
                   <div className="skill">Agile</div>
                   <div className="skill">Scrum</div>
                   <div className="skill">Project Management</div>
                   <div className="skill">Roadmapping</div>
-                  <div className="skill">User Research</div> 
-                </div>
+                  <div className="skill">User Research</div>
+                </Accordion>
 
-                <div className="skill-list-sub">
-                  <div className="skills-list-title">Creative</div>
+                <Accordion title="Creative">
                   <div className="skill">Figma</div>
                   <div className="skill">Illustrator</div>
                   <div className="skill">After Effects</div>
+                  <div className="skill">Premiere</div>
                   <div className="skill">Photoshop</div>
                   <div className="skill">Lightroom</div>
                   <div className="skill">XD</div>
-                </div>
-              </div>
+                </Accordion>
 
-
-              <div className="skills-list-section">
-                <div className="skill-list-sub2">
-                  <div className="skills-list-title">Frontend</div>
+                <Accordion title="Frontend">
                   <div className="skill">Node.js</div>
                   <div className="skill">React</div>
                   <div className="skill">Express</div>
                   <div className="skill">Framer-Motion</div>
-                </div>
+                </Accordion>
 
-                <div className="skill-list-sub2">
-                  <div className="skills-list-title">Backend</div>
+                <Accordion title="Backend">
                   <div className="skill">SQL</div>
                   <div className="skill">SQLite</div>
                   <div className="skill">MySQL</div>
                   <div className="skill">MongoDB</div>
                   <div className="skill">Mongoose</div>
-                </div>
-              </div>
-              
+                </Accordion>
             </div>
           </div>
+
         </div>
 
         <div className='home-container3'>
@@ -117,7 +108,8 @@ const Home = () => {
 
         <div className='home-container4'>
           <div className='projects-container' style={{border: '1px solid black'}}>
-            <div className='projects-title'>Projects</div>
+            <div className='projects-title'>Featured Projects</div>
+            
 
           </div>
         </div>

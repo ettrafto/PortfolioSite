@@ -50,90 +50,81 @@
 
 
 .venn-diagram-container{
+  
     width:55%;
     height:100vh;
 }
 
+/* -------------  LAYOUT CONTAINER ------------- */
 .skills-container {
-    width: 45%;
-    padding: 2rem;
-    box-sizing: border-box;
-  }
-  
-  .skills-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-    padding-left: 0.5rem;
-  }
-  
-  /* turn the list into a grid */
-  .home-skills-list {
-    display: flex;
-    flex-direction: column;
-    justify-items: start;
-    width:100%;
-  }
-  
-  /* each category box */
-  .skills-list-section {
-    display: flex;
-    flex-direction: row;
-    width:100%;
-  }
-  
-  /* category title */
-  .skills-list-title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-  .skill-list-sub{
-    display: flex;
-    flex-direction: column;
-    background: #fafafa;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    margin:3%;
-    width:30%;
-    align-self: flex-start;
-    
-  }
+  width: 45%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
 
-  .skill-list-sub2{
-    display: flex;
-    flex-direction: column;
-    background: #fafafa;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    margin:3%;
-    width:40%;
-    align-self: flex-start;
+.home-skills-list {
+  width: 100%;
+  max-width: 900px;              /* keeps things from stretching on huge screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.0rem;                  /* space between accordion sections */
+}
 
-    }
-  
-  /* individual skills */
-  .skill {
-    font-size: 0.9rem;
-    padding:1%;
-    line-height: 1.3;
-  }
-  
-  /* responsive tweak: full width on small */
-  @media (max-width: 768px) {
-    .skills-container {
-      width: 100%;
-      padding: 1rem;
-    }
-    .skills-list {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+/* -------------  ACCORDION SHELL ------------- */
+.accordion-section {
+  width: 80%;                    /* ← 80 % of parent, centered */
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;              /* clips the slide animation */
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+
+/* -------------  HEADER (CLICKABLE) ------------- */
+.accordion-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025rem;
+}
+
+/* icon that rotates ▼ / ▲ */
+.accordion-icon {
+  font-size: 1.4rem;
+  transition: transform .3s ease;
+}
+.accordion-header[aria-expanded="true"] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* -------------  INNER CONTENT ------------- */
+.accordion-content {
+  padding: 0 1.25rem 1rem;       /* top padding is animated in Motion */
+}
+
+.skill {
+  font-size: .95rem;
+  padding: .3rem 0;
+  line-height: 1.35;
+}
+
+/* -------------  SMALL‑SCREEN TWEAKS ------------- */
+@media (max-width: 640px) {
+  .accordion-section { width: 95%; }
+  .accordion-header { font-size: 1.05rem; }
+}
+
 
 /* SECTION 3 */
 .education-container {
