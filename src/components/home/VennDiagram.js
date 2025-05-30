@@ -127,7 +127,7 @@ const VennDiagram = () => {
         fontSize="14"
         fill="#000"
       >
-Not Joe      </motion.text>
+ME      </motion.text>
     </svg>
   );
 };
