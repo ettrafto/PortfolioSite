@@ -14,9 +14,12 @@ const Work = () => {
   const isPresent = useIsPresent();
   const [selected, setSelected] = useState(null);
 
+  const [view, setView] = useState("tech"); // 'tech' or 'creative'
+  const filteredProjects = projects.filter(p => (view === "tech" ? p.isTech : !p.isTech));
 
   return (
     <>
+      <div className=''></div>
        <motion.div
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
@@ -25,20 +28,31 @@ const Work = () => {
         className="privacy-screen"
       />
 
+  {/* Toggle Button */}
 
-      <div className="card-container"> 
-        {projects.map((project) => (
-              <Thumbnail
-                  className="card"
-                  key={project.id}
-                  id={project.id}
-                  projectThumbnail = {project.thumbnail}
-                  projectName={project.title}
-                  imageUrl={project.thumbnail}
-                  setSelected={setSelected}
-              />
-            ))}
+      <div className="toggle-switch-wrapper">
+        <div className="toggle-switch" onClick={() => setView(view === "tech" ? "creative" : "tech")}>
+          <div className={`toggle-indicator ${view === "tech" ? "left" : "right"}`} />
+          <span className={view === "tech" ? "active" : ""}>Technical</span>
+          <span className={view === "creative" ? "active" : ""}>Creative</span>
         </div>
+      </div>
+
+
+      {/* Project Thumbnails */}
+      <div className="card-container">
+        {filteredProjects.map((project) => (
+          <Thumbnail
+            className="card"
+            key={project.id}
+            id={project.id}
+            projectThumbnail={project.thumbnail}
+            projectName={project.title}
+            imageUrl={project.thumbnail}
+            setSelected={setSelected}
+          />
+        ))}
+      </div>
 
         <AnimatePresence>
             {selected && <DetailView selected={selected} onClose={() => setSelected(null)} />}
