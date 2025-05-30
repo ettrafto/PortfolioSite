@@ -1,16 +1,19 @@
+import FeaturedProject from '../../home/FeaturedProject';
 import tempPhoto from './images/temp.JPG';
 
 const projects = [
   {
       id: "1",
       title: "OurOutdoors",
+      shortDescription: "A social media platform for outdoor enthusiasts to connect and coordinate activities.",
       description: "OurOutdoors is a social media platform tailored for outdoor enthusiasts who want to explore, connect, and coordinate activities together. Built using the MERN stack (MongoDB, Express, React, and Node.js) using a REST API, the app provides a responsive, scalable solution for users to organize and participate in outdoor events, rides, and excursions. Through a range of interactive features, OurOutdoors allows users to both request and offer rides, create and join events, post comments, manage friend connections, and react to activities through likes.",
       thumbnail: '/images/projects/ourOutdoors.webp',
       skills: ["RoadMapping", "React.js", "Node.js", "Express.js", "Mongoose", "REST API"],
       liveLink: "",
       gitLink: "https://github.com/ettrafto/ouroutdoors",
       date: "2024",
-      images: []
+      images: [],
+      FeaturedProject: true
   },
   {
       id: "2",
@@ -21,7 +24,9 @@ const projects = [
       liveLink: "",
       gitLink: "https://github.com/ettrafto/CRVT-Local-Legislators",
       date: "Fall 2024",
-      images: []
+      images: [],
+      FeaturedProject: false
+
   },
   {
       id: "3",
@@ -32,7 +37,8 @@ const projects = [
       liveLink: "",
       gitLink: "https://github.com/ettrafto/scubaDiver",
       date: "Fall 2023",
-      images: ['/images/projects/scubaDiver1.webp','/images/projects/scubaDiver5.webp','/images/projects/scubaDiver2.webp']
+      images: ['/images/projects/scubaDiver1.webp','/images/projects/scubaDiver5.webp','/images/projects/scubaDiver2.webp'],
+      FeaturedProject: true
   },
   {
       id: "4",
@@ -43,7 +49,8 @@ const projects = [
       liveLink: "",
       gitLink: "https://github.com/ettrafto/mymoney",
       date: "Fall 2023",
-      images: ['/images/projects/mymoney2.webp']
+      images: ['/images/projects/mymoney2.webp'],
+      FeaturedProject: true
   },
   {
     id: "5",
@@ -54,7 +61,8 @@ const projects = [
     liveLink: "",
     gitLink: "https://github.com/ettrafto/mysafari",
     date: "Fall 2023",
-    images: ['/images/projects/mysafari4.webp','/images/projects/mysafari2.webp','/images/projects/mysafari3.webp']
+    images: ['/images/projects/mysafari4.webp','/images/projects/mysafari2.webp','/images/projects/mysafari3.webp'],
+    FeaturedProject: false
 },
 {
     id: "6",
@@ -65,7 +73,8 @@ const projects = [
     liveLink: "https://evantrafton.com/mastermind",
     gitLink: "https://github.com/ettrafto/mastermind",
     date: "Summer 2024",
-    images: [] 
+    images: [] ,
+    FeaturedProject: false
 },
 {
   id: "7",
@@ -76,7 +85,8 @@ const projects = [
   liveLink: "",
   gitLink: "",  
   date: "Fall 2023",
-  images: ['/images/projects/photosift2.webp']
+  images: ['/images/projects/photosift2.webp'],
+  FeaturedProject: false
 }
 /*,
 {

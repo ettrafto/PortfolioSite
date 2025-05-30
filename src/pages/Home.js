@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { motion, useIsPresent } from "framer-motion";
 
 import './Home.css';
 import PerlinNoiseCircle from '../components/Profile/PerlinNoiseCircle';
 import VennDiagram from '../components/home/VennDiagram';
 import Accordion from '../components/home/Accordian';
+import FeaturedProject from '../components/home/FeaturedProject';
+import QuoteCarousel from '../components/home/QuoteCarusel';
+
 
 const Home = () => {
   const isPresent = useIsPresent();
+
+  const [selectedProject, setSelectedProject] = useState(null);
+
 
   return (
     <>
@@ -107,22 +113,24 @@ const Home = () => {
         </div>
 
         <div className='home-container4'>
-          <div className='projects-container' style={{border: '1px solid black'}}>
+          <div className='projects-container' >
             <div className='projects-title'>Featured Projects</div>
+            <div className="featured-project-container"> 
+              <FeaturedProject />
+            </div>
             
 
           </div>
         </div>
 
-        {/*<div className='home-container5'>
-          <div className='misc-container' style={{border: '1px solid black'}}>
-            <div>Misc</div>
-          </div>
-          <div className='contact-container' style={{border: '1px solid black'}}>
-              <div className='contact-title'>Contact</div>
+        <div className='home-container5'>
+            <div className='reco-title'>Endorsements</div>
+          
+          <div className='recos-container' >
+            <QuoteCarousel />
 
           </div>
-        </div>*/}
+        </div>
 
       </div>
     </>

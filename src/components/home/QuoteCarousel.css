@@ -1,0 +1,72 @@
+.quote-carousel {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: 4rem auto 5rem auto;
+  padding: 0 1rem;
+  min-height: 180px;
+
+}
+.quote-viewbox {
+  position: relative;
+  min-height: 160px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.quote-content {
+  text-align: center;
+  padding: 1.5rem;
+}
+.quote-container{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+}
+.quote-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.quote-meta {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.arrow-button {
+  width:10%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e0e0e0;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: #444;
+  transition: stroke 0.2s;
+}
+
+.arrow-button:hover svg {
+  stroke: #000;
+}
+
+.arrow-left {
+  right: 100%;
+}
+
+.arrow-right {
+  left: 100%;
+}
