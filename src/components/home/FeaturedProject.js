@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+
 import projects from '../work/ProjectData/projects.js';
 import './FeaturedProject.css';
 
@@ -31,6 +34,9 @@ const FeaturedProject = ({ onSelect }) => {
                     </div>
                 </div>
             ))}
+            <Link to="/work" className="f-project-link">
+                View All Projects
+            </Link>
         </div>
     );
 };
