@@ -1,0 +1,62 @@
+/* 1) Ensure the container is positioned relative so the overlay can sit on top */
+.thumbnail-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.8rem; /* match your existing thumbnail rounding */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 2) Hover‐state styling for the container (scale + shadow) */
+.thumbnail-container:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+/* 3) The <img> inside */
+.thumbnail-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.8rem; /* match container corners */
+}
+
+/* 4) Overlay that sits on top of the image (hidden initially) */
+.thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* 33% opaque black background */
+  background-color: rgba(0, 0, 0, 0.33);
+
+  /* Center content vertically & horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Start fully transparent */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none; /* so it doesn't block hover events on the container */
+}
+
+/* 5) Reveal overlay on hover */
+.thumbnail-container:hover .thumbnail-overlay {
+  opacity: 1;
+  pointer-events: auto; /* now you could hover or click inside overlay if needed */
+}
+
+/* 6) The description text inside the overlay */
+.short-description {
+  color: #fff;
+  font-size: 1rem;       /* adjust as needed */
+  text-align: center;
+  padding: 0 0.5rem;     /* a bit of horizontal padding if it wraps */
+  line-height: 1.4;      /* improve readability */
+}

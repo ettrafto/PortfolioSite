@@ -24,6 +24,7 @@ function DetailView({ selected, onClose }) {
         <>
             <motion.div
                 className="overlay"
+                margin="0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -49,11 +50,11 @@ function DetailView({ selected, onClose }) {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 style={{
                     position: "fixed",
-                    top: "15%",
-                    left: "15%",
+                    top: "7.5%",
+                    left: "10%",
                     transform: "translate(-50%, -50%)",
-                    width: "70%",
-                    height: "80%",
+                    width: "80%",
+                    height: "85%",
                     overflowY: "auto",
                     background: "white",
                     borderRadius: "30px",

@@ -48,6 +48,7 @@ const Work = () => {
             id={project.id}
             projectThumbnail={project.thumbnail}
             projectName={project.title}
+            shortDescription={project.shortDescription}
             imageUrl={project.thumbnail}
             setSelected={setSelected}
           />

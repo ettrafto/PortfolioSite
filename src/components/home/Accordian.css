@@ -1,7 +1,7 @@
 /* =========  Accordion Wrapper  ========= */
 .accordion-section {
     width: 80%;                 /* or 100% if it lives in a narrow parent */
-    margin: 0 auto 1.5rem;      /* centered with bottom gap */
+    margin: 0 0 1.5rem;      /* centered with bottom gap */
     margin-left:0;
     border: 2px solid #d0d0d0;
     border-radius: 10px;

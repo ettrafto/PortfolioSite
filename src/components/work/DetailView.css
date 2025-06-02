@@ -1,4 +1,6 @@
-
+.overlay{
+    margin: 0 !important;
+}
 
 .header-container{
     display: flex;
@@ -72,6 +74,7 @@ detail-view{
 
 .detail-parent{
     display: flex;
+    padding-bottom: 5%;
 }
 
 .detail-img-container{
