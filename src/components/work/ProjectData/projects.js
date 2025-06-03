@@ -100,8 +100,9 @@ const projects = [
     FeaturedProject: false,
     isTech: true
   },
-  // New entries from CSV:
-  {
+
+
+  /*{
     id: "8",
     title: "CaveDiver",
     shortDescription: "",
@@ -128,13 +129,13 @@ const projects = [
     images: [],
     FeaturedProject: false,
     isTech: true
-  },
+  },*/
   {
     id: "20",
     title: "Why Adventure",
     shortDescription: "",
     description: "In my fourth project for Visual Communication, I created a short video combining rotoscoping and text animation with After Effects and Premiere.",
-    thumbnail: "",
+    thumbnail: "/images/projects/WhyAdventure.webp",
     skills: ["Adobe Premiere", "Adobe After Effects"],
     liveLink: "https://www.youtube.com/watch?v=RlEIYd5G7mc",
     gitLink: "",
@@ -148,7 +149,7 @@ const projects = [
     title: "ET Intro Animation",
     shortDescription: "",
     description: "Animated an introduction title sequence and logo reveal using After Effects.",
-    thumbnail: "",
+    thumbnail: "/images/projects/EtAnimation.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
     liveLink: "",
     gitLink: "",
@@ -162,7 +163,7 @@ const projects = [
     title: "Do Not Go Gentle into that Goodnight",
     shortDescription: "",
     description: "Created a typography-driven animation interpreting Dylan Thomas’s poem, using After Effects to animate text layers and effects.",
-    thumbnail: "",
+    thumbnail: "/images/projects/DoNotGoGentleIntoThatGoodnight.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
     liveLink: "",
     gitLink: "",
@@ -175,8 +176,8 @@ const projects = [
     id: "23",
     title: "Phone Animation",
     shortDescription: "",
-    description: "Designed a promotional animation showcasing phone features and interface, using After Effects and Illustrator.",
-    thumbnail: "",
+    description: "Designed a series of animations highlighting the dangers of phone addiction, using After Effects and Illustrator.",
+    thumbnail: "/images/projects/PhoneAnimation.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
     liveLink: "",
     gitLink: "",
@@ -185,6 +186,7 @@ const projects = [
     FeaturedProject: false,
     isTech: false
   },
+  /*
   {
     id: "24",
     title: "Molokai Adventures",
@@ -240,7 +242,7 @@ const projects = [
     images: ["/images/mysafari4.webp", "/images/mysafari2.webp", "/images/mysafari3.webp"],
     FeaturedProject: false,
     isTech: false
-  }
+  }*/
 ];
 
 export default projects;

@@ -14,6 +14,11 @@ const quotes = [
     "Evan has taken three courses with me in web development (both front end and back end) where his final projects were all top notch. His work ethic to complete tasks on time, the work itself excellent and his ability to learn above and beyond are all traits to be envied by his peers.",
     "Robert Erickson Senior Lecturer Emeritus Computer Science",
     "University of Vermont"
+  ],
+  [
+    "Evan has a real problem-solving mindset, and is very quick to learn the tools and technologies needed to build web products. He was able to wrangle older technology while leveraging modern frameworks to build a useful piece of civic tech in the VTBillTracker. Evan showed a ton of initiative, built a great map interface, and connected it all in an efficient way manner, resulting in a great end product.",
+    "Ben Cooley, Research Data Visualization Engineer",
+    "University of Vermont"
   ]
 ];
 
@@ -30,7 +35,7 @@ export default function QuoteCarousel() {
 
   useEffect(() => {
     if (measureRef.current) {
-      setContainerHeight(measureRef.current.offsetHeight + 10);
+      setContainerHeight(measureRef.current.offsetHeight + 40);
     }
   }, [index]);
 

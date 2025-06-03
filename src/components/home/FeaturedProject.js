@@ -5,8 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import projects from "../work/ProjectData/projects.js";
 import "./FeaturedProject.css";
-import DetailView from "../work/DetailView.js";
-import "../work/DetailView.css"; // Ensure this is imported for styles
+
+/*import DetailView from "../work/DetailView.js";
+import "../work/DetailView.css"; // Ensure this is imported for styles */
 
 const FeaturedProject = () => {
   // 1. Grab only the projects marked as featured
@@ -64,7 +65,7 @@ const FeaturedProject = () => {
       </div>
 
       {/* 5. AnimatePresence will mount/unmount the DetailView */}
-      <AnimatePresence>
+      {/*<AnimatePresence>
         {selected && (
           <DetailView
             selected={selected}
@@ -72,7 +73,7 @@ const FeaturedProject = () => {
           />
         )}
       </AnimatePresence>
-    </>
+          */}    </>
   );
 };
 

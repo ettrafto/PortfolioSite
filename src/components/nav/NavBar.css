@@ -83,3 +83,124 @@
   flex: 0 0 15%; /* Take up 15% of navbar width */
   justify-content: flex-end; /* Align icons to the right */
 }
+
+/* Only show hamburger on mobile */
+.hamburger {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  height: 60px; /* lock fixed height */
+  z-index: 1000;
+  padding: 0 1rem;
+}
+
+.nav-dropdown {
+  margin-top:0;
+  position: absolute;
+  top: 60px; /* directly below navbar */
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #444;
+}
+
+.nav-dropdown li {
+  margin: 10px 0;
+}
+
+
+/*.nav-dropdown.open {
+  display: flex;
+}
+
+nav.navbar.menu-open {
+  height: auto;
+  min-height: 400px; /* or however tall your dropdown is */
+
+
+
+
+.nav-dropdown a {
+  color: #e1e1e1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav-dropdown .external-links {
+  border-top: 1px solid #444;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.navbar li span a {
+    color: #e1e1e1;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 800;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .4s cubic-bezier(.25,.8,.25,1);
+}
+
+
+@media (max-width: 768px) {
+  .nav-name-container {
+  flex: 0 0 70%; /* Take up 15% of navbar width */
+}
+  
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    color: #e1e1e1;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  .nav-links,
+  .icons-container {
+    display: none;
+  }
+
+  .external-links {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 5% !important;
+  }
+
+  .external-links a img {
+    margin: 10% 35%;
+    width: 30%;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+    gap: 1rem;
+    height: 60px; /* lock initial navbar height */
+  }
+
+  nav.navbar.menu-open {
+    height: auto;
+    min-height: 400px;
+    flex-wrap: wrap; /* allow dropdown to flow below */
+  }
+  .icons-container{
+    display: none !important; /* Hide icons on mobile */
+  }
+}

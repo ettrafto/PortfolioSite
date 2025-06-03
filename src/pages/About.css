@@ -104,3 +104,47 @@
 
 }
 .text5{}
+
+@media (max-width: 768px) {
+  .about-page-container {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 95%;
+  }
+
+  .about-page-text {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 110%;
+    text-align: center;
+  }
+
+  .about-page-title {
+    font-size: 130%;
+  }
+
+  .about-page-job {
+    font-size: 160%;
+  }
+
+  .sub-title {
+    font-size: 120%;
+  }
+
+  .about-page-image-container {
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-page-image {
+    max-width: 100%;
+    height: auto;
+  }
+  li {
+    list-style-type: none;
+  }
+  ul {
+        padding-left: 0px;
+  }
+}

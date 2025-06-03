@@ -82,6 +82,7 @@ src/components/work/DetailView.css
 src/components/work/DetailView.js
 src/components/work/ImgGallery.js
 src/components/work/ProjectData/projects.js
+src/components/work/Thumbnail.css
 src/components/work/Thumbnail.js
 src/context/AuthContext.js
 src/index.css
@@ -118,6 +119,104 @@ src/setupTests.js
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path="public/manifest.json">
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+</file>
+
+<file path="public/robots.txt">
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+</file>
+
+<file path="README.md">
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</file>
 
 <file path="repomix-output.txt">
 This file is a merged representation of the entire codebase, combining all repository files into a single document.
@@ -2792,113 +2891,6 @@ File: src/setupTests.js
 import '@testing-library/jest-dom';
 </file>
 
-<file path="public/manifest.json">
-{
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
-</file>
-
-<file path="public/robots.txt">
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
-</file>
-
-<file path="README.md">
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-</file>
-
 <file path="src/App.test.js">
 import { render, screen } from '@testing-library/react';
 import App from './App';
@@ -3063,88 +3055,6 @@ export default ContactForm;
 }
 </file>
 
-<file path="src/components/home/Accordian.css">
-/* =========  Accordion Wrapper  ========= */
-.accordion-section {
-    width: 80%;                 /* or 100% if it lives in a narrow parent */
-    margin: 0 auto 1.5rem;      /* centered with bottom gap */
-    margin-left:0;
-    border: 2px solid #d0d0d0;
-    border-radius: 10px;
-    background: #fafafa;
-    overflow: hidden;           /* clips animated height changes */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-    
-    display: flex;           
-    flex-direction: column;   
-  }
-  
-  /* =========  Header (clickable)  ========= */
-  .accordion-header {
-    all: unset;                 /* strip default button styles */
-    box-sizing: border-box;
-    width: 100%;
-    padding: 1rem 1.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.03rem;
-    user-select: none;
-    transition: background 0.2s ease;
-  }
-  
-  .accordion-header:hover {
-    background: #f0f0f0;
-  }
-  
-  /* =========  Arrow Icon  ========= */
-  .accordion-icon {
-    font-size: 1.4rem;
-    transition: transform 0.3s ease;
-  }
-  
-  /* rotate when open (matching aria-expanded) */
-  .accordion-header[aria-expanded="true"] .accordion-icon {
-    transform: rotate(180deg);
-  }
-  
-  /* =========  Content Wrapper  ========= */
-  /* height + opacity animation handled by Framer Motion,
-     but we still need padding and typography */
-    .accordion-content {
-    display: flex;          /* ← NEW */
-    flex-direction: column; /* ← NEW */
-    padding: 0 1.25rem 1rem;
-    box-sizing: border-box;
-    gap: 0.25rem;           /* optional: even space between skills */
-    }
-      
-  
-  /* =========  Example child styling  ========= */
-  .accordion-content .skill {
-    font-size: 0.95rem;
-    line-height: 1.35;
-    padding: 0.3rem 0;
-    width:100%;
-    font-size: larger;
-  }
-  
-  /* =========  Mobile tweak  ========= */
-  @media (max-width: 640px) {
-    .accordion-section {
-      width: 95%;
-    }
-    .accordion-header {
-      font-size: 1.05rem;
-      padding: 0.85rem 1rem;
-    }
-  }
-</file>
-
 <file path="src/components/home/Accordian.js">
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -3277,6 +3187,11 @@ const quotes = [
     "Evan has taken three courses with me in web development (both front end and back end) where his final projects were all top notch. His work ethic to complete tasks on time, the work itself excellent and his ability to learn above and beyond are all traits to be envied by his peers.",
     "Robert Erickson Senior Lecturer Emeritus Computer Science",
     "University of Vermont"
+  ],
+  [
+    "Evan has a real problem-solving mindset, and is very quick to learn the tools and technologies needed to build web products. He was able to wrangle older technology while leveraging modern frameworks to build a useful piece of civic tech in the VTBillTracker. Evan showed a ton of initiative, built a great map interface, and connected it all in an efficient way manner, resulting in a great end product.",
+    "Ben Cooley, Research Data Visualization Engineer",
+    "University of Vermont"
   ]
 ];
 
@@ -3293,7 +3208,7 @@ export default function QuoteCarousel() {
 
   useEffect(() => {
     if (measureRef.current) {
-      setContainerHeight(measureRef.current.offsetHeight + 10);
+      setContainerHeight(measureRef.current.offsetHeight + 40);
     }
   }, [index]);
 
@@ -4656,7 +4571,7 @@ import '@testing-library/jest-dom';
       name="description"
       content="Evan Trafton's Website"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -4774,99 +4689,86 @@ const UnderConstruction = () => {
 export default UnderConstruction;
 </file>
 
-<file path="src/components/home/FeaturedProject.css">
-.f-project-wrapper {
-    display: flex;
+<file path="src/components/home/Accordian.css">
+/* =========  Accordion Wrapper  ========= */
+.accordion-section {
+    width: 80%;                 /* or 100% if it lives in a narrow parent */
+    margin: 0 0 1.5rem;      /* centered with bottom gap */
+    margin-left:0;
+    border: 2px solid #d0d0d0;
+    border-radius: 10px;
+    background: #fafafa;
+    overflow: hidden;           /* clips animated height changes */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    
+    display: flex;           
+    flex-direction: column;   
+  }
+  
+  /* =========  Header (clickable)  ========= */
+  .accordion-header {
+    all: unset;                 /* strip default button styles */
+    box-sizing: border-box;
     width: 100%;
-    background-color: #f9f9f9;
-    border-radius: 20px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.featured-projects-section {
-    margin: 2rem auto;
+    padding: 1rem 1.25rem;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-radius: 1rem;
-    padding: 2rem;
-    background-color: #f9f9f9;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-.f-project-thumbnail {
-    flex: 0 0 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.f-project-thumbnail img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-}
-
-.f-project-content-container {
-    width: 65%;
-    display: flex;
-    flex-direction: column !important;
-    justify-content: space-between;
-    padding-left: 1.5rem;
-}
-
-.f-project-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #222;
-}
-
-.f-project-short-description {
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 1rem;
-}
-
-.f-project-skill-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.skill-pill {
-    color: #333 !important;
-    background-color: #e0e0e0;
-    padding: 0.3rem 0.75rem !important;
-    border-radius: 6px;
-    color: white;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-.f-project-link{
-    margin-top: 2%;
-    color: #333 !important;
-    background-color: #e0e0e0;
-    padding: .8rem 1.5rem !important;
-    border-radius: 6px;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.f-project-link:hover {
-    background-color: #7a7a7a;
-    color: #000;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+    user-select: none;
+    transition: background 0.2s ease;
+  }
+  
+  .accordion-header:hover {
+    background: #f0f0f0;
+  }
+  
+  /* =========  Arrow Icon  ========= */
+  .accordion-icon {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+  }
+  
+  /* rotate when open (matching aria-expanded) */
+  .accordion-header[aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
+  }
+  
+  /* =========  Content Wrapper  ========= */
+  /* height + opacity animation handled by Framer Motion,
+     but we still need padding and typography */
+    .accordion-content {
+    display: flex;          /* ← NEW */
+    flex-direction: column; /* ← NEW */
+    padding: 0 1.25rem 1rem;
+    box-sizing: border-box;
+    gap: 0.25rem;           /* optional: even space between skills */
+    }
+      
+  
+  /* =========  Example child styling  ========= */
+  .accordion-content .skill {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    padding: 0.3rem 0;
+    width:100%;
+    font-size: larger;
+  }
+  
+  /* =========  Mobile tweak  ========= */
+  @media (max-width: 640px) {
+    .accordion-section {
+      width: 95%;
+    }
+    .accordion-header {
+      font-size: 1.05rem;
+      padding: 0.85rem 1rem;
+    }
+  }
 </file>
 
 <file path="src/components/nav/NavIcons.css">
@@ -5134,6 +5036,71 @@ const Card = () => {
 export default Card;
 </file>
 
+<file path="src/components/work/Thumbnail.css">
+/* 1) Ensure the container is positioned relative so the overlay can sit on top */
+.thumbnail-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.8rem; /* match your existing thumbnail rounding */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 2) Hover‐state styling for the container (scale + shadow) */
+.thumbnail-container:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+/* 3) The <img> inside */
+.thumbnail-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.8rem; /* match container corners */
+}
+
+/* 4) Overlay that sits on top of the image (hidden initially) */
+.thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* 33% opaque black background */
+  background-color: rgba(0, 0, 0, 0.33);
+
+  /* Center content vertically & horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Start fully transparent */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none; /* so it doesn't block hover events on the container */
+}
+
+/* 5) Reveal overlay on hover */
+.thumbnail-container:hover .thumbnail-overlay {
+  opacity: 1;
+  pointer-events: auto; /* now you could hover or click inside overlay if needed */
+}
+
+/* 6) The description text inside the overlay */
+.short-description {
+  color: #fff;
+  font-size: 1rem;       /* adjust as needed */
+  text-align: center;
+  padding: 0 0.5rem;     /* a bit of horizontal padding if it wraps */
+  line-height: 1.4;      /* improve readability */
+}
+</file>
+
 <file path="src/index.css">
 body {
   margin: 0;
@@ -5362,51 +5329,107 @@ yarn-debug.log*
 yarn-error.log*
 </file>
 
-<file path="src/components/home/FeaturedProject.js">
-import React from "react";
-import { Link } from "react-router-dom";
+<file path="src/components/home/FeaturedProject.css">
+.f-project-wrapper {
+    display: flex;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
 
+/* .f-project-wrapper:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.01);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.3),
+        0 6px 20px rgba(0, 0, 0, 0.19);
 
-import projects from '../work/ProjectData/projects.js';
-import './FeaturedProject.css';
+} */
+.featured-projects-section {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
 
-const FeaturedProject = ({ onSelect }) => {
-    const featuredProjects = projects.filter(p => p.FeaturedProject === true);
+.f-project-thumbnail {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    return (
-        <div className="featured-projects-section">
+.f-project-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
 
-            {featuredProjects.map((project) => (
-                <div
-                    className="f-project-wrapper"
-                    key={project.id}
-                    onClick={() => onSelect && onSelect(project.id)}
-                >
-                    <div className="f-project-thumbnail">
-                        <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
-                    </div>
+.f-project-content-container {
+    width: 65%;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+}
 
-                    <div className="f-project-content-container">
-                        <div className="f-project-title">{project.title}</div>
-                        <div className="f-project-short-description">{project.shortDescription}</div>
-                        <div className="f-project-skill-container">
-                            {project.skills.map((skill, index) => (
-                                <div className="skill-pill" key={index}>
-                                    {skill}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            ))}
-            <Link to="/work" className="f-project-link">
-                View All Projects
-            </Link>
-        </div>
-    );
-};
+.f-project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
 
-export default FeaturedProject;
+.f-project-short-description {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.f-project-skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-pill {
+    color: #333 !important;
+    background-color: #e0e0e0;
+    padding: 0.3rem 0.75rem !important;
+    border-radius: 6px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.f-project-link{
+    margin-top: 2%;
+    color: #333 !important;
+    background-color: #e0e0e0;
+    padding: .8rem 1.5rem !important;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.f-project-link:hover {
+    background-color: #7a7a7a;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 </file>
 
 <file path="src/components/nav/NavBar.js">
@@ -5435,215 +5458,87 @@ const NavBar = () => {
 export default NavBar;
 </file>
 
-<file path="src/components/work/DetailView.css">
-.header-container{
-    display: flex;
-    flex-direction: row;
-}
-.header{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-}
-.detail-title{
-    margin:0em;
-    padding-left: 10%;
-    padding-top:1em;
-    font-size: 2em;
-    text-align: left;
-}
-.detail-date{
-    padding-left:10%;  
-    padding-top:.6em;  
-    margin:0%;
-    font-weight: 400;
-}
-.header-links{
-    width:30%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    gap:2em;
-    padding-left:15%;
-    padding-top:1em;
-}
+<file path="src/components/home/FeaturedProject.js">
+// FeaturedProject.js
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
-.header-links a img{
-    width:2.5rem;
-    height: 2.5rem;
+import projects from "../work/ProjectData/projects.js";
+import "./FeaturedProject.css";
 
-}
-.header-container a img:hover{
-transform: scale(1.1);
-}
+/*import DetailView from "../work/DetailView.js";
+import "../work/DetailView.css"; // Ensure this is imported for styles */
 
-.icon-disabled {
-    opacity: 0.0;      /* Make the image partially transparent */
-    cursor: default;   /* Change cursor to default */
-    pointer-events: none; /* Disable interactions */
-}
+const FeaturedProject = () => {
+  // 1. Grab only the projects marked as featured
+  const featuredProjects = projects.filter((p) => p.FeaturedProject === true);
 
-detail-view{
-    border-radius:1.8em;
-}
-.detail-view {
-    /* Optional: Add smooth scrolling */
-    scroll-behavior: smooth;
-    overflow-y: auto; /* Ensure vertical scrolling */
-    padding-right: 10px;
-}
+  // 2. Keep track of which project (by id) is currently “open” in the DetailView
+  const [selected, setSelected] = useState(null);
 
-/* Customize scrollbar appearance */
-.detail-view::-webkit-scrollbar {
-    width: 10px !important; /* Adjust scrollbar width */
-    background-color: rgba(0, 0, 0, 0) !important;
+  return (
+    <>
+      <div className="featured-projects-section">
+        {featuredProjects.map((project) => (
+          <motion.div
+            className="f-project-wrapper"
+            key={project.id}
+            // 3. When the user clicks this card, set it as “selected”
+            onClick={() => setSelected(project.id)}
+          >
+            {/* 
+              4. If you want a shared-layout animation between the thumbnail 
+                 and the DetailView, wrap the image (or a container) in a motion element 
+                 with layoutId matching project.id. 
+                 
+                 ↳ In DetailView, the outer <motion.div layoutId={selected} /> will match this.
+            */}
+            <div className="f-project-thumbnail">
+              <motion.img
+                src={project.thumbnail}
+                alt={`${project.title} thumbnail`}
+                layoutId={project.id}
+                style={{ width: "100%", height: "auto", borderRadius: "15px", objectFit: "cover" }}
+              />
+            </div>
 
-}
+            <div className="f-project-content-container">
+              <div className="f-project-title">{project.title}</div>
+              <div className="f-project-short-description">
+                {project.shortDescription}
+              </div>
+              <div className="f-project-skill-container">
+                {project.skills.map((skill, idx) => (
+                  <div className="skill-pill" key={idx}>
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        ))}
 
-.detail-view::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    border-radius: 10px !important;
-    margin-right: -10px !important;
-}
+        {/* “View All Projects” link stays the same */}
+        <Link to="/work" className="f-project-link">
+          View All Projects
+        </Link>
+      </div>
 
-.detail-parent{
-    display: flex;
-}
+      {/* 5. AnimatePresence will mount/unmount the DetailView */}
+      {/*<AnimatePresence>
+        {selected && (
+          <DetailView
+            selected={selected}
+            onClose={() => setSelected(null)}
+          />
+        )}
+      </AnimatePresence>
+          */}    </>
+  );
+};
 
-.detail-img-container{
-    width:55%;
-    padding: 2.2em 2em 2em 3.6em;
-    border-radius: 15%;
-}
-.detail-img{
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.detail-description{
-    padding: 1em 1em;
-}
-
-.detail-container{
-    width:45%;
-    display: flex;
-    flex-direction: column;
-}
-
-.skills-container {
-    padding: 0em 1em;
-}
-
-.skills-container h3 {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-    color: #333;
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em; /* Space between skill boxes */
-    padding: 0;
-    list-style-type: none;
-    margin: 0;
-}
-
-.skill-item {
-    background-color: #e0e0e0; /* Light gray background */
-    color: #333;
-    padding: 0.4em 0.8em;
-    border-radius: 8px; /* Rounded corners */
-    font-size: 0.9em;
-    white-space: nowrap; /* Prevents text from wrapping to next line */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
-}
-
-/* Container for the image gallery */
-.img-gallery {
-    display: flex;
-    flex-direction: column;  /* Stack images vertically */
-    align-items: center;     /* Center images horizontally */
-    gap: 1em;                /* Space between images */
-    width: 100%;             /* Full width of container */
-    padding: 1em 0;          /* Padding at top and bottom */
-}
-
-/* Individual images in the gallery */
-.one-gallery-img {
-    width: 90%;              /* Each image takes up 90% of the container width */
-    max-width: 600px;        /* Optional max width for larger screens */
-    border-radius: 8px;      /* Slight border radius for styling */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-</file>
-
-<file path="src/pages/Work.css">
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3em;
-    padding: 4em;
-    justify-content: center; /* Center-align cards */
-}
-
-.thumbnail {
-    flex: 1 1 calc(30% - 20px);
-    aspect-ratio: 16 / 9;       
-    overflow: hidden;
-    border-radius: 1.8rem;
-    background-color: #f0f0f0;
-    border: solid black 1.5px;
-
-}
-
-.thumbnail:hover {
-    transform: scale(1.01);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-
-/* Image styling */
-.thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1.8rem;
-}
-
-/* Force 2-column layout when only 1 card is left in a row on large screens */
-@media (min-width: 1200px) {
-    .card-container > :nth-last-child(1):nth-child(3n + 1),
-    .card-container > :nth-last-child(1):nth-child(3n + 2) {
-        flex: 1 1 calc(49% - 20px); /* Adjust to two columns */
-        flex-grow: 0;
-        flex-shrink: 0;
-    }
-}
-
-/* Medium screen: Adjust to two columns */
-@media (max-width: 1200px) {
-    .thumbnail {
-        flex: 1 1 calc(49% - 20px);
-    }
-}
-
-/* Small screen: Single column */
-@media (max-width: 750px) {
-    .thumbnail {
-        flex: 1 1 100%;
-    }
-}
-
-.card-title {
-    background-color: rgba(0, 0, 0, 0.90);
-    padding: 1em;
-    border-radius: 1.8rem 1.8rem 0 0;
-    text-align: center;
-    font-weight: bold;
-    color:white;
-}
+export default FeaturedProject;
 </file>
 
 <file path="src/components/nav/NavBar.css">
@@ -5816,37 +5711,152 @@ const updateSize = () => {
 export default PerlinNoiseCircle;
 </file>
 
-<file path="src/components/work/Thumbnail.js">
-import { motion } from "framer-motion";
-import { useEffect } from "react";
-// Import the static image
-//import tempThumbnail from './ProjectData/images/temp.webp';
-
-function Thumbnail({ id, projectName, projectThumbnail, setSelected }) {
-    useEffect(() => {
-        const img = new Image();
-        //img.src = tempThumbnail; // Preload the bigger version
-    }, []);
-
-    return (
-        <motion.div
-            className="thumbnail"
-            layoutId={id}
-            style={{
-                backgroundSize: "cover",
-                backgroundImage: `url(${projectThumbnail})`,
-                borderRadius: "30px",
-                overflow: "hidden", // Ensure image respects the border-radius
-                cursor: "pointer"   // Add a pointer cursor for better UX
-            }}
-            onTap={() => setSelected(id)}
-        >
-            <div className="card-title">{projectName}</div>
-        </motion.div>
-    );
+<file path="src/components/work/DetailView.css">
+.overlay{
+    margin: 0 !important;
 }
 
-export default Thumbnail;
+.header-container{
+    display: flex;
+    flex-direction: row;
+}
+.header{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.detail-title{
+    margin:0em;
+    padding-left: 10%;
+    padding-top:1em;
+    font-size: 2em;
+    text-align: left;
+}
+.detail-date{
+    padding-left:10%;  
+    padding-top:.6em;  
+    margin:0%;
+    font-weight: 400;
+}
+.header-links{
+    width:30%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap:2em;
+    padding-left:15%;
+    padding-top:1em;
+}
+
+.header-links a img{
+    width:2.5rem;
+    height: 2.5rem;
+
+}
+.header-container a img:hover{
+transform: scale(1.1);
+}
+
+.icon-disabled {
+    opacity: 0.0;      /* Make the image partially transparent */
+    cursor: default;   /* Change cursor to default */
+    pointer-events: none; /* Disable interactions */
+}
+
+detail-view{
+    border-radius:1.8em;
+}
+.detail-view {
+    /* Optional: Add smooth scrolling */
+    scroll-behavior: smooth;
+    overflow-y: auto; /* Ensure vertical scrolling */
+    padding-right: 10px;
+}
+
+/* Customize scrollbar appearance */
+.detail-view::-webkit-scrollbar {
+    width: 10px !important; /* Adjust scrollbar width */
+    background-color: rgba(0, 0, 0, 0) !important;
+
+}
+
+.detail-view::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 10px !important;
+    margin-right: -10px !important;
+}
+
+.detail-parent{
+    display: flex;
+    padding-bottom: 5%;
+}
+
+.detail-img-container{
+    width:55%;
+    padding: 2.2em 2em 2em 3.6em;
+    border-radius: 15%;
+}
+.detail-img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.detail-description{
+    padding: 1em 1em;
+}
+
+.detail-container{
+    width:45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-container {
+    padding: 0em 1em;
+}
+
+.skills-container h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em; /* Space between skill boxes */
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.skill-item {
+    background-color: #e0e0e0; /* Light gray background */
+    color: #333;
+    padding: 0.4em 0.8em;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 0.9em;
+    white-space: nowrap; /* Prevents text from wrapping to next line */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+}
+
+/* Container for the image gallery */
+.img-gallery {
+    display: flex;
+    flex-direction: column;  /* Stack images vertically */
+    align-items: center;     /* Center images horizontally */
+    gap: 1em;                /* Space between images */
+    width: 100%;             /* Full width of container */
+    padding: 1em 0;          /* Padding at top and bottom */
+}
+
+/* Individual images in the gallery */
+.one-gallery-img {
+    width: 90%;              /* Each image takes up 90% of the container width */
+    max-width: 600px;        /* Optional max width for larger screens */
+    border-radius: 8px;      /* Slight border radius for styling */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 </file>
 
 <file path="src/pages/Contact.js">
@@ -5915,6 +5925,131 @@ const Contact = () => {
 };
 
 export default Contact;
+</file>
+
+<file path="src/pages/Work.css">
+.toggle-switch-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 240px;
+  height: 48px;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  user-select: none;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+.toggle-switch span {
+  z-index: 1;
+  flex: 1;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.toggle-switch span.active {
+  color: #ffffff;
+}
+
+.toggle-indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: 50%;
+  background-color: #333;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.toggle-indicator.left {
+  left: 4px;
+}
+
+.toggle-indicator.right {
+  left: calc(50% - 4px);
+}
+
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    padding: 4em;
+    justify-content: center; /* Center-align cards */
+}
+
+.thumbnail {
+    flex: 1 1 calc(30% - 20px);
+    aspect-ratio: 16 / 9;       
+    overflow: hidden;
+    border-radius: 1.8rem;
+    background-color: #f0f0f0;
+    border: solid black 1.5px;
+
+}
+
+.thumbnail:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Image styling */
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.8rem;
+}
+
+/* Force 2-column layout when only 1 card is left in a row on large screens */
+@media (min-width: 1200px) {
+    .card-container > :nth-last-child(1):nth-child(3n + 1),
+    .card-container > :nth-last-child(1):nth-child(3n + 2) {
+        flex: 1 1 calc(49% - 20px); /* Adjust to two columns */
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
+
+/* Medium screen: Adjust to two columns */
+@media (max-width: 1200px) {
+    .thumbnail {
+        flex: 1 1 calc(49% - 20px);
+    }
+}
+
+/* Small screen: Single column */
+@media (max-width: 750px) {
+    .thumbnail {
+        flex: 1 1 100%;
+    }
+}
+
+.card-title {
+    background-color: rgba(0, 0, 0, 0.90);
+    padding: 1em;
+    border-radius: 1.8rem 1.8rem 0 0;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+}
 </file>
 
 <file path="src/App.css">
@@ -6083,6 +6218,98 @@ ME      </motion.text>
 export default VennDiagram;
 </file>
 
+<file path="src/components/work/Thumbnail.js">
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+// Import the static image
+//import tempThumbnail from './ProjectData/images/temp.webp';
+import './Thumbnail.css'; 
+
+function Thumbnail({ id, projectName, projectThumbnail, shortDescription, setSelected }) {
+    useEffect(() => {
+        const img = new Image();
+        //img.src = tempThumbnail; // Preload the bigger version
+    }, []);
+
+    return (
+        <>
+            <motion.div
+                className="thumbnail  thumbnail-container"
+                layoutId={id}
+                style={{
+                    backgroundSize: "cover",
+                    backgroundImage: `url(${projectThumbnail})`,
+                    borderRadius: "30px",
+                    overflow: "hidden", // Ensure image respects the border-radius
+                    cursor: "pointer"   // Add a pointer cursor for better UX
+                }}
+                onTap={() => setSelected(id)}
+            >            
+            <div className="thumbnail-overlay">
+                <span className="short-description">
+                {shortDescription}
+                </span>
+            </div>
+                <div className="card-title">{projectName}</div>
+            </motion.div>
+
+    </>
+    );
+}
+
+export default Thumbnail;
+</file>
+
+<file path="package.json">
+{
+  "name": "portfolio-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@builder.io/react": "^4.0.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.2",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.21.1",
+    "framer-motion": "^11.2.12",
+    "lucide-react": "^0.511.0",
+    "p5": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "react-spring": "^9.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+</file>
+
 <file path="src/components/work/DetailView.js">
 import { motion } from "framer-motion";
 import React, { useEffect } from "react";
@@ -6110,6 +6337,7 @@ function DetailView({ selected, onClose }) {
         <>
             <motion.div
                 className="overlay"
+                margin="0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -6135,11 +6363,11 @@ function DetailView({ selected, onClose }) {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 style={{
                     position: "fixed",
-                    top: "15%",
-                    left: "15%",
+                    top: "7.5%",
+                    left: "10%",
                     transform: "translate(-50%, -50%)",
-                    width: "70%",
-                    height: "80%",
+                    width: "80%",
+                    height: "85%",
                     overflowY: "auto",
                     background: "white",
                     borderRadius: "30px",
@@ -6207,211 +6435,249 @@ import tempPhoto from './images/temp.JPG';
 
 const projects = [
   {
-      id: "1",
-      title: "OurOutdoors",
-      shortDescription: "A social media platform for outdoor enthusiasts to connect and coordinate activities.",
-      description: "OurOutdoors is a social media platform tailored for outdoor enthusiasts who want to explore, connect, and coordinate activities together. Built using the MERN stack (MongoDB, Express, React, and Node.js) using a REST API, the app provides a responsive, scalable solution for users to organize and participate in outdoor events, rides, and excursions. Through a range of interactive features, OurOutdoors allows users to both request and offer rides, create and join events, post comments, manage friend connections, and react to activities through likes.",
-      thumbnail: '/images/projects/ourOutdoors.webp',
-      skills: ["RoadMapping", "React.js", "Node.js", "Express.js", "Mongoose", "REST API"],
-      liveLink: "",
-      gitLink: "https://github.com/ettrafto/ouroutdoors",
-      date: "2024",
-      images: [],
-      FeaturedProject: true
+    id: "1",
+    title: "OurOutdoors",
+    shortDescription: "A social media platform for outdoor enthusiasts to connect and coordinate activities.",
+    description: "OurOutdoors is a social media platform tailored for outdoor enthusiasts who want to explore, connect, and coordinate activities together. Built using the MERN stack (MongoDB, Express, React, and Node.js) using a REST API, the app provides a responsive, scalable solution for users to organize and participate in outdoor events, rides, and excursions. Through a range of interactive features, OurOutdoors allows users to both request and offer rides, create and join events, post comments, manage friend connections, and react to activities through likes.",
+    thumbnail: "/images/projects/ourOutdoors.webp",
+    skills: ["RoadMapping", "React.js", "Node.js", "Express.js", "Mongoose", "REST API"],
+    liveLink: "",
+    gitLink: "https://github.com/ettrafto/ouroutdoors",
+    date: "2024",
+    images: [],
+    FeaturedProject: true,
+    isTech: true
   },
   {
-      id: "2",
-      title: "Vermont Legislature Bill Lookup",
-      description: "My Vermont Legislature Bill Site is an open-source web application developed to help Vermont citizens easily access and understand the bill activities of their local legislators. Designed with a district-focused approach, the application allows users to select specific districts on an interactive map, offering a localized view of legislative actions by representatives from those areas. Once a district is chosen, users can sort and filter bills by sponsorship involvement, enabling them to track and monitor their legislators’ contributions more closely.",
-      thumbnail: '/images/projects/vtLegistlature1.webp',
-      skills: ["Project Management", "React.js", "Node.js", "Express.js", "SQL Lite", "APIs", "D3", "Framer Motion"],
-      liveLink: "",
-      gitLink: "https://github.com/ettrafto/CRVT-Local-Legislators",
-      date: "Fall 2024",
-      images: [],
-      FeaturedProject: false
-
+    id: "2",
+    title: "Vermont Legislature Bill Lookup",
+    shortDescription: "VTBillTracker.org is an open-source, web platform designed to help Vermont citizens easily find detailed bill activity for their legislators.",
+    description: "My Vermont Legislature Bill Site is an open-source web application developed to help Vermont citizens easily access and understand the bill activities of their local legislators. Designed with a district-focused approach, the application allows users to select specific districts on an interactive map, offering a localized view of legislative actions by representatives from those areas. Once a district is chosen, users can sort and filter bills by sponsorship involvement, enabling them to track and monitor their legislators’ contributions more closely.",
+    thumbnail: "/images/projects/vtLegistlature1.webp",
+    skills: ["Project Management", "React.js", "Node.js", "Express.js", "SQL Lite", "APIs", "D3", "Framer Motion"],
+    liveLink: "",
+    gitLink: "https://github.com/ettrafto/CRVT-Local-Legislators",
+    date: "Fall 2024",
+    images: [],
+    FeaturedProject: true,
+    isTech: true
   },
   {
-      id: "3",
-      title: "ScubaDiver",
-      description: "For the final project in CS2300: Advanced Programming, I developed a 3D scuba diving game using vanilla OpenGL and GLSW. This project simulates an underwater environment where players explore randomly generated cave systems to collect treasure. The user can adjust their swimming speed, impacting the rate of oxygen depletion. Oxygen levels vary based on movement speed, and the game tracks and displays elapsed time and remaining oxygen to challenge the player. \n \nRandom Cave Generation: The cave generation algorithm uses procedural methods to create unique pathways each time the game is played, ensuring a new experience with every session. The randomization algorithm accounts for open spaces, narrow passages, and branching paths, making each underwater cave system intricate and rewarding to explore.",
-      thumbnail: '/images/projects/scubaDiver3.gif',
-      skills: ["C++", "OpenGL", "GLSW"],
-      liveLink: "",
-      gitLink: "https://github.com/ettrafto/scubaDiver",
-      date: "Fall 2023",
-      images: ['/images/projects/scubaDiver1.webp','/images/projects/scubaDiver5.webp','/images/projects/scubaDiver2.webp'],
-      FeaturedProject: true
+    id: "3",
+    title: "ScubaDiver",
+    shortDescription: "",
+    description: "For the final project in CS2300: Advanced Programming, I developed a 3D scuba diving game using vanilla OpenGL and GLSW. This project simulates an underwater environment where players explore randomly generated cave systems to collect treasure. The user can adjust their swimming speed, impacting the rate of oxygen depletion. Oxygen levels vary based on movement speed, and the game tracks and displays elapsed time and remaining oxygen to challenge the player.\n\nRandom Cave Generation: The cave generation algorithm uses procedural methods to create unique pathways each time the game is played, ensuring a new experience with every session. The randomization algorithm accounts for open spaces, narrow passages, and branching paths, making each underwater cave system intricate and rewarding to explore.",
+    thumbnail: "/images/projects/scubaDiver3.gif",
+    skills: ["C++", "OpenGL", "GLSW"],
+    liveLink: "",
+    gitLink: "https://github.com/ettrafto/scubaDiver",
+    date: "Fall 2023",
+    images: ["/images/projects/scubaDiver1.webp", "/images/projects/scubaDiver5.webp", "/images/projects/scubaDiver2.webp"],
+    FeaturedProject: false,
+    isTech: true
   },
   {
-      id: "4",
-      title: "MyMoney",
-      description: "The MyMoney web application is designed to help users visualize and manage their personal finances effectively. Utilizing CanvasJS, the app presents users' spending patterns through interactive graphs, offering clear insights into their financial habits. Users can set and monitor spending goals, track progress, and make informed decisions to achieve their financial objectives. The application features a user-friendly interface with sections for account balances, recent transactions, and budget goals, ensuring a comprehensive overview of one's financial status. By combining data visualization with goal-setting functionalities, MyMoney serves as a valuable tool for individuals aiming to enhance their financial well-being.",
-      thumbnail: '/images/projects/mymoney1.webp',
-      skills: ["HTML", "PHP", "CSS", "Canvas.js", "WebDB"],
-      liveLink: "",
-      gitLink: "https://github.com/ettrafto/mymoney",
-      date: "Fall 2023",
-      images: ['/images/projects/mymoney2.webp'],
-      FeaturedProject: true
+    id: "4",
+    title: "MyMoney",
+    shortDescription: "",
+    description: "The MyMoney web application is designed to help users visualize and manage their personal finances effectively. Utilizing CanvasJS, the app presents users' spending patterns through interactive graphs, offering clear insights into their financial habits. Users can set and monitor spending goals, track progress, and make informed decisions to achieve their financial objectives. The application features a user-friendly interface with sections for account balances, recent transactions, and budget goals, ensuring a comprehensive overview of one's financial status. By combining data visualization with goal-setting functionalities, MyMoney serves as a valuable tool for individuals aiming to enhance their financial well-being.",
+    thumbnail: "/images/projects/mymoney1.webp",
+    skills: ["HTML", "PHP", "CSS", "Canvas.js", "WebDB"],
+    liveLink: "",
+    gitLink: "https://github.com/ettrafto/mymoney",
+    date: "Fall 2023",
+    images: ["/images/projects/mymoney2.webp"],
+    FeaturedProject: false,
+    isTech: true
   },
   {
     id: "5",
     title: "MySafari",
+    shortDescription: "",
     description: "MySafari is a web project designed to document and share my photography from my family's safari experience in Tanzania. Over the course of a week, this journey highlights encounters with diverse wildlife. The Home Page introduces the safari, capturing the essence of the adventure with background information concerning Tanzania and the history of safari. A Featured Section showcases selected highlights, including significant wildlife sightings. The Animals Page presents detailed information and photographs of the various species observed, offering the user the ability to sort by animal. On the about me page I selected some silly pictures of myself and included a form with the ability to contact me.",
-    thumbnail: '/images/projects/mysafari1.webp',
+    thumbnail: "/images/projects/mysafari1.webp",
     skills: ["HTML", "PHP", "CSS", "WebDB"],
     liveLink: "",
     gitLink: "https://github.com/ettrafto/mysafari",
     date: "Fall 2023",
-    images: ['/images/projects/mysafari4.webp','/images/projects/mysafari2.webp','/images/projects/mysafari3.webp'],
-    FeaturedProject: false
-},
-{
+    images: ["/images/projects/mysafari4.webp", "/images/projects/mysafari2.webp", "/images/projects/mysafari3.webp"],
+    FeaturedProject: false,
+    isTech: true
+  },
+  {
     id: "6",
     title: "Mastermind",
-    description:'I recreated the classic board game mastermind in React! Click Above to play!',
-    thumbnail: '/images/projects/mastermind.webp',
-    skills: ["React","CSS"],
+    shortDescription: "",
+    description: "I recreated the classic board game mastermind in React! Click Above to play!",
+    thumbnail: "/images/projects/mastermind.webp",
+    skills: ["React", "CSS"],
     liveLink: "https://evantrafton.com/mastermind",
     gitLink: "https://github.com/ettrafto/mastermind",
     date: "Summer 2024",
-    images: [] ,
-    FeaturedProject: false
-},
-{
-  id: "7",
-  title: "Photosift",
-  description: "",
-  thumbnail: '/images/projects/photosift1.webp',
-  skills: ["Javascript", "CSS", "Human-Computer-Interaction"],
-  liveLink: "",
-  gitLink: "",  
-  date: "Fall 2023",
-  images: ['/images/projects/photosift2.webp'],
-  FeaturedProject: false
-}
-/*,
-{
-  id: "8",
-  title: "Are We Cyborgs?",
-  description: "",
-  thumbnail: '/images/mysafari1.webp',
-  skills: ["D3", "React", "CSS"],
-  liveLink: "",
-  gitLink: "https://github.com/ettrafto/Are-We-Cyborgs-DataNarrative",
-  date: "Fall 2023",
-  images: ['/images/mysafari4.webp','/images/mysafari2.webp','/images/mysafari3.webp']
-}*/
+    images: [],
+    FeaturedProject: false,
+    isTech: true
+  },
+  {
+    id: "7",
+    title: "Photosift",
+    shortDescription: "",
+    description: "",
+    thumbnail: "/images/projects/photosift1.webp",
+    skills: ["Javascript", "CSS", "Human-Computer-Interaction"],
+    liveLink: "",
+    gitLink: "",
+    date: "Fall 2023",
+    images: ["/images/projects/photosift2.webp"],
+    FeaturedProject: false,
+    isTech: true
+  },
+
+
+  /*{
+    id: "8",
+    title: "CaveDiver",
+    shortDescription: "",
+    description: "The game, a 2D scuba diver cave-diving horror experience, follows an explorer descending into murky waters. Players navigate procedurally generated caves while managing oxygen levels, evading creatures, and finding treasure. Equipped with a harpoon and limited torchlight, strategic resource management is key. Core features include realistic buoyancy, dynamic lighting for suspense, cave mapping, and atmospheric tension, exploration, and resource management.",
+    thumbnail: "",
+    skills: ["Godot", "Project Management", "Project Planning"],
+    liveLink: "",
+    gitLink: "https://github.com/ettrafto/CaveDiver",
+    date: "Spring 2025",
+    images: [],
+    FeaturedProject: true,
+    isTech: true
+  },
+  {
+    id: "9",
+    title: "FileNodes",
+    shortDescription: "",
+    description: "Experimenting in displaying files as nodes on a graph",
+    thumbnail: "",
+    skills: ["JavaScript", "Python", "Web Sockets"],
+    liveLink: "",
+    gitLink: "",
+    date: "Spring 2025",
+    images: [],
+    FeaturedProject: false,
+    isTech: true
+  },*/
+  {
+    id: "20",
+    title: "Why Adventure",
+    shortDescription: "",
+    description: "In my fourth project for Visual Communication, I created a short video combining rotoscoping and text animation with After Effects and Premiere.",
+    thumbnail: "/images/projects/WhyAdventure.webp",
+    skills: ["Adobe Premiere", "Adobe After Effects"],
+    liveLink: "https://www.youtube.com/watch?v=RlEIYd5G7mc",
+    gitLink: "",
+    date: "Spring 2025",
+    images: [],
+    FeaturedProject: false,
+    isTech: false
+  },
+  {
+    id: "21",
+    title: "ET Intro Animation",
+    shortDescription: "",
+    description: "Animated an introduction title sequence and logo reveal using After Effects.",
+    thumbnail: "/images/projects/EtAnimation.webp",
+    skills: ["Adobe After Effects", "Adobe Illustrator"],
+    liveLink: "",
+    gitLink: "",
+    date: "Spring 2025",
+    images: [],
+    FeaturedProject: false,
+    isTech: false
+  },
+  {
+    id: "22",
+    title: "Do Not Go Gentle into that Goodnight",
+    shortDescription: "",
+    description: "Created a typography-driven animation interpreting Dylan Thomas’s poem, using After Effects to animate text layers and effects.",
+    thumbnail: "/images/projects/DoNotGoGentleIntoThatGoodnight.webp",
+    skills: ["Adobe After Effects", "Adobe Illustrator"],
+    liveLink: "",
+    gitLink: "",
+    date: "Spring 2025",
+    images: [],
+    FeaturedProject: false,
+    isTech: false
+  },
+  {
+    id: "23",
+    title: "Phone Animation",
+    shortDescription: "",
+    description: "Designed a series of animations highlighting the dangers of phone addiction, using After Effects and Illustrator.",
+    thumbnail: "/images/projects/PhoneAnimation.webp",
+    skills: ["Adobe After Effects", "Adobe Illustrator"],
+    liveLink: "",
+    gitLink: "",
+    date: "Spring 2025",
+    images: [],
+    FeaturedProject: false,
+    isTech: false
+  },
+  /*
+  {
+    id: "24",
+    title: "Molokai Adventures",
+    shortDescription: "",
+    description: "Produced a short travel montage in Adobe Illustrator and After Effects, highlighting Molokai’s landscapes.",
+    thumbnail: "",
+    skills: ["Adobe Illustrator"],
+    liveLink: "",
+    gitLink: "",
+    date: "Spring 2024",
+    images: [],
+    FeaturedProject: false,
+    isTech: false
+  },
+  {
+    id: "25",
+    title: "Spicy Ramen",
+    shortDescription: "",
+    description: "Developed a cooking tutorial animation in Adobe Illustrator, simulating ramen preparation with animated ingredients.",
+    thumbnail: "",
+    skills: ["Adobe Illustrator"],
+    liveLink: "",
+    gitLink: "",
+    date: "Fall 2024",
+    images: [],
+    FeaturedProject: false,
+    isTech: false
+  },
+  {
+    id: "26",
+    title: "Google Doodle",
+    shortDescription: "",
+    description: "Created an interactive Google Doodle concept using HTML, CSS, and JavaScript.",
+    thumbnail: "",
+    skills: ["Adobe Illustrator"],
+    liveLink: "",
+    gitLink: "",
+    date: "Spring 2024",
+    images: [],
+    FeaturedProject: false,
+    isTech: false
+  },
+  {
+    id: "27",
+    title: "Are We Cyborgs?",
+    shortDescription: "",
+    description: "",
+    thumbnail: "/images/mysafari1.webp",
+    skills: ["Adobe Illustrator", "Data Visualization"],
+    liveLink: "",
+    gitLink: "https://github.com/ettrafto/Are-We-Cyborgs-DataNarrative",
+    date: "Fall 2023",
+    images: ["/images/mysafari4.webp", "/images/mysafari2.webp", "/images/mysafari3.webp"],
+    FeaturedProject: false,
+    isTech: false
+  }*/
 ];
 
 export default projects;
-</file>
-
-<file path="package.json">
-{
-  "name": "portfolio-frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@builder.io/react": "^4.0.1",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.2",
-    "emailjs-com": "^3.2.0",
-    "express": "^4.21.1",
-    "framer-motion": "^11.2.12",
-    "lucide-react": "^0.511.0",
-    "p5": "^1.9.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1",
-    "react-scripts": "5.0.1",
-    "react-spring": "^9.7.4",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
-}
-</file>
-
-<file path="src/pages/Work.js">
-import React, {useState} from 'react';
-import { motion, useIsPresent, AnimatePresence } from "framer-motion";
-
-import DetailView from '../components/work/DetailView';
-import Thumbnail from '../components/work/Thumbnail';
-import CardRefector from '../components/work/CardRefactor';
-
-
-import "./Work.css";
-
-import projects from '../components/work/ProjectData/projects.js';
-
-const Work = () => {
-  const isPresent = useIsPresent();
-  const [selected, setSelected] = useState(null);
-
-
-  return (
-    <>
-      <div className=''></div>
-       <motion.div
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-        style={{ originX: isPresent ? 0 : 1 }}
-        className="privacy-screen"
-      />
-
-
-      <div className="card-container"> 
-        {projects.map((project) => (
-              <Thumbnail
-                  className="card"
-                  key={project.id}
-                  id={project.id}
-                  projectThumbnail = {project.thumbnail}
-                  projectName={project.title}
-                  imageUrl={project.thumbnail}
-                  setSelected={setSelected}
-              />
-            ))}
-        </div>
-
-        <AnimatePresence>
-            {selected && <DetailView selected={selected} onClose={() => setSelected(null)} />}
-        </AnimatePresence>
-    </>
-);
-}
- 
-
-export default Work;
 </file>
 
 <file path="src/pages/About.js">
@@ -6612,6 +6878,75 @@ const App = () => {
 export default App;
 </file>
 
+<file path="src/pages/Work.js">
+import React, {useState} from 'react';
+import { motion, useIsPresent, AnimatePresence } from "framer-motion";
+
+import DetailView from '../components/work/DetailView';
+import Thumbnail from '../components/work/Thumbnail';
+import CardRefector from '../components/work/CardRefactor';
+
+
+import "./Work.css";
+
+import projects from '../components/work/ProjectData/projects.js';
+
+const Work = () => {
+  const isPresent = useIsPresent();
+  const [selected, setSelected] = useState(null);
+
+  const [view, setView] = useState("tech"); // 'tech' or 'creative'
+  const filteredProjects = projects.filter(p => (view === "tech" ? p.isTech : !p.isTech));
+
+  return (
+    <>
+      <div className=''></div>
+       <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className="privacy-screen"
+      />
+
+  {/* Toggle Button */}
+
+      <div className="toggle-switch-wrapper">
+        <div className="toggle-switch" onClick={() => setView(view === "tech" ? "creative" : "tech")}>
+          <div className={`toggle-indicator ${view === "tech" ? "left" : "right"}`} />
+          <span className={view === "tech" ? "active" : ""}>Technical</span>
+          <span className={view === "creative" ? "active" : ""}>Creative</span>
+        </div>
+      </div>
+
+
+      {/* Project Thumbnails */}
+      <div className="card-container">
+        {filteredProjects.map((project) => (
+          <Thumbnail
+            className="card"
+            key={project.id}
+            id={project.id}
+            projectThumbnail={project.thumbnail}
+            projectName={project.title}
+            shortDescription={project.shortDescription}
+            imageUrl={project.thumbnail}
+            setSelected={setSelected}
+          />
+        ))}
+      </div>
+
+        <AnimatePresence>
+            {selected && <DetailView selected={selected} onClose={() => setSelected(null)} />}
+        </AnimatePresence>
+    </>
+);
+}
+ 
+
+export default Work;
+</file>
+
 <file path="src/pages/Home.css">
 /* Base styles */
 * {
@@ -6672,7 +7007,7 @@ export default App;
 
 /* -------------  LAYOUT CONTAINER ------------- */
 .skills-container {
-  width: 45%;
+  width: 50%;
   padding: 2rem;
   display: flex;
   justify-content: center;
