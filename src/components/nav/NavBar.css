@@ -159,7 +159,7 @@ nav.navbar.menu-open {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
   .nav-name-container {
   flex: 0 0 70%; /* Take up 15% of navbar width */
 }

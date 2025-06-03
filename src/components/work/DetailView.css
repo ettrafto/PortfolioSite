@@ -89,6 +89,7 @@ detail-view{
 
 .detail-description{
     padding: 1em 1em;
+    font-size: 1.4em;
 }
 
 .detail-container{
@@ -99,6 +100,8 @@ detail-view{
 
 .skills-container {
     padding: 0em 1em;
+    width: 90%;
+    margin: 0 auto; /* Center the container */
 }
 
 .skills-container h3 {
@@ -139,7 +142,96 @@ detail-view{
 /* Individual images in the gallery */
 .one-gallery-img {
     width: 90%;              /* Each image takes up 90% of the container width */
-    max-width: 600px;        /* Optional max width for larger screens */
+    max-width: 900px;        /* Optional max width for larger screens */
     border-radius: 8px;      /* Slight border radius for styling */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+ 
+@media screen and (max-width: 768px) {
+  .detail-view {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 95%;
+    height: 90%;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: flex-start;
+    padding-left: 10%;
+
+  }
+
+  .header {
+    width: 100%;
+    padding-bottom: 1em;
+  }
+
+  .detail-title {
+    padding-left: 0;
+    font-size: 1.5em;
+  }
+
+.detail-date {
+  padding-left: 0;
+  padding-top: 0.6em;
+  margin: 0;
+  font-weight: 400;
+  text-align: left;
+}
+
+
+.header-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  padding-left: 0;
+  padding-top: 1em;
+}
+
+
+  .header-links a img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .detail-parent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-img-container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .detail-container {
+    width: 90%;
+  }
+
+  .detail-description {
+    font-size: 1.1em;
+    padding: 0.5rem 1rem;
+  }
+
+  .skills-container {
+    padding: 0.5em 1rem;
+  }
+
+  .skill-item {
+    font-size: 0.8em;
+  }
+
+  .img-gallery {
+    padding: 1em 0.5em;
+  }
+
+  .one-gallery-img {
+    width: 100%;
+  }
 }

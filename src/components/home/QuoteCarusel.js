@@ -26,16 +26,26 @@ export default function QuoteCarousel() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [containerHeight, setContainerHeight] = useState("auto");
+
+  const prevIndexRef = useRef(index);
+  const prevDirectionRef = useRef(direction);
   const measureRef = useRef();
+  const firstInteractionRef = useRef(true);
 
   const paginate = (newDirection) => {
+    const newIndex = (index + newDirection + quotes.length) % quotes.length;
+
+
+    prevIndexRef.current = index;
+    prevDirectionRef.current = newDirection;
     setDirection(newDirection);
-    setIndex((prev) => (prev + newDirection + quotes.length) % quotes.length);
+    setIndex(newIndex);
+    firstInteractionRef.current = false;
   };
 
   useEffect(() => {
     if (measureRef.current) {
-      setContainerHeight(measureRef.current.offsetHeight + 40);
+      setContainerHeight(300);
     }
   }, [index]);
 
@@ -50,13 +60,22 @@ export default function QuoteCarousel() {
         animate={{ height: containerHeight }}
         transition={{ duration: 0.3 }}
       >
-        <AnimatePresence initial={false} custom={direction} mode="wait">
+        <AnimatePresence initial={false} custom={prevDirectionRef.current} mode="wait">
           <motion.div
             key={index}
-            custom={direction}
-            initial={{ x: direction > 0 ? 300 : -300, opacity: 0 }}
+            custom={prevDirectionRef.current}
+            initial={() => {
+              const x = prevDirectionRef.current > 0 ? 300 : -300;
+              return { x, opacity: 0 };
+            }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: direction > 0 ? -300 : 300, opacity: 0 }}
+            exit={() => {
+              if (firstInteractionRef.current) {
+                return {};
+              }
+              const x = prevDirectionRef.current > 0 ? -300 : 300;
+              return { x, opacity: 0 };
+            }}
             transition={{ duration: 0.5 }}
           >
             <div className="quote-container" ref={measureRef}>
@@ -65,11 +84,32 @@ export default function QuoteCarousel() {
             </div>
           </motion.div>
         </AnimatePresence>
+        <div className="quote-indicators">
+        {quotes.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => {
+              if (i !== index) {
+                const newDirection = i > index ? 1 : -1;
+                prevIndexRef.current = index;
+                prevDirectionRef.current = newDirection;
+                setDirection(newDirection);
+                setIndex(i);
+                firstInteractionRef.current = false;
+              }
+            }}
+            className={`indicator-dot ${i === index ? "active" : ""}`}
+            aria-label={`Go to quote ${i + 1}`}
+          />
+        ))}
+      </div>
       </motion.div>
 
       <button className="arrow-button arrow-right" onClick={() => paginate(1)} aria-label="Next Quote">
         <ArrowRight />
       </button>
+      
+
     </div>
   );
 }

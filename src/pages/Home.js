@@ -35,7 +35,7 @@ const Home = () => {
           <PerlinNoiseCircle className="profile"/>
 
         </div>
-
+        
 
         <div className="home-container2">
           <div className="venn-diagram-container">
@@ -92,6 +92,14 @@ const Home = () => {
           </div>
 
         </div>
+        <div className='home-container5'>
+            <div className='reco-title'>Testamonials</div>
+          
+          <div className='recos-container' >
+            <QuoteCarousel />
+
+          </div>
+        </div>
 
         <div className='home-container3'>
 
@@ -123,14 +131,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='home-container5'>
-            <div className='reco-title'>Endorsements</div>
-          
-          <div className='recos-container' >
-            <QuoteCarousel />
 
-          </div>
-        </div>
 
       </div>
     </>

@@ -12,6 +12,7 @@
 }
 
 .modal-content {
+    padding-top:1%;
     background: #ffffff00;
     width: 70%;
     border-radius: 8px;
@@ -44,4 +45,75 @@
 /* Hide scrollbar for Firefox */
 .modal-content {
     scrollbar-width: none;
+}
+.resume-download{ 
+    margin-top:1%;
+    padding: 1% 5%;
+    width:15%;
+    max-height:7%;
+    border-radius: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease;
+
+}
+.resume-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+}
+.resume-download img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10%;
+}
+
+.resume-download:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .resume-download {
+    width: 80%;
+    padding: 0.75rem;
+    max-height: none;
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .resume-download img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .resume-text {
+    font-size: 1rem;
+  }
+  .resume-content {
+  }
+
+.resume-content img {
+    padding-top: 20px;
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    display: block; /* prevents extra space from inline image rendering */
+    object-fit: contain; /* ensures the full image fits */
+}
+
 }

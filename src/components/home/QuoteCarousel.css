@@ -2,12 +2,14 @@
   position: relative;
   width: 80%;
   max-width: 900px;
-  margin: 4rem auto 5rem auto;
-  padding: 0 1rem;
+  margin: 1rem auto 1rem auto;
+  padding: 0rem 1rem;
   min-height: 180px;
 
 }
 .quote-viewbox {
+  display: flex;
+  flex-direction: column;
   position: relative;
   min-height: 160px;
   width: 100%;
@@ -16,6 +18,8 @@
   justify-content: center;
   align-items: center;
 }
+
+
 
 
 .quote-content {
@@ -69,4 +73,72 @@
 
 .arrow-right {
   left: 100%;
+}
+
+.quote-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator-dot.active {
+  background-color: #333;
+}
+@media screen and (max-width: 768px) {
+  .quote-carousel {
+    width: 95%;
+    padding: 0 0.5rem;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .quote-meta,
+  .quote-author {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .arrow-button {
+    width: 40px;
+    height: 40px;
+    padding: 0.25rem;
+  }
+
+  .arrow-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .arrow-left {
+    right: calc(100% - 40px);
+  }
+
+  .arrow-right {
+    left: calc(100% - 40px);
+  }
+
+  .quote-indicators {
+    gap: 0.25rem;
+  }
+
+  .indicator-dot {
+    width: 10px;
+    height: 10px;
+  }
 }

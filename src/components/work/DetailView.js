@@ -73,6 +73,7 @@ function DetailView({ selected, onClose }) {
                                 <img src="icons/website.webp" alt="website-icon" />
                             </a>
                         ) : (
+                            
                             <a>
                                 <img src="/icons/website.webp" alt="Live Link Icon" className="icon-disabled" />
                             </a>

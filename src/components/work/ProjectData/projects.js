@@ -35,7 +35,7 @@ const projects = [
     title: "ScubaDiver",
     shortDescription: "",
     description: "For the final project in CS2300: Advanced Programming, I developed a 3D scuba diving game using vanilla OpenGL and GLSW. This project simulates an underwater environment where players explore randomly generated cave systems to collect treasure. The user can adjust their swimming speed, impacting the rate of oxygen depletion. Oxygen levels vary based on movement speed, and the game tracks and displays elapsed time and remaining oxygen to challenge the player.\n\nRandom Cave Generation: The cave generation algorithm uses procedural methods to create unique pathways each time the game is played, ensuring a new experience with every session. The randomization algorithm accounts for open spaces, narrow passages, and branching paths, making each underwater cave system intricate and rewarding to explore.",
-    thumbnail: "/images/projects/scubaDiver3.gif",
+    thumbnail: "/images/projects/scubaDiver3.webp",
     skills: ["C++", "OpenGL", "GLSW"],
     liveLink: "",
     gitLink: "https://github.com/ettrafto/scubaDiver",

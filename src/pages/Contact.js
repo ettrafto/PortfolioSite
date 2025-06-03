@@ -46,7 +46,7 @@ const Contact = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/icons/resume.webp" alt="Resume" />
+          <img src="/icons/resume-download.webp" alt="Resume" />
         </a>
 
         <a
