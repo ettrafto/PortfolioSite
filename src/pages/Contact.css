@@ -24,3 +24,9 @@
     outline: none; /* Removes the default focus outline */
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5); /* Adds a custom focus ring */
 }
+@media screen {
+    .contact-icons-container a img {
+        width: 3em; /* Set the width of the images */
+        height: 3em; /* Set the height of the images */
+    }
+}

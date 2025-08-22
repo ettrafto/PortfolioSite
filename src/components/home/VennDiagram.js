@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useSpring } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
+
 
 // 🌀 Individual Circle Component with animated label
 const CircleWithMotion = ({
@@ -61,6 +63,10 @@ const CircleWithMotion = ({
 const VennDiagram = () => {
   const svgRef = useRef(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+
+
+  
 
   const circles = [
     { label: 'Technical', baseX: 140, baseY: 150, color: 'red', labelOffsetX: -30, labelOffsetY: 20 },
@@ -110,8 +116,8 @@ const VennDiagram = () => {
   return (
     <svg
       ref={svgRef}
-      viewBox="0 0 400 300"
-      className="w-full max-w-[600px] h-auto"
+      viewBox="-35 -10 400 300"
+      className="svg"
       preserveAspectRatio="xMidYMid meet"
     >
       {circles.map((circle, idx) => (

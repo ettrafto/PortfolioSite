@@ -27,6 +27,7 @@ const NavBar = () => {
           <li><span><Link to="/">HOME</Link></span></li>
           <li><span><Link to="/work">WORK</Link></span></li>
           <li><span><Link to="/about">ABOUT</Link></span></li>
+          <li><span><Link to="/consulting">CONSULTING</Link></span></li>
           <li><span><Link to="/contact">CONTACT</Link></span></li>
         </ul>
         <NavIcons/>
@@ -44,6 +45,7 @@ const NavBar = () => {
             <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
             <li><Link to="/work" onClick={() => setMenuOpen(false)}>Work</Link></li>
             <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+            <li><Link to="/consulting" onClick={() => setMenuOpen(false)}>Consulting</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
             <li className="external-links">
               <a href="https://github.com/ettrafto"><img src="/icons/inverseGithub.webp" /></a>

@@ -1,0 +1,14 @@
+/* Centers the diagram and constrains width for desktop */
+.venn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px; /* small breathing room on mobile */
+}
+
+/* Responsive SVG sizing */
+.venn-svg {
+  width: min(100%, 640px); /* easy cap on large screens */
+  height: auto;
+  display: block;          /* remove inline SVG baseline gap */
+}

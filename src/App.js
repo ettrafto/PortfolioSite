@@ -11,6 +11,7 @@ import Work from './pages/Work';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Consulting from './pages/Consulting';
 import Mastermind from './pages/live-projects/mastermind/Mastermind';
 /*
 import Manager from './pages/manager/Manager';
@@ -47,6 +48,7 @@ const App = () => {
     { path: "/about", element: <About /> },
     { path: "/blog", element: <Blog /> },
     { path: "/contact", element: <Contact /> },
+    { path: "/consulting", element: <Consulting /> },
     { path: "/mastermind", element: <Mastermind /> },
     /*
     { path: "/manager", element: <Manager /> },
