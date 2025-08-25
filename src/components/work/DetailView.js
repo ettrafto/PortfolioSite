@@ -49,6 +49,7 @@ function DetailView({ selected, onClose }) {
                 exit={{ opacity: 0, scale: 0.8, y: 50 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 style={{
+                    display: "block",
                     position: "fixed",
                     top: "7.5%",
                     left: "10%",
@@ -68,19 +69,20 @@ function DetailView({ selected, onClose }) {
                     </div>
 
                     <div className="header-links">
+                  
+                    <a href={project.gitLink}>
+                            <img src="icons/github.webp" alt="github-icon" />
+                        </a>
                         {project.liveLink ? (
                             <a href={project.liveLink}>
                                 <img src="icons/website.webp" alt="website-icon" />
                             </a>
                         ) : (
                             
-                            <a>
-                                <img src="/icons/website.webp" alt="Live Link Icon" className="icon-disabled" />
-                            </a>
+                         <div className="icon-disabled">
+                            </div>
                         )}
-                        <a href={project.gitLink}>
-                            <img src="icons/github.webp" alt="github-icon" />
-                        </a>
+
                     </div>
                 </div>
 
