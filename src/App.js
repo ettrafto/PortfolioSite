@@ -12,6 +12,7 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Consulting from './pages/Consulting';
+import BookConsultation from './pages/BookConsultation';
 import Mastermind from './pages/live-projects/mastermind/Mastermind';
 /*
 import Manager from './pages/manager/Manager';
@@ -49,6 +50,7 @@ const App = () => {
     { path: "/blog", element: <Blog /> },
     { path: "/contact", element: <Contact /> },
     { path: "/consulting", element: <Consulting /> },
+    { path: "/consult", element: <BookConsultation /> },
     { path: "/mastermind", element: <Mastermind /> },
     /*
     { path: "/manager", element: <Manager /> },

@@ -68,3 +68,46 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Cal.com Consult Onboarding (Zero-DB)
+
+This adds a minimal, production-ready Cal.com integration:
+
+- Frontend: `/consult` (Cal embed), `/admin/bookings` (password-protected admin list)
+- Backend: Express webhook receiver and bookings proxy (no database)
+
+### Environment Variables
+
+Frontend (CRA):
+
+- `REACT_APP_CAL_EVENT_URL` — your Cal.com event link
+
+Backend (`server/.env`):
+
+- `PORT`, `NODE_ENV`
+- `CAL_API_BASE`, `CAL_API_KEY`
+- `WEBHOOK_SHARED_SECRET`
+- `ADMIN_SHARED_PASSWORD`
+- optional SMTP + Slack vars
+
+### Cal.com Setup
+
+1. Create an Event Type and add intake questions.
+2. Copy your event URL and set `REACT_APP_CAL_EVENT_URL`.
+3. Create a Webhook in Cal.com → URL: `https://YOUR_DOMAIN/api/cal/webhook`.
+   - Add custom header: `x-webhook-secret: <WEBHOOK_SHARED_SECRET>`.
+
+### Hostinger Deploy
+
+- Client: build CRA `npm run build` and serve the `build` folder.
+- Server: set up Node app in hPanel in `/server` directory with `npm start`.
+- Configure all env vars in hPanel.
+
+### End-to-End Test Checklist
+
+- Open `/consult`, book a slot.
+- Confirm Cal.com email/calendar invite.
+- Check server logs for webhook receipt.
+- If Slack/email configured, confirm alert.
+- Open `/admin/bookings`, enter admin password, load 30-day window. See booking.
+- Reschedule/cancel in Cal.com → webhook fires; Admin reflects changes on reload.
