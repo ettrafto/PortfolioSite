@@ -138,7 +138,6 @@ const projects = [
     thumbnail: "/images/projects/WhyAdventure.webp",
     skills: ["Adobe Premiere", "Adobe After Effects"],
     liveLink: "https://www.youtube.com/watch?v=RlEIYd5G7mc",
-    gitLink: "",
     date: "Spring 2025",
     images: [],
     FeaturedProject: false,

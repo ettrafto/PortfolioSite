@@ -159,7 +159,12 @@ nav.navbar.menu-open {
 }
 
 
+
+
 @media (max-width: 999px) {
+
+
+
   .nav-name-container {
   flex: 0 0 70%; /* Take up 15% of navbar width */
 }
@@ -203,4 +208,72 @@ nav.navbar.menu-open {
   .icons-container{
     display: none !important; /* Hide icons on mobile */
   }
+}
+
+
+:root { --nav-h: 60px; }
+
+
+/* Hide hamburger above 1000px already in your CSS */
+.hamburger { display: none; background: transparent; border: 0; }
+
+/* Default: ensure overlays don't show on desktop even if rendered */
+.nav-backdrop, .nav-dropdown { display: none; }
+
+/* ----------------- MOBILE ONLY ----------------- */
+@media (max-width: 999px) {
+  .hamburger { display: block; font-size: 28px; color: #e1e1e1; cursor: pointer; margin-right: 1rem; }
+
+  .navbar {
+    position: sticky; top: 0; z-index: 1000;
+    height: var(--nav-h);
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  /* Backdrop under the dropdown */
+  .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: var(--nav-h) 0 0 0; /* fills viewport below sticky bar */
+    background: #000;
+    z-index: 998;
+  }
+
+  /* The dropdown itself, anchored to the viewport below the sticky bar */
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    z-index: 999;
+    background: #000;
+    border-top: 1px solid #444;
+    padding: 1rem 2rem;
+
+    max-height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
+  }
+
+  .nav-dropdown li { margin: 10px 0; }
+  .nav-dropdown a { color: #e1e1e1; text-decoration: none; font-weight: 600; font-size: 18px; }
+
+  /* Keep your existing mobile tweaks (external-links row, etc.) */
+  .external-links {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 5% !important;
+    border-top: 1px solid #444;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  .external-links a img {
+    margin: 10% 35%;
+    width: 30%;
+  }
+
+  /* Hide desktop lists on mobile (unchanged) */
+  .nav-links, .icons-container { display: none; }
+  .nav-name-container { flex: 0 0 70%; }
 }

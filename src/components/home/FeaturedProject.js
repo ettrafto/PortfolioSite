@@ -38,8 +38,10 @@ const FeaturedProject = () => {
                 src={project.thumbnail}
                 alt={`${project.title} thumbnail`}
                 layoutId={project.id}
-                style={{ width: "100%", height: "auto", borderRadius: "15px", objectFit: "cover" }}
+                loading="lazy"
+                decoding="async"
               />
+
             </div>
 
             <div className="f-project-content-container">

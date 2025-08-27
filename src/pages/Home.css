@@ -56,7 +56,7 @@
 }
 
 /* -------------  LAYOUT CONTAINER ------------- */
-.skills-container {
+.home-skills-container {
   width: 50%;
   padding: 2rem;
   display: flex;
@@ -326,7 +326,7 @@
     margin-bottom: 2rem;
   }
 
-  .skills-container {
+  .home-skills-container {
     width: 90%;
     padding: 1rem;
   }

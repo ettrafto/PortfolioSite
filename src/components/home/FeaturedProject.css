@@ -107,3 +107,56 @@
     padding:0;
     align-items:start;
 }
+
+/* Thumbnail gets a stable box and clips overflow */
+.f-project-thumbnail {
+  flex: 0 0 30%;
+  display: block;               /* simpler flow than flex here */
+  aspect-ratio: 16 / 9;         /* consistent shape */
+  border-radius: 15px;
+  overflow: hidden;             /* crop to the rounded box */
+  background: #e9e9e9;          /* subtle placeholder while loading */
+}
+
+/* Image fills the box, no stretching */
+.f-project-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* key: fill & crop */
+  transform: translateZ(0);     /* avoid subpixel seams in some browsers */
+}
+
+/* Keep card layout tidy */
+.f-project-wrapper {
+  display: flex;
+  gap: 1.25rem;                 /* consistent spacing between thumb & text */
+  align-items: center;
+}
+
+/* Content column keeps remaining width */
+.f-project-content-container {
+  flex: 1 1 auto;
+  min-width: 0;                 /* prevents overflow from long titles */
+  padding-left: 0;              /* gap handles spacing now */
+}
+
+/* Responsive: stack on smaller screens and keep a nice 16:9 hero thumb */
+@media (max-width: 900px) {
+  .f-project-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .f-project-thumbnail {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0.75rem;
+  }
+
+  .f-project-content-container {
+    width: 100%;
+    padding-left: 0;
+  }
+}

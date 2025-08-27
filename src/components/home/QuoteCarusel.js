@@ -1,7 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
 import "./QuoteCarousel.css";
 
 const quotes = [
@@ -12,7 +11,7 @@ const quotes = [
   ],
   [
     "Evan has taken three courses with me in web development (both front end and back end) where his final projects were all top notch. His work ethic to complete tasks on time, the work itself excellent and his ability to learn above and beyond are all traits to be envied by his peers.",
-    "Robert Erickson Senior Lecturer Emeritus Computer Science",
+    "Robert Erickson Senior Lecturer Emeritus Computer Science",
     "University of Vermont"
   ],
   [
@@ -24,92 +23,111 @@ const quotes = [
 
 export default function QuoteCarousel() {
   const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [containerHeight, setContainerHeight] = useState("auto");
+  const [dir, setDir] = useState(0);
+  const [frameH, setFrameH] = useState(0); // animated height
 
-  const prevIndexRef = useRef(index);
-  const prevDirectionRef = useRef(direction);
-  const measureRef = useRef();
-  const firstInteractionRef = useRef(true);
+  const slideRef = useRef(null); // wraps the active quote content
+  const firstRun = useRef(true);
 
-  const paginate = (newDirection) => {
-    const newIndex = (index + newDirection + quotes.length) % quotes.length;
-
-
-    prevIndexRef.current = index;
-    prevDirectionRef.current = newDirection;
-    setDirection(newDirection);
-    setIndex(newIndex);
-    firstInteractionRef.current = false;
+  const paginate = (delta) => {
+    setDir(delta);
+    setIndex((i) => (i + delta + quotes.length) % quotes.length);
+    firstRun.current = false;
   };
 
-  useEffect(() => {
-    if (measureRef.current) {
-      setContainerHeight(300);
-    }
+  // Measure active slide’s height and update the frame’s height
+  useLayoutEffect(() => {
+    const el = slideRef.current;
+    if (!el) return;
+
+    const measure = () => setFrameH(el.offsetHeight);
+
+    // Initial measure
+    measure();
+
+    // Observe size changes (e.g., font reflow, wrapping)
+    const ro = new ResizeObserver(() => {
+      // schedule with rAF to avoid layout thrash during animation ticks
+      requestAnimationFrame(measure);
+    });
+    ro.observe(el);
+
+    // Also remap on resize (orientation/viewport width changes)
+    window.addEventListener("resize", measure);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
   }, [index]);
 
   return (
     <div className="quote-carousel">
-      <button className="arrow-button arrow-left" onClick={() => paginate(-1)} aria-label="Previous Quote">
-        <ArrowLeft />
-      </button>
-
+      {/* Frame: only the quote content animates height */}
       <motion.div
-        className="quote-viewbox"
-        animate={{ height: containerHeight }}
-        transition={{ duration: 0.3 }}
+        className="quote-frame"
+        animate={{ height: frameH || "auto" }}
+        transition={{ duration: 0.28, ease: "easeOut" }}
       >
-        <AnimatePresence initial={false} custom={prevDirectionRef.current} mode="wait">
+        <AnimatePresence initial={false} custom={dir} mode="wait">
           <motion.div
             key={index}
-            custom={prevDirectionRef.current}
+            className="quote-slide"
+            custom={dir}
             initial={() => {
-              const x = prevDirectionRef.current > 0 ? 300 : -300;
-              return { x, opacity: 0 };
+              const x = dir > 0 ? 40 : -40;
+              return firstRun.current ? { opacity: 0 } : { x, opacity: 0 };
             }}
             animate={{ x: 0, opacity: 1 }}
             exit={() => {
-              if (firstInteractionRef.current) {
-                return {};
-              }
-              const x = prevDirectionRef.current > 0 ? -300 : 300;
-              return { x, opacity: 0 };
+              const x = dir > 0 ? -40 : 40;
+              return firstRun.current ? { opacity: 0 } : { x, opacity: 0 };
             }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.28, ease: "easeOut" }}
           >
-            <div className="quote-container" ref={measureRef}>
-              <p className="quote-text">"{quotes[index][0]}"</p>
+            {/* This wrapper is what we measure */}
+            <div ref={slideRef} className="quote-content">
+              <p className="quote-text">“{quotes[index][0]}”</p>
               <p className="quote-author">— {quotes[index][1]}, {quotes[index][2]}</p>
             </div>
           </motion.div>
         </AnimatePresence>
-        <div className="quote-indicators">
-        {quotes.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => {
-              if (i !== index) {
-                const newDirection = i > index ? 1 : -1;
-                prevIndexRef.current = index;
-                prevDirectionRef.current = newDirection;
-                setDirection(newDirection);
-                setIndex(i);
-                firstInteractionRef.current = false;
-              }
-            }}
-            className={`indicator-dot ${i === index ? "active" : ""}`}
-            aria-label={`Go to quote ${i + 1}`}
-          />
-        ))}
-      </div>
+
+        {/* In-frame arrows (don’t affect height because they’re absolutely positioned) */}
+        <button
+          className="arrow-button left"
+          aria-label="Previous Quote"
+          onClick={() => paginate(-1)}
+        >
+          <ArrowLeft />
+        </button>
+        <button
+          className="arrow-button right"
+          aria-label="Next Quote"
+          onClick={() => paginate(1)}
+        >
+          <ArrowRight />
+        </button>
       </motion.div>
 
-      <button className="arrow-button arrow-right" onClick={() => paginate(1)} aria-label="Next Quote">
-        <ArrowRight />
-      </button>
-      
-
+      {/* Controls under the frame: fixed area so layout never jumps */}
+      <div className="quote-controls">
+        <div className="quote-indicators">
+          {quotes.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                if (i === index) return;
+                setDir(i > index ? 1 : -1);
+                setIndex(i);
+                firstRun.current = false;
+              }}
+              className={`indicator-dot ${i === index ? "active" : ""}`}
+              aria-label={`Go to quote ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

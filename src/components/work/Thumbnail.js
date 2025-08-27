@@ -14,6 +14,8 @@ function Thumbnail({ id, projectName, projectThumbnail, shortDescription, setSel
         <>
             <motion.div
                 className="thumbnail  thumbnail-container"
+                initial={false} 
+
                 layoutId={id}
                 style={{
                     backgroundSize: "cover",

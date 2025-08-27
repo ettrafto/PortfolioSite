@@ -42,7 +42,7 @@ const Home = () => {
             <VennDiagram />
           </div>
 
-          <div className="skills-container">
+          <div className="home-skills-container">
             <div className="home-skills-list">
                 <Accordion title="Languages">
                   <div className="skill">Python</div>

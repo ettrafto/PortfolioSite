@@ -110,6 +110,10 @@
     .thumbnail {
         flex: 1 1 100%;
     }
+    .card-container{
+      padding: 1.5em 1em;
+      gap:1.5em;
+    }
 }
 
 .card-title {
