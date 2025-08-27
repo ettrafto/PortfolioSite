@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useIsPresent } from "framer-motion";
 import { getCalApi } from '@calcom/embed-react';
@@ -103,6 +103,8 @@ const testimonials = [
 const Consulting = () => {
   const isPresent = useIsPresent();
 
+  const [isBusiness, setIsBusiness] = useState(true);
+
   useEffect(() => {
     (async function () {
       try {
@@ -116,6 +118,10 @@ const Consulting = () => {
 
   return (
     <>
+
+    {/*isBusiness === true ?*/}  
+
+    
       <motion.div
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
@@ -124,7 +130,16 @@ const Consulting = () => {
         className="privacy-screen"
       />
 
-      <div className="consulting-page">
+       <div className="consulting-page">
+        
+        <div className="toggle-switch-wrapper">
+          <div className="toggle-switch" onClick={() => setView(setIsBusiness === "Individual" ? "Business" : "Individual")}>
+            <div className={`toggle-indicator ${isBusiness === "Individual" ? "Business" : "Individual"}`} />
+            <span className={isBusiness === false ? "active" : ""}>Individual</span>
+            <span className={isBusiness === true ? "active" : ""}>Business</span>
+          </div>
+        </div>
+
         {/* Hero */}
         <section className="consulting-section hero">
           <div className="container">
