@@ -1,8 +1,120 @@
 .mastermind {
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin: 1rem 0;
-  }
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.mastermind-card {
+  width: 100%;
+  max-width: 720px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #f7f7f9;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.status-item {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+}
+
+.status-item .label {
+  color: #666;
+  font-weight: 600;
+}
+
+.status-item .value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.status-actions {
+  margin-left: auto;
+}
+
+.primary-button,
+.secondary-button,
+.guess-button {
+  appearance: none;
+  border: none;
+  border-radius: 10px;
+  padding: .6rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, .35);
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.secondary-button {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.secondary-button:hover {
+  background: #d1d5db;
+}
+
+.instructions {
+  border: 1px solid #eee;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: .5rem .75rem;
+  margin-bottom: 1rem;
+}
+
+.instructions summary {
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.instructions-content {
+  margin-top: .5rem;
+  color: #374151;
+}
+
+.status {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.status-message {
+  font-weight: 800;
+  margin-bottom: .75rem;
+}
+
+.status-message.win {
+  color: #16a34a;
+}
+
+.status-message.lose {
+  color: #dc2626;
+}

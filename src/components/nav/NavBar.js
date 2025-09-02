@@ -126,8 +126,8 @@ const NavBar = () => {
             <li><Link to="/consulting" onClick={() => setMenuOpen(false)}>Consulting</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
             <li className="external-links">
-              <a href="https://github.com/ettrafto"><img src="/icons/inverseGithub.webp" alt="GitHub" /></a>
-              <a href="https://www.linkedin.com/in/evan-trafton"><img src="/icons/inverseLinkedIn.webp" alt="LinkedIn" /></a>
+              <a target="_blank" href="https://github.com/ettrafto"><img src="/icons/inverseGithub.webp" alt="GitHub" /></a>
+              <a target="_blank" href="https://www.linkedin.com/in/evan-trafton"><img src="/icons/inverseLinkedIn.webp" alt="LinkedIn" /></a>
               <a onClick={openModal}><img src="/icons/inverseResume.webp" alt="Resume" /></a>
             </li>
           </motion.ul>

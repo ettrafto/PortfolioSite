@@ -2,7 +2,7 @@ import React from 'react';
 import GuessRow from './GuessRow';
 import './GameBoard.css';
 
-const GameBoard = ({ guesses, feedback, currentGuess, setCurrentGuess, handleGuess, activeRow, gameOver }) => {
+const GameBoard = ({ guesses, feedback, currentGuess, setCurrentGuess, handleGuess, activeRow, gameOver, triesRemaining }) => {
   const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
 
   const handleColorChange = (index) => {
@@ -25,7 +25,7 @@ const GameBoard = ({ guesses, feedback, currentGuess, setCurrentGuess, handleGue
           active={true}
           handleColorChange={handleColorChange}
           handleGuess={handleGuess}
-          guessesLeft={12 - guesses.length}
+          guessesLeft={triesRemaining}
         />
       )}
     </div>

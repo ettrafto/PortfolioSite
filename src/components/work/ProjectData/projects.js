@@ -1,5 +1,4 @@
 import FeaturedProject from '../../home/FeaturedProject';
-import tempPhoto from './images/temp.JPG';
 
 const projects = [
   {
@@ -33,7 +32,7 @@ const projects = [
   {
     id: "3",
     title: "ScubaDiver",
-    shortDescription: "",
+    shortDescription: "A 2D OpenGL scuba diving game where players explore procedurally generated underwater caves while managing oxygen and survival.",
     description: "For the final project in CS2300: Advanced Programming, I developed a 3D scuba diving game using vanilla OpenGL and GLSW. This project simulates an underwater environment where players explore randomly generated cave systems to collect treasure. The user can adjust their swimming speed, impacting the rate of oxygen depletion. Oxygen levels vary based on movement speed, and the game tracks and displays elapsed time and remaining oxygen to challenge the player.\n\nRandom Cave Generation: The cave generation algorithm uses procedural methods to create unique pathways each time the game is played, ensuring a new experience with every session. The randomization algorithm accounts for open spaces, narrow passages, and branching paths, making each underwater cave system intricate and rewarding to explore.",
     thumbnail: "/images/projects/scubaDiver3.webp",
     skills: ["C++", "OpenGL", "GLSW"],
@@ -47,7 +46,7 @@ const projects = [
   {
     id: "4",
     title: "MyMoney",
-    shortDescription: "",
+    shortDescription: "A personal finance web app that visualizes spending habits, tracks budgets, and helps users manage their financial goals.",
     description: "The MyMoney web application is designed to help users visualize and manage their personal finances effectively. Utilizing CanvasJS, the app presents users' spending patterns through interactive graphs, offering clear insights into their financial habits. Users can set and monitor spending goals, track progress, and make informed decisions to achieve their financial objectives. The application features a user-friendly interface with sections for account balances, recent transactions, and budget goals, ensuring a comprehensive overview of one's financial status. By combining data visualization with goal-setting functionalities, MyMoney serves as a valuable tool for individuals aiming to enhance their financial well-being.",
     thumbnail: "/images/projects/mymoney1.webp",
     skills: ["HTML", "PHP", "CSS", "Canvas.js", "WebDB"],
@@ -61,7 +60,7 @@ const projects = [
   {
     id: "5",
     title: "MySafari",
-    shortDescription: "",
+    shortDescription: "A storytelling website showcasing photography and wildlife encounters from a Tanzanian safari with interactive galleries and info pages.",
     description: "MySafari is a web project designed to document and share my photography from my family's safari experience in Tanzania. Over the course of a week, this journey highlights encounters with diverse wildlife. The Home Page introduces the safari, capturing the essence of the adventure with background information concerning Tanzania and the history of safari. A Featured Section showcases selected highlights, including significant wildlife sightings. The Animals Page presents detailed information and photographs of the various species observed, offering the user the ability to sort by animal. On the about me page I selected some silly pictures of myself and included a form with the ability to contact me.",
     thumbnail: "/images/projects/mysafari1.webp",
     skills: ["HTML", "PHP", "CSS", "WebDB"],
@@ -75,7 +74,7 @@ const projects = [
   {
     id: "6",
     title: "Mastermind",
-    shortDescription: "",
+    shortDescription: "A React-based recreation of the classic code-breaking board game Mastermind. Play Here!",
     description: "I recreated the classic board game mastermind in React! Click Above to play!",
     thumbnail: "/images/projects/mastermind.webp",
     skills: ["React", "CSS"],
@@ -86,10 +85,11 @@ const projects = [
     FeaturedProject: false,
     isTech: true
   },
+  /*
   {
     id: "7",
     title: "Photosift",
-    shortDescription: "",
+    shortDescription: "A wireframe for interactive tool for organizing and exploring photo collections using graph-based visualizations.",
     description: "",
     thumbnail: "/images/projects/photosift1.webp",
     skills: ["Javascript", "CSS", "Human-Computer-Interaction"],
@@ -100,12 +100,13 @@ const projects = [
     FeaturedProject: false,
     isTech: true
   },
+  */
 
 
-  /*{
+  {
     id: "8",
     title: "CaveDiver",
-    shortDescription: "",
+    shortDescription: "A 2D horror game set in underwater caves where players manage oxygen, explore, and survive encounters with hidden creatures.",
     description: "The game, a 2D scuba diver cave-diving horror experience, follows an explorer descending into murky waters. Players navigate procedurally generated caves while managing oxygen levels, evading creatures, and finding treasure. Equipped with a harpoon and limited torchlight, strategic resource management is key. Core features include realistic buoyancy, dynamic lighting for suspense, cave mapping, and atmospheric tension, exploration, and resource management.",
     thumbnail: "",
     skills: ["Godot", "Project Management", "Project Planning"],
@@ -116,6 +117,7 @@ const projects = [
     FeaturedProject: true,
     isTech: true
   },
+  /*
   {
     id: "9",
     title: "FileNodes",
@@ -133,11 +135,12 @@ const projects = [
   {
     id: "20",
     title: "Why Adventure",
-    shortDescription: "",
+    shortDescription: "A short video combining rotoscoping and animated text to explore the theme of adventure.",
     description: "In my fourth project for Visual Communication, I created a short video combining rotoscoping and text animation with After Effects and Premiere.",
     thumbnail: "/images/projects/WhyAdventure.webp",
     skills: ["Adobe Premiere", "Adobe After Effects"],
     liveLink: "https://www.youtube.com/watch?v=RlEIYd5G7mc",
+    gitLink: "",
     date: "Spring 2025",
     images: [],
     FeaturedProject: false,
@@ -146,7 +149,7 @@ const projects = [
   {
     id: "21",
     title: "ET Intro Animation",
-    shortDescription: "",
+    shortDescription: "A motion graphics project featuring a sleek animated title sequence and logo reveal.",
     description: "Animated an introduction title sequence and logo reveal using After Effects.",
     thumbnail: "/images/projects/EtAnimation.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
@@ -160,7 +163,7 @@ const projects = [
   {
     id: "22",
     title: "Do Not Go Gentle into that Goodnight",
-    shortDescription: "",
+    shortDescription: "A typography-focused After Effects animation interpreting Dylan Thomas’s poem.",
     description: "Created a typography-driven animation interpreting Dylan Thomas’s poem, using After Effects to animate text layers and effects.",
     thumbnail: "/images/projects/DoNotGoGentleIntoThatGoodnight.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
@@ -174,7 +177,7 @@ const projects = [
   {
     id: "23",
     title: "Phone Animation",
-    shortDescription: "",
+    shortDescription: "A series of animated visuals exploring the dangers of smartphone addiction.",
     description: "Designed a series of animations highlighting the dangers of phone addiction, using After Effects and Illustrator.",
     thumbnail: "/images/projects/PhoneAnimation.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
@@ -227,11 +230,11 @@ const projects = [
     images: [],
     FeaturedProject: false,
     isTech: false
-  },
+  },*/
   {
     id: "27",
     title: "Are We Cyborgs?",
-    shortDescription: "",
+    shortDescription: "A data visualization project exploring the relationship between humans and technology use.",
     description: "",
     thumbnail: "/images/mysafari1.webp",
     skills: ["Adobe Illustrator", "Data Visualization"],
@@ -241,7 +244,7 @@ const projects = [
     images: ["/images/mysafari4.webp", "/images/mysafari2.webp", "/images/mysafari3.webp"],
     FeaturedProject: false,
     isTech: false
-  }*/
+  }
 ];
 
 export default projects;

@@ -79,12 +79,13 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  border: 1px solid #2a2a2a;
-  background: #0f0f0f;
+  border: 1px solid #e0e0e0;
+  background: #e0e0e0;
   cursor: pointer;
 }
-.quote-frame .arrow-button:hover{ background:#121212; }
-.quote-frame .arrow-button svg{ width: 22px; height: 22px; stroke:#e1e1e1; }
+.quote-frame .arrow-button:hover{ background:#3a3a3a; }
+.quote-frame .arrow-button:hover svg{ stroke:#f1f1f1; }
+.quote-frame .arrow-button svg{ width: 22px; height: 22px; stroke:#333; }
 .quote-frame .arrow-button.left{ left: 8px; }
 .quote-frame .arrow-button.right{ right: 8px; }
 
