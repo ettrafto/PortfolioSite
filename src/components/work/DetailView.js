@@ -117,7 +117,7 @@ const detailStyle = useMemo(() => {
 
 
             {project.gitLink ? (
-              <a href={project.gitLink}>
+              <a href={project.gitLink} target="_blank" rel="noopener noreferrer">
                 <img src="icons/github.webp" alt="github-icon" />
               </a>
             ) : (
@@ -126,7 +126,7 @@ const detailStyle = useMemo(() => {
 
 
             {project.liveLink ? (
-              <a href={project.liveLink}>
+              <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                 <img src="icons/website.webp" alt="website-icon" />
               </a>
             ) : (
@@ -160,8 +160,22 @@ const detailStyle = useMemo(() => {
             </div>
           </div>
         </div>
-
+       {project.video && (
+          <div className="video-gallery" >
+            <video controls 
+              className="one-gallery-vid"  
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              >
+                <source  src={project.video} type="video/webm" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+        )}
         <ImgGallery images={project.images} />
+ 
       </motion.div>
     </>
   );

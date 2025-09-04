@@ -70,7 +70,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="navbar">
-        <button
+        <div
           ref={buttonRef}
           className="hamburger"
           aria-expanded={menuOpen}
@@ -78,7 +78,7 @@ const NavBar = () => {
           onClick={() => setMenuOpen(prev => !prev)}
         >
           ☰
-        </button>
+        </div>
 
         <div className="nav-name-container">
           <div className="nav-name">EVAN TRAFTON</div>

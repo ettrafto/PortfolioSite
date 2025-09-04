@@ -151,6 +151,24 @@ detail-view{
     border-radius: 8px;      /* Slight border radius for styling */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
+/* Container for the image gallery */
+.video-gallery {
+    display: flex;
+    flex-direction: column;  /* Stack images vertically */
+    align-items: center;     /* Center images horizontally */
+    gap: 1em;                /* Space between images */
+    width: 100%;             /* Full width of container */
+    padding: 1em 0;          /* Padding at top and bottom */
+}
+
+/* Individual images in the gallery */
+.one-gallery-vid {
+    width: 90%;              /* Each image takes up 90% of the container width */
+    max-width: 900px;        /* Optional max width for larger screens */
+    border-radius: 8px;      /* Slight border radius for styling */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
  
 @media screen and (max-width: 1200px) {
   .detail-view {

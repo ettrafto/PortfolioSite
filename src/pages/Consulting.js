@@ -198,15 +198,19 @@ const Consulting = () => {
   const [isBusiness, setIsBusiness] = useState(false);
 
   useEffect(() => {
-    (async function () {
+    (async () => {
       try {
-        const cal = await getCalApi({ namespace: '30min' });
-        cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+        const cal30 = await getCalApi({ namespace: '30min' });
+        cal30('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+
+        const calTech = await getCalApi({ namespace: 'tech-help' });
+        calTech('ui', { hideEventTypeDetails: false, layout: 'month_view' });
       } catch (e) {
         console.error('Failed to init Cal embed', e);
       }
     })();
   }, []);
+
 
   return (
   <>
@@ -385,9 +389,16 @@ const Consulting = () => {
                 >
                   Book a Free Consultation
                 </button>
-                <Link className="cta-button secondary" to="/contact">
-                  Contact Me Today
-                </Link>
+                <button
+                  className="cta-button primary"
+                  data-cal-namespace="tech-help"
+                  data-cal-link="evan-trafton/tech-help"
+                  data-cal-config='{"layout":"month_view"}'
+                >
+                  Book an Appointment
+                </button>
+
+                
               </div>
             </div>
           </section>

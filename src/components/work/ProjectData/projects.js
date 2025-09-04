@@ -11,21 +11,22 @@ const projects = [
     liveLink: "",
     gitLink: "https://github.com/ettrafto/ouroutdoors",
     date: "2024",
-    images: [],
-    FeaturedProject: true,
-    isTech: true
+    images: ["/images/projects/OurOutdoors2.webp", "/images/projects/OurOutdoors3.webp"],
+    FeaturedProject: false,
+    isTech: true,
+    video: "/images/projects/ourOutdoorsVid.webm"
   },
   {
     id: "2",
     title: "Vermont Legislature Bill Lookup",
     shortDescription: "VTBillTracker.org is an open-source, web platform designed to help Vermont citizens easily find detailed bill activity for their legislators.",
     description: "My Vermont Legislature Bill Site is an open-source web application developed to help Vermont citizens easily access and understand the bill activities of their local legislators. Designed with a district-focused approach, the application allows users to select specific districts on an interactive map, offering a localized view of legislative actions by representatives from those areas. Once a district is chosen, users can sort and filter bills by sponsorship involvement, enabling them to track and monitor their legislators’ contributions more closely.",
-    thumbnail: "/images/projects/vtLegistlature1.webp",
-    skills: ["Project Management", "React.js", "Node.js", "Express.js", "SQL Lite", "APIs", "D3", "Framer Motion"],
-    liveLink: "",
+    thumbnail: "/images/projects/vtlegislature1.webp",
+    skills: ["Project Management", "React.js", "Node.js", "Express.js", "SQL Lite", "APIs", "Framer Motion"],
+    liveLink: "https://vtbilltracker.org/",
     gitLink: "https://github.com/ettrafto/CRVT-Local-Legislators",
     date: "Fall 2024",
-    images: [],
+    images: ["/images/projects/vtlegislature2.webp","/images/projects/vtlegislature3.webp"],
     FeaturedProject: true,
     isTech: true
   },
@@ -108,12 +109,12 @@ const projects = [
     title: "CaveDiver",
     shortDescription: "A 2D horror game set in underwater caves where players manage oxygen, explore, and survive encounters with hidden creatures.",
     description: "The game, a 2D scuba diver cave-diving horror experience, follows an explorer descending into murky waters. Players navigate procedurally generated caves while managing oxygen levels, evading creatures, and finding treasure. Equipped with a harpoon and limited torchlight, strategic resource management is key. Core features include realistic buoyancy, dynamic lighting for suspense, cave mapping, and atmospheric tension, exploration, and resource management.",
-    thumbnail: "",
-    skills: ["Godot", "Project Management", "Project Planning"],
+    thumbnail: "/images/projects/CaveDiverTitle.webp",
+    skills: ["Godot", "Project Management", "Project Planning", "Game Design"],
     liveLink: "",
     gitLink: "https://github.com/ettrafto/CaveDiver",
     date: "Spring 2025",
-    images: [],
+    images: ["/images/projects/cavediver1.webp"],
     FeaturedProject: true,
     isTech: true
   },
@@ -136,7 +137,7 @@ const projects = [
     id: "20",
     title: "Why Adventure",
     shortDescription: "A short video combining rotoscoping and animated text to explore the theme of adventure.",
-    description: "In my fourth project for Visual Communication, I created a short video combining rotoscoping and text animation with After Effects and Premiere.",
+    description: "In my fourth project for Visual Communication, I created a short video combining rotoscoping and text animation with After Effects and Premiere. Watch above!",
     thumbnail: "/images/projects/WhyAdventure.webp",
     skills: ["Adobe Premiere", "Adobe After Effects"],
     liveLink: "https://www.youtube.com/watch?v=RlEIYd5G7mc",
@@ -150,10 +151,10 @@ const projects = [
     id: "21",
     title: "ET Intro Animation",
     shortDescription: "A motion graphics project featuring a sleek animated title sequence and logo reveal.",
-    description: "Animated an introduction title sequence and logo reveal using After Effects.",
+    description: "Animated an introduction title sequence and logo reveal using After Effects. Watch above!",
     thumbnail: "/images/projects/EtAnimation.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
-    liveLink: "",
+    liveLink: "https://youtu.be/DQSP1kVjGEE?si=BTwLf5C3pTkRYBkH",
     gitLink: "",
     date: "Spring 2025",
     images: [],
@@ -164,10 +165,10 @@ const projects = [
     id: "22",
     title: "Do Not Go Gentle into that Goodnight",
     shortDescription: "A typography-focused After Effects animation interpreting Dylan Thomas’s poem.",
-    description: "Created a typography-driven animation interpreting Dylan Thomas’s poem, using After Effects to animate text layers and effects.",
+    description: "Created a typography-driven animation interpreting Dylan Thomas’s poem, using After Effects to animate text layers and effects. Watch above!",
     thumbnail: "/images/projects/DoNotGoGentleIntoThatGoodnight.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
-    liveLink: "",
+    liveLink: "https://youtu.be/npl1uJ6iYLk?si=3IPfPVW8VdUOs4Ac",
     gitLink: "",
     date: "Spring 2025",
     images: [],
@@ -176,12 +177,12 @@ const projects = [
   },
   {
     id: "23",
-    title: "Phone Animation",
+    title: "Phone Addiction Animations",
     shortDescription: "A series of animated visuals exploring the dangers of smartphone addiction.",
-    description: "Designed a series of animations highlighting the dangers of phone addiction, using After Effects and Illustrator.",
+    description: "Designed a series of animations highlighting the dangers of phone addiction, using After Effects and Illustrator. Watch above!",
     thumbnail: "/images/projects/PhoneAnimation.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
-    liveLink: "",
+    liveLink: "https://www.youtube.com/shorts/kIQife2DX8Y",
     gitLink: "",
     date: "Spring 2025",
     images: [],
@@ -189,22 +190,9 @@ const projects = [
     isTech: false
   },
   /*
+
   {
     id: "24",
-    title: "Molokai Adventures",
-    shortDescription: "",
-    description: "Produced a short travel montage in Adobe Illustrator and After Effects, highlighting Molokai’s landscapes.",
-    thumbnail: "",
-    skills: ["Adobe Illustrator"],
-    liveLink: "",
-    gitLink: "",
-    date: "Spring 2024",
-    images: [],
-    FeaturedProject: false,
-    isTech: false
-  },
-  {
-    id: "25",
     title: "Spicy Ramen",
     shortDescription: "",
     description: "Developed a cooking tutorial animation in Adobe Illustrator, simulating ramen preparation with animated ingredients.",
@@ -217,22 +205,9 @@ const projects = [
     FeaturedProject: false,
     isTech: false
   },
+
   {
-    id: "26",
-    title: "Google Doodle",
-    shortDescription: "",
-    description: "Created an interactive Google Doodle concept using HTML, CSS, and JavaScript.",
-    thumbnail: "",
-    skills: ["Adobe Illustrator"],
-    liveLink: "",
-    gitLink: "",
-    date: "Spring 2024",
-    images: [],
-    FeaturedProject: false,
-    isTech: false
-  },*/
-  {
-    id: "27",
+    id: "25",
     title: "Are We Cyborgs?",
     shortDescription: "A data visualization project exploring the relationship between humans and technology use.",
     description: "",
@@ -244,7 +219,7 @@ const projects = [
     images: ["/images/mysafari4.webp", "/images/mysafari2.webp", "/images/mysafari3.webp"],
     FeaturedProject: false,
     isTech: false
-  }
+  }*/
 ];
 
 export default projects;
