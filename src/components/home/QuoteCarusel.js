@@ -18,6 +18,11 @@ const quotes = [
     "Evan has a real problem-solving mindset, and is very quick to learn the tools and technologies needed to build web products. He was able to wrangle older technology while leveraging modern frameworks to build a useful piece of civic tech in the VTBillTracker. Evan showed a ton of initiative, built a great map interface, and connected it all in an efficient way manner, resulting in a great end product.",
     "Ben Cooley, Research Data Visualization Engineer",
     "University of Vermont"
+  ],
+  [
+    "Evan consistently demonstrated a commitment to producing high-quality work while offering substantial peer feedback throughout the design process. He is self-motivated, actively developing both his technical skills and conceptual thinking.",
+    "Professor Steve Kostell, Design Lecturer",
+    "University of Vermont"
   ]
 ];
 

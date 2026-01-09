@@ -36,7 +36,7 @@ const ContactForm = () => {
         if (Object.keys(formErrors).length === 0) {
             try {
                 await emailjs.send(
-                    'service_nfl3sxr',   // Replace with your EmailJS Service ID
+                    'service_2duai76',   // Replace with your EmailJS Service ID
                     'template_iozjnxb',   // Replace with your EmailJS Template ID
                     formData,
                     'D7PKVm4zaJad74jjy'     // Replace with your EmailJS Public Key

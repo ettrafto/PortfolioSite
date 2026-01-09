@@ -2,6 +2,97 @@ import FeaturedProject from '../../home/FeaturedProject';
 
 const projects = [
   {
+    id: "10",
+    title: "TimeTiles",
+    shortDescription: "A dynamic time-blocking calendar and task planning system.",
+    description:
+      "TimeTiles is a full-stack productivity app designed around the philosophy of time-blocking. Users create custom task types, define events with durations and colors, and drag them onto an interactive, zoomable daily calendar grid. The system includes snapping logic, draggable/resizable Tiles, reusable templates, and a structured left-pane library of user-defined event types. The backend is powered by a secure Java Spring Boot API with persistent data models for tasks, types, events, and scheduling. The frontend is built in React with Tailwind and DnD-Kit, featuring smooth animations, intelligent conflict detection, and a modern UI.",
+    thumbnail: "/images/projects/TimeTiles2.webp",
+    skills: [
+      "System Architecture",
+      "React.js",
+      "TailwindCSS",
+      "DnD-Kit",
+      "Java",
+      "Spring Boot",
+      "REST API Design",
+      "Data Modeling",
+      "UI/UX Design",
+      "State Management"
+    ],
+    liveLink: "",
+    gitLink: "https://github.com/ettrafto/TimeBlocks",
+    date: "2025",
+    images: [
+      "/images/projects/TimeTiles1.webp",
+      "/images/projects/TimeTiles3.webp",
+      "/images/projects/TimeTiles4.webp",
+    ],
+    FeaturedProject: true,
+    isTech: true,
+    //video: "/images/projects/timeblocks_demo.webm"
+  },
+  {
+    id: "11",
+    title: "NodeNotes",
+    shortDescription: "A desktop notes system with draggable windows, a visual board, and powerful linking.",
+    description: "NodeNotes is a Tauri-powered desktop application built with React and TypeScript that reimagines note-taking as a spatial, visual system. Each note opens in its own native window and syncs with a central board that shows note positions, links, and layouts in real time. Inspired by tools like Muse and Obsidian Canvas, NodeNotes supports draggable/resizable notes, a grid-based board, live connectors between notes, multi-window management, state persistence, snapping, and experimental grid/freeform movement modes. The project focuses heavily on UI/UX design, multi-window architecture, state consistency, and a clean, minimal aesthetic.",
+    thumbnail: "/images/projects/NodeNotes1.webp",
+    skills: [
+      "Tauri v3",
+      "TypeScript",
+      "React.js",
+      "Zustand",
+      "Node.js",
+      "UI/UX Design",
+      "Multi-Window Architecture",
+      "State Management",
+      "Drag & Drop Systems"
+    ],
+    liveLink: "",
+    gitLink: "https://github.com/ettrafto/NodeNotes",
+    date: "2025",
+    images: [
+      "/images/projects/NodeNotes2.webp",
+      "/images/projects/NodeNotes3.webp",
+      "/images/projects/NodeNotes4.webp"
+    ],
+    FeaturedProject: false,
+    isTech: true,
+    //video: "/images/projects/nodenotes-demo.webm"
+  },
+  {
+    id: "12",
+    title: "Photos.Log",
+    shortDescription: "A personal portfolio site showcasing projects, photography, and design-driven systems.",
+    description: "photos.evantrafton.me is a custom-built personal site designed to unify software projects, photography, and visual experiments under a cohesive, minimal aesthetic. Built with React and modern frontend tooling, the site emphasizes performance, clarity, and interaction-driven storytelling. It features custom photo pipelines with optimized WebP assets, album and trip-based navigation, interactive maps and timelines, and carefully structured project documentation. The site serves as both a portfolio and an evolving sandbox for UI/UX exploration, system design, and frontend architecture.",
+    thumbnail: "/images/projects/PhotoLog1.webp",
+    skills: [
+      "React.js",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "UI/UX Design",
+      "Responsive Design",
+      "Image Optimization",
+      "Frontend Architecture",
+      "Interaction Design"
+    ],
+    liveLink: "https://evantrafton.com",
+    gitLink: "",
+    date: "2025",
+    images: [
+      "/images/projects/PhotoLog2.webp",
+      "/images/projects/PhotoLog3.webp",
+      "/images/projects/PhotoLog4.webp",
+      "/images/projects/PhotoLog5.webp",
+      "/images/projects/PhotoLog6.webp"
+    ],
+    FeaturedProject: true,
+    isTech: true
+  },
+  {
     id: "1",
     title: "OurOutdoors",
     shortDescription: "A social media platform for outdoor enthusiasts to connect and coordinate activities.",
@@ -115,7 +206,7 @@ const projects = [
     gitLink: "https://github.com/ettrafto/CaveDiver",
     date: "Spring 2025",
     images: ["/images/projects/cavediver1.webp"],
-    FeaturedProject: true,
+    FeaturedProject: false,
     isTech: true
   },
   /*
@@ -182,7 +273,7 @@ const projects = [
     description: "Designed a series of animations highlighting the dangers of phone addiction, using After Effects and Illustrator. Watch above!",
     thumbnail: "/images/projects/PhoneAnimation.webp",
     skills: ["Adobe After Effects", "Adobe Illustrator"],
-    liveLink: "https://www.youtube.com/shorts/kIQife2DX8Y",
+    liveLink: "https://www.youtube.com/shorts/-xQ3qBGtLNU",
     gitLink: "",
     date: "Spring 2025",
     images: [],

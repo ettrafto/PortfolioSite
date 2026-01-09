@@ -53,12 +53,12 @@ button:hover {
 }
 
 .error-message {
-    color: #f25858;
+    color: #501d1d;
     font-size: 0.9em;
 }
 
 .success-message {
-    color: #58f258;
+    color: #154715;
     font-size: 1em;
     text-align: center;
     margin-top: 1em;

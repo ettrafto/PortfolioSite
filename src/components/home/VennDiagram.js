@@ -64,9 +64,9 @@ const VennDiagram = () => {
 
   // Build circles from the true center (this was the left-leaning issue)
   const circles = [
-    { label: 'Technical',   baseX: cx - hOffset, baseY: cy,       color: 'black', labelOffsetX: -30, labelOffsetY: 20, r },
-    { label: 'Professional',baseX: cx + hOffset, baseY: cy,       color: 'black', labelOffsetX:  30, labelOffsetY: 20, r },
-    { label: 'Creative',    baseX: cx,           baseY: cy - vOffset, color: 'black', labelOffsetX:   0, labelOffsetY: -30, r },
+    { label: 'Design',   baseX: cx - hOffset, baseY: cy,       color: 'black', labelOffsetX: -30, labelOffsetY: 20, r },
+    { label: 'Architecture',baseX: cx + hOffset, baseY: cy,       color: 'black', labelOffsetX:  30, labelOffsetY: 20, r },
+    { label: 'Build',    baseX: cx,           baseY: cy - vOffset, color: 'black', labelOffsetX:   0, labelOffsetY: -30, r },
   ];
 
   // Center of overlap (slightly above cy looks nicer)

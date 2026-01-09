@@ -75,18 +75,30 @@ const Home = () => {
                 </Accordion>
 
                 <Accordion title="Frontend">
-                  <div className="skill">Node.js</div>
+                  <div className="skill">Vite</div>
                   <div className="skill">React</div>
+                  <div className="skill">Next</div>
                   <div className="skill">Express</div>
                   <div className="skill">Framer-Motion</div>
+                  <div className="skill">Tailwind</div>
+                  <div className="skill">D3.js</div>
+
                 </Accordion>
 
                 <Accordion title="Backend">
+                  <div className="skill">Node.js</div>
+                  <div className="skill">Express</div>
+                  <div className="skill">Nginx</div>
+                  <div className="skill">Playwright</div>
+                  <div className="skill">Postman</div>
                   <div className="skill">SQL</div>
                   <div className="skill">SQLite</div>
                   <div className="skill">MySQL</div>
                   <div className="skill">MongoDB</div>
                   <div className="skill">Mongoose</div>
+                  <div className="skill">Postgres</div>
+
+
                 </Accordion>
             </div>
           </div>
