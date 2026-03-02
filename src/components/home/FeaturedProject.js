@@ -10,8 +10,10 @@ import DetailView from "../work/DetailView.js";
 import "../work/DetailView.css"; // Ensure this is imported for styles */
 
 const FeaturedProject = () => {
-  // 1. Grab only the projects marked as featured
-  const featuredProjects = projects.filter((p) => p.FeaturedProject === true);
+  // 1. Grab only the projects marked as featured, sorted by featuredOrder
+  const featuredProjects = projects
+    .filter((p) => p.FeaturedProject === true)
+    .sort((a, b) => (a.featuredOrder ?? 999) - (b.featuredOrder ?? 999));
 
   // 2. Keep track of which project (by id) is currently “open” in the DetailView
   const [selected, setSelected] = useState(null);

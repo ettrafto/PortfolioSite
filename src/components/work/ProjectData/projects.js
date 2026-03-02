@@ -29,6 +29,7 @@ const projects = [
       "/images/projects/TimeTiles4.webp",
     ],
     FeaturedProject: true,
+    featuredOrder: 2,
     isTech: true,
     //video: "/images/projects/timeblocks_demo.webm"
   },
@@ -90,6 +91,7 @@ const projects = [
       "/images/projects/PhotoLog6.webp"
     ],
     FeaturedProject: true,
+    featuredOrder: 1,
     isTech: true
   },
   {
@@ -119,6 +121,7 @@ const projects = [
     date: "Fall 2024",
     images: ["/images/projects/vtlegislature2.webp","/images/projects/vtlegislature3.webp"],
     FeaturedProject: true,
+    featuredOrder: 3,
     isTech: true
   },
   {
