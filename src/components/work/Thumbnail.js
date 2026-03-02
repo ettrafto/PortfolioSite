@@ -16,7 +16,7 @@ function Thumbnail({ id, projectName, projectThumbnail, shortDescription, setSel
                 className="thumbnail  thumbnail-container"
                 initial={false} 
 
-                layoutId={id}
+                layoutId={`work-${id}`}
                 style={{
                     backgroundSize: "cover",
                     backgroundImage: `url(${projectThumbnail})`,

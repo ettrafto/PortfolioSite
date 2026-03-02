@@ -5,7 +5,7 @@ import projects from './ProjectData/projects.js';
 import './DetailView.css';
 import ImgGallery from "./ImgGallery.js";
 
-function DetailView({ selected, onClose }) {
+function DetailView({ selected, layoutId, onClose }) {
   const project = projects.find((p) => p.id === selected);
 
   // Prevent background scrolling when DetailView is open
@@ -99,7 +99,7 @@ const detailStyle = useMemo(() => {
 
       <motion.div
         className="detail-view"
-        layoutId={selected}
+        layoutId={layoutId ?? selected}
         initial={{ opacity: 0, scale: 0.8, y: 50, borderRadius: "30px" }}
         animate={{ opacity: 1, scale: 1, y: 0, borderRadius: "30px" }}
         exit={{ opacity: 0, scale: 0.8, y: 50 }}

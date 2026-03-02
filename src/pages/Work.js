@@ -56,7 +56,7 @@ const Work = () => {
       </div>
 
         <AnimatePresence>
-            {selected && <DetailView selected={selected} onClose={() => setSelected(null)} />}
+            {selected && <DetailView selected={selected} layoutId={selected ? `work-${selected}` : undefined} onClose={() => setSelected(null)} />}
         </AnimatePresence>
     </>
 );

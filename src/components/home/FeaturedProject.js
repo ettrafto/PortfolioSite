@@ -39,7 +39,7 @@ const FeaturedProject = () => {
               <motion.img
                 src={project.thumbnail}
                 alt={`${project.title} thumbnail`}
-                layoutId={project.id}
+                layoutId={`home-${project.id}`}
                 loading="lazy"
                 decoding="async"
               />
@@ -73,6 +73,7 @@ const FeaturedProject = () => {
         {selected && (
           <DetailView
             selected={selected}
+            layoutId={selected ? `home-${selected}` : undefined}
             onClose={() => setSelected(null)}
           />
         )}
