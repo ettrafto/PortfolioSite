@@ -84,6 +84,11 @@ const detailStyle = useMemo(() => {
   // Early return AFTER hooks => satisfies rules-of-hooks
   if (!project) return null;
 
+  const headerLinks = [
+    project.gitLink && { href: project.gitLink, icon: "icons/github.webp", alt: "github-icon" },
+    project.liveLink && { href: project.liveLink, icon: "icons/website.webp", alt: "website-icon" },
+  ].filter(Boolean);
+
   return (
     <>
       <motion.div
@@ -113,25 +118,11 @@ const detailStyle = useMemo(() => {
           </div>
 
           <div className="header-links">
-
-
-
-            {project.gitLink ? (
-              <a href={project.gitLink} target="_blank" rel="noopener noreferrer">
-                <img src="icons/github.webp" alt="github-icon" />
+            {headerLinks.map((link) => (
+              <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
+                <img src={link.icon} alt={link.alt} />
               </a>
-            ) : (
-              <div className="icon-disabled" />
-            )}
-
-
-            {project.liveLink ? (
-              <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                <img src="icons/website.webp" alt="website-icon" />
-              </a>
-            ) : (
-              <div className="icon-disabled" />
-            )}
+            ))}
           </div>
         </div>
 

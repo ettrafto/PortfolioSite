@@ -5,6 +5,7 @@ import './Home.css';
 import PerlinNoiseCircle from '../components/Profile/PerlinNoiseCircle';
 import VennDiagram from '../components/home/VennDiagram';
 import Accordion from '../components/home/Accordian';
+import AIDesignPhilosophy from '../components/home/AIDesignPhilosophy';
 import FeaturedProject from '../components/home/FeaturedProject';
 import QuoteCarousel from '../components/home/QuoteCarusel';
 
@@ -112,7 +113,7 @@ const Home = () => {
 
           </div>
         </div>
-
+        <AIDesignPhilosophy />
         <div className='home-container3'>
 
           <div className='education-container'>
