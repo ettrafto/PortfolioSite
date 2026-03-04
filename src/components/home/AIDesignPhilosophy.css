@@ -309,19 +309,19 @@
 /* Widen section on medium screens so workflow cards fit on one line */
 @media (max-width: 1780px) {
   .ai-design-philosophy-section {
-    width: 75%;
+    width: 65%;
   }
 }
 
 @media (max-width: 1400px) {
   .ai-design-philosophy-section {
-    width: 85%;
+    width: 70%;
   }
 }
 
 @media (min-width: 1920px) {
   .ai-design-philosophy-section {
-    width: 70%;
+    width: 55%;
   }
 }
 
