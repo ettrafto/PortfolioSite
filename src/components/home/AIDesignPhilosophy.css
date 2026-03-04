@@ -1,4 +1,4 @@
-/* Matches home page section widths: 55% desktop, 90% mobile */
+/* Matches home page section widths: 60% collapsed desktop, 90% mobile */
 .ai-design-philosophy-section {
   width: 55%;
   display: flex;
@@ -124,7 +124,7 @@
   min-width: 0;
   box-sizing: border-box;
   overflow: hidden;
-  padding: 0.5rem 2rem 2rem;
+  padding: 0.5rem 0.5rem 1.5rem;
   background-color: #f9f9f9;
   border-radius: 1rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -183,12 +183,14 @@
 }
 
 .ai-design-philosophy-tab-content {
-  min-height: 120px;
-  padding: 1rem 0;
+  min-height: 150px;
+  width: 100%;
+  padding: 0.5rem 0;
 }
 
 .ai-design-philosophy-inner-panel {
   overflow: hidden;
+  width: 100%;
 }
 
 .ai-design-philosophy-body {
@@ -231,12 +233,147 @@
   list-style-type: decimal;
 }
 
+/* ---------- Workflow tab: cards + arrows ---------- */
+.ai-workflow-panel {
+  width: 100%;
+  min-width: 0;
+  padding: 0 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.ai-workflow-steps-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.ai-workflow-step-card {
+  flex: 2 1 23%;
+  min-width: 0;
+  min-height: 120px;
+  padding: clamp(1.25rem, 2vw, 1.75rem) clamp(1.25rem, 1.8vw, 1.75rem);
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ai-workflow-step-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.ai-workflow-step-card-title {
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-weight: 600;
+  color: #333;
+}
+
+.ai-workflow-step-card-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  align-items: center;
+  text-align: center;
+}
+
+.ai-workflow-step-card-line {
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  line-height: 1.4;
+  color: #555;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.ai-workflow-arrow {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  color: #999;
+  padding: 0 0.125rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Widen section on medium screens so workflow cards fit on one line */
+@media (max-width: 1780px) {
+  .ai-design-philosophy-section {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .ai-design-philosophy-section {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .ai-design-philosophy-section {
+    width: 70%;
+  }
+}
+
+/* Workflow cards: vertical layout below 1000px with vertical arrows */
+@media (max-width: 1000px) {
+  .ai-workflow-steps-row {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    width:50%;
+  }
+
+  .ai-workflow-arrow {
+    display: flex;
+    transform: rotate(90deg);
+    padding: 0.25rem 0;
+  }
+
+  .ai-workflow-step-card {
+    min-width: 100%;
+    max-width: none;
+    flex: 1 1 auto;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* 600–1000px: extra breathing room for cards */
+@media (min-width: 600px) and (max-width: 1000px) {
+  .ai-workflow-steps-row {
+    gap: 1.25rem;
+  }
+
+  .ai-workflow-step-card {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .ai-design-philosophy-section {
     width: 90%;
     align-items: center;
     padding-top: 2%;
     padding-bottom: 3%;
+  }
+
+  .ai-design-philosophy-header-left {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 
   .ai-design-philosophy-outer-header {
@@ -250,17 +387,46 @@
   }
 
   .ai-design-philosophy-content {
-    padding: 1.5rem;
+    padding: 0.5rem 0.75rem 1rem;
   }
 
   .ai-design-philosophy-outer-header:hover .ai-design-philosophy-outer-intro,
   .ai-design-philosophy-outer-header[aria-expanded="true"] .ai-design-philosophy-outer-intro {
     max-width: min(400px, 100%);
     white-space: normal;
+    flex-basis: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.5rem;
   }
 
   .ai-design-philosophy-tab-btn {
     padding: 0.65rem 0.5rem;
     font-size: 0.9rem;
+  }
+}
+
+/* Workflow cards: single column on very small screens, arrows stay vertical */
+@media (max-width: 599px) {
+  .ai-workflow-arrow {
+    display: flex;
+    transform: rotate(90deg);
+    padding: 0.25rem 0;
+  }
+
+  .ai-workflow-steps-row {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-workflow-step-card {
+    min-width: 100%;
+    flex: 1 1 100%;
+    padding: 1.25rem 1.25rem;
+  }
+
+  .ai-workflow-panel {
+    padding: 0 0.5rem 0.5rem;
   }
 }

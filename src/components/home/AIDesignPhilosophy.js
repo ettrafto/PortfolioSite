@@ -2,6 +2,29 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./AIDesignPhilosophy.css";
 
+const WORKFLOW_STEPS = [
+  { n: "01", title: "Define", lines: ["Outline problem", "& constraints"] },
+  { n: "02", title: "Architect", lines: ["Draft architecture", "& interfaces"] },
+  { n: "03", title: "Generate", lines: ["Use AI to create", "code & tests"] },
+  { n: "04", title: "Iterate", lines: ["Improve, extend,", "and refactor"] },
+  { n: "05", title: "Validate", lines: ["Run tests and", "review changes"] },
+];
+
+const WorkflowStepCard = ({ title, lines }) => (
+  <div className="ai-workflow-step-card">
+    <div className="ai-workflow-step-card-header">
+      <span className="ai-workflow-step-card-title">{title}</span>
+    </div>
+    <div className="ai-workflow-step-card-lines">
+      {lines.map((line, i) => (
+        <span key={i} className="ai-workflow-step-card-line">
+          {line}
+        </span>
+      ))}
+    </div>
+  </div>
+);
+
 const INNER_ITEMS = [
   {
     id: "philosophy",
@@ -19,15 +42,17 @@ const INNER_ITEMS = [
     title: "Workflow",
     panelId: "ai-workflow-panel",
     content: (
-      <div className="ai-design-philosophy-body">
-        <ol className="ai-design-philosophy-list ai-design-philosophy-steps">
-          <li>Define problem and constraints</li>
-          <li>Architecture and interfaces</li>
-          <li>Scaffolding and iteration</li>
-          <li>Tests and contract checks</li>
-          <li>Manual review and refactor</li>
-          <li>Production validation</li>
-        </ol>
+      <div className="ai-workflow-panel">
+        <div className="ai-workflow-steps-row">
+          {WORKFLOW_STEPS.flatMap((step, i) =>
+            i === 0
+              ? [<WorkflowStepCard key={step.n} title={step.title} lines={step.lines} />]
+              : [
+                  <span key={`arrow-${i}`} className="ai-workflow-arrow" aria-hidden>→</span>,
+                  <WorkflowStepCard key={step.n} title={step.title} lines={step.lines} />,
+                ]
+          )}
+        </div>
       </div>
     ),
   },
