@@ -233,6 +233,120 @@
   list-style-type: decimal;
 }
 
+/* ---------- Philosophy tab: content box + rows + dividers ---------- */
+.ai-philosophy-panel {
+  width: 100%;
+  min-width: 0;
+  padding: 0 1.25rem 1rem;
+  box-sizing: border-box;
+}
+
+.ai-philosophy-content-box {
+  width: 100%;
+  min-width: 0;
+  padding: 1.25rem 1.25rem 1rem;
+  background-color: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Override .home-parent * wildcard - restore normal text flow */
+.ai-philosophy-content-box p {
+  display: block !important;
+  margin: 0;
+  justify-content: unset;
+  align-items: unset;
+}
+
+.ai-philosophy-content-box .ai-philosophy-final-line {
+  display: block !important;
+  margin: 0.75rem 0 0 0;
+  justify-content: unset;
+  align-items: unset;
+}
+
+.ai-philosophy-content-box strong {
+  display: inline !important;
+  margin: 0;
+  justify-content: unset;
+  align-items: unset;
+}
+
+.ai-philosophy-content-box hr.ai-philosophy-divider {
+  display: block !important;
+  margin: 0;
+  justify-content: unset;
+  align-items: unset;
+}
+
+.ai-philosophy-row-content {
+  display: block;
+}
+
+.ai-philosophy-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+}
+
+.ai-philosophy-row-icon {
+  width: 48px;
+  min-width: 48px;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.ai-philosophy-row-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.ai-philosophy-row-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.ai-philosophy-row-content strong {
+  font-weight: 600;
+  color: #333;
+}
+
+.ai-philosophy-divider {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 0;
+}
+
+.ai-philosophy-final-line {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 0.75rem 0 0 0;
+  padding-top: 0.75rem;
+  overflow-wrap: break-word;
+}
+
+.ai-philosophy-final-line strong {
+  font-weight: 600;
+  color: #333;
+}
+
+.ai-philosophy-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
 /* ---------- Workflow tab: cards + arrows ---------- */
 .ai-workflow-panel {
   width: 100%;
@@ -332,7 +446,8 @@
     flex-wrap: nowrap;
     align-items: center;
     gap: 1rem;
-    width:50%;
+    width: 50%;
+    margin: 0 auto;
   }
 
   .ai-workflow-arrow {
@@ -404,6 +519,40 @@
     padding: 0.65rem 0.5rem;
     font-size: 0.9rem;
   }
+
+  /* Philosophy tab: tighter padding, smaller icons */
+  .ai-philosophy-panel {
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .ai-philosophy-content-box {
+    padding: 1rem;
+  }
+
+  .ai-philosophy-row {
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+  }
+
+  .ai-philosophy-row-icon {
+    width: 40px;
+    min-width: 40px;
+  }
+
+  .ai-philosophy-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ai-philosophy-row-content p {
+    font-size: 0.9rem;
+  }
+
+  .ai-philosophy-final-line {
+    margin: 0.5rem 0 0 0;
+    padding-top: 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Workflow cards: single column on very small screens, arrows stay vertical */
@@ -428,5 +577,28 @@
 
   .ai-workflow-panel {
     padding: 0 0.5rem 0.5rem;
+  }
+
+  /* Philosophy tab: minimal padding, smaller icons */
+  .ai-philosophy-panel {
+    padding: 0 0.5rem 0.5rem;
+  }
+
+  .ai-philosophy-content-box {
+    padding: 0.75rem;
+  }
+
+  .ai-philosophy-row-icon {
+    width: 36px;
+    min-width: 36px;
+  }
+
+  .ai-philosophy-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .ai-philosophy-row-content p {
+    font-size: 0.875rem;
   }
 }

@@ -10,6 +10,49 @@ const WORKFLOW_STEPS = [
   { n: "05", title: "Validate", lines: ["Run tests and", "review changes"] },
 ];
 
+const PHILOSOPHY_ICONS = ["/icons/ai-icon1.webp", "/icons/ai-icon2.webp", "/icons/ai-icon3.webp"];
+
+const PhilosophyIcon = ({ src }) => (
+  <img src={src} alt="" className="ai-philosophy-icon" aria-hidden />
+);
+
+/* Alias for backwards compatibility - use PhilosophyIcon with src instead */
+const PhilosophyIconPlaceholder = () => <PhilosophyIcon src={PHILOSOPHY_ICONS[0]} />;
+
+const PhilosophyRow = ({ icon, children, showDivider }) => (
+  <>
+    <div className="ai-philosophy-row">
+      <div className="ai-philosophy-row-icon">{icon}</div>
+      <div className="ai-philosophy-row-content">{children}</div>
+    </div>
+    {showDivider && <hr className="ai-philosophy-divider" />}
+  </>
+);
+
+const PHILOSOPHY_ROWS = [
+  {
+    content: (
+      <p>
+        I use AI as an engineering <strong>accelerator, not a decision-maker</strong>. My workflow is built around clear authority structures where architecture documents, schemas, and <strong>source code</strong> define the system's <strong>ground truth</strong> while AI assists with exploration, planning, and implementation.
+      </p>
+    ),
+  },
+  {
+    content: (
+      <p>
+        <strong>I separate planning from execution:</strong> AI helps generate ideas and draft solutions, but all changes are <strong>validated</strong> and executed through deterministic tools like version control, testing, and structured documentation.
+      </p>
+    ),
+  },
+  {
+    content: (
+      <p>
+        To manage <strong>complex systems</strong>, I rely on <strong>externalized thinking</strong>—mind maps, architectural diagrams, and written <strong>design artifacts</strong> that allow both humans and AI to reason about the same structure.
+      </p>
+    ),
+  },
+];
+
 const WorkflowStepCard = ({ title, lines }) => (
   <div className="ai-workflow-step-card">
     <div className="ai-workflow-step-card-header">
@@ -31,9 +74,21 @@ const INNER_ITEMS = [
     title: "Philosophy",
     panelId: "ai-philosophy-panel",
     content: (
-      <div className="ai-design-philosophy-body">
-        <p>I use AI to speed up iteration and reduce busywork, not to replace engineering judgment.</p>
-        <p>I'm responsible for architecture, correctness, security, and production quality.</p>
+      <div className="ai-philosophy-panel">
+        <div className="ai-philosophy-content-box">
+          {PHILOSOPHY_ROWS.map((row, i) => (
+            <PhilosophyRow
+              key={i}
+              icon={<PhilosophyIcon src={PHILOSOPHY_ICONS[i]} />}
+              showDivider={i < PHILOSOPHY_ROWS.length - 1}
+            >
+              {row.content}
+            </PhilosophyRow>
+          ))}
+          <p className="ai-philosophy-final-line">
+            This approach increases <strong>development speed</strong> while <strong>preserving</strong> clarity, control, and <strong>technical ownership</strong>.
+          </p>
+        </div>
       </div>
     ),
   },
