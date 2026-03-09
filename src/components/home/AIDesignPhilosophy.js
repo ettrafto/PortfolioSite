@@ -20,13 +20,10 @@ const PhilosophyIcon = ({ src }) => (
 const PhilosophyIconPlaceholder = () => <PhilosophyIcon src={PHILOSOPHY_ICONS[0]} />;
 
 const PhilosophyRow = ({ icon, children, showDivider }) => (
-  <>
-    <div className="ai-philosophy-row">
-      <div className="ai-philosophy-row-icon">{icon}</div>
-      <div className="ai-philosophy-row-content">{children}</div>
-    </div>
-    {showDivider && <hr className="ai-philosophy-divider" />}
-  </>
+  <div className={`ai-philosophy-row ${showDivider ? "ai-philosophy-row-with-divider" : ""}`}>
+    <div className="ai-philosophy-row-icon">{icon}</div>
+    <div className="ai-philosophy-row-content">{children}</div>
+  </div>
 );
 
 const PHILOSOPHY_ROWS = [
@@ -52,6 +49,20 @@ const PHILOSOPHY_ROWS = [
     ),
   },
 ];
+
+const SAFEGUARDS_CARDS = [
+  { title: "Human Review", description: "All AI-generated code is reviewed and edited before integration." },
+  { title: "Architecture Authority", description: "System architecture, schemas, and documentation define the ground truth." },
+  { title: "Validation Pipeline", description: "Tests, logs, and runtime checks confirm behavior before deployment." },
+  { title: "Controlled Automation", description: "AI accelerates development while engineers retain final decision authority." },
+];
+
+const SafeguardCard = ({ title, description }) => (
+  <div className="ai-safeguards-card">
+    <h3 className="ai-safeguards-card-title">{title}</h3>
+    <p className="ai-safeguards-card-description">{description}</p>
+  </div>
+);
 
 const WorkflowStepCard = ({ title, lines }) => (
   <div className="ai-workflow-step-card">
@@ -116,13 +127,12 @@ const INNER_ITEMS = [
     title: "Safeguards",
     panelId: "ai-safeguards-panel",
     content: (
-      <div className="ai-design-philosophy-body">
-        <ul className="ai-design-philosophy-list">
-          <li>Review and edit all generated code</li>
-          <li>Manually validate security-sensitive logic</li>
-          <li>Tests, logs, real env checks before shipping</li>
-          <li>Requirements win when conflicts arise</li>
-        </ul>
+      <div className="ai-safeguards-panel">
+        <div className="ai-safeguards-cards-grid">
+          {SAFEGUARDS_CARDS.map((card, i) => (
+            <SafeguardCard key={i} title={card.title} description={card.description} />
+          ))}
+        </div>
       </div>
     ),
   },
@@ -134,13 +144,15 @@ const AIDesignPhilosophy = () => {
 
   const toggleOuter = () => {
     setOuterOpen((prev) => {
-      if (prev) setActiveInner(null);
+      if (!prev) {
+        setActiveInner((current) => (current ?? "philosophy"));
+      }
       return !prev;
     });
   };
 
   const toggleInner = (id) => {
-    setActiveInner((prev) => (prev === id ? null : id));
+    setActiveInner(id);
   };
 
   return (

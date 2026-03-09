@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-width: 0;
   width: 100%;
 }
 
@@ -102,6 +103,7 @@
 
 .ai-design-philosophy-chevron {
   font-size: 1.2rem;
+  flex-shrink: 0;
   transition: transform 0.35s ease;
 }
 
@@ -326,6 +328,12 @@
   margin: 0;
 }
 
+.ai-philosophy-row-with-divider {
+  border-bottom: 1px solid #d0d0d0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .ai-philosophy-final-line {
   font-size: 0.95rem;
   line-height: 1.5;
@@ -345,6 +353,57 @@
   height: 48px;
   object-fit: contain;
   display: block;
+}
+
+/* ---------- Safeguards tab: card grid ---------- */
+.ai-safeguards-panel {
+  width: 100%;
+  min-width: 0;
+  padding: 0 1.25rem 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ai-safeguards-cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  min-height: 260px;
+}
+
+.ai-safeguards-card {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  margin: 0;
+  min-height: 120px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.ai-safeguards-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  display: block !important;
+}
+
+.ai-safeguards-card-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 0;
+  display: block !important;
+  overflow-wrap: break-word;
 }
 
 /* ---------- Workflow tab: cards + arrows ---------- */
@@ -478,6 +537,22 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .ai-design-philosophy-header-left {
+    flex-wrap: wrap;
+  }
+
+  .ai-design-philosophy-outer-header:hover .ai-design-philosophy-outer-intro,
+  .ai-design-philosophy-outer-header[aria-expanded="true"] .ai-design-philosophy-outer-intro {
+    max-width: none;
+    white-space: normal;
+    flex-basis: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .ai-design-philosophy-section {
     width: 90%;
@@ -553,6 +628,21 @@
     padding-top: 0.5rem;
     font-size: 0.9rem;
   }
+
+  /* Safeguards tab: single column, tighter padding */
+  .ai-safeguards-panel {
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .ai-safeguards-cards-grid {
+    grid-template-columns: 1fr;
+    min-height: 480px;
+  }
+
+  .ai-safeguards-card-title,
+  .ai-safeguards-card-description {
+    font-size: 0.9rem;
+  }
 }
 
 /* Workflow cards: single column on very small screens, arrows stay vertical */
@@ -599,6 +689,19 @@
   }
 
   .ai-philosophy-row-content p {
+    font-size: 0.875rem;
+  }
+
+  .ai-safeguards-panel {
+    padding: 0 0.5rem 0.5rem;
+  }
+
+  .ai-safeguards-card {
+    padding: 1rem;
+  }
+
+  .ai-safeguards-card-title,
+  .ai-safeguards-card-description {
     font-size: 0.875rem;
   }
 }
