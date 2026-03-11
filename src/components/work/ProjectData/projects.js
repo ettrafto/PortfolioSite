@@ -80,8 +80,8 @@ const projects = [
       "Frontend Architecture",
       "Interaction Design"
     ],
-    liveLink: "https://evantrafton.com",
-    gitLink: "",
+    liveLink: "https://photos.evantrafton.me",
+    gitLink: "https://github.com/ettrafto/My-Photo-Gallery",
     date: "2025",
     images: [
       "/images/projects/PhotoLog2.webp",
