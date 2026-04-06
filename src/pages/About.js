@@ -44,7 +44,7 @@ const About = () => {
 
         <div className="about-page-container container3">
           <div className="about-page-text text3">
-            As both a developer and a designer, I thrive at the intersection of technical precision and creative thinking. I love building intuitive, impactful tools that solve real-world problems. My favorite projects are where I can combine thoughtful architecture with user-first design.
+            As both an engineer and designer, I thrive when I can combine technical precision and creative thinking. I love building intuitive, impactful tools that solve real-world problems. My favorite projects are when I am required to utilize all of my skills to produce real solutions.
             
           </div>
           <div className='about-page-image-container'>

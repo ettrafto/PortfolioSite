@@ -106,7 +106,7 @@ const Home = () => {
 
         </div>
         <div className='home-container5'>
-            <div className='reco-title'>Testamonials</div>
+            <div className='reco-title'>Testimonials</div>
           
           <div className='recos-container' >
             <QuoteCarousel />
