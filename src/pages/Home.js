@@ -112,6 +112,21 @@ const Home = () => {
         </div>
         <AIDesignPhilosophy />
         <div className='home-container3'>
+          <div className='education-container'>
+            <div className='education-details'>
+              <div className='education-title'>
+                <div className='school'>Fidelity</div>
+              </div>
+              <div className='degree role-line'>Associate Full-Stack Engineer</div>
+              <div className='minor role-line'>AI Software Engineering Applications (AISEA) - Voice</div>
+            </div>
+
+            <div className='uvm-logo'>
+              <img src='/images/logos/fidelity-logo.png' alt="Fidelity logo" className='uvm-logo-img'/>
+            </div>
+          </div>
+        </div>
+        <div className='home-container3'>
 
           <div className='education-container'>
             <div className='education-details'>

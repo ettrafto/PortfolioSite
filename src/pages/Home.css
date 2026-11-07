@@ -181,6 +181,15 @@
     display: flex;
     justify-content: start;
   }
+
+  .role-line {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.35;
+    text-align: left;
+    white-space: normal;
+  }
   
   .uvm-logo {
     width: 30%;
@@ -350,9 +359,10 @@
     padding: 0;
   }
 
-  .degree, .minor {
+  .degree, .minor, .role-line {
     justify-content: center;
     padding-left: 0;
+    text-align: center;
   }
 
   .uvm-logo {
