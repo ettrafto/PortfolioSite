@@ -111,3 +111,5 @@ Backend (`server/.env`):
 - If Slack/email configured, confirm alert.
 - Open `/admin/bookings`, enter admin password, load 30-day window. See booking.
 - Reschedule/cancel in Cal.com → webhook fires; Admin reflects changes on reload.
+
+<!-- build trigger -->
