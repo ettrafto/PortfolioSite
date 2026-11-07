@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { motion, useIsPresent } from "framer-motion";
 
 import './Home.css';
@@ -12,9 +12,6 @@ import QuoteCarousel from '../components/home/QuoteCarusel';
 
 const Home = () => {
   const isPresent = useIsPresent();
-
-  const [selectedProject, setSelectedProject] = useState(null);
-
 
   return (
     <>

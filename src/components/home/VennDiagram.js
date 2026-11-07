@@ -1,7 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useSpring } from 'framer-motion';
-import { useMediaQuery } from 'react-responsive';
-
 // 🌀 Individual Circle Component with animated label
 const CircleWithMotion = ({
   label,
@@ -50,7 +48,6 @@ const CircleWithMotion = ({
 const VennDiagram = () => {
   const svgRef = useRef(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const isMobile = useMediaQuery({ maxWidth: 640 });
 
   // --- Use the viewBox center as the source of truth ---
   const VBW = 400;

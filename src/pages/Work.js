@@ -3,8 +3,6 @@ import { motion, useIsPresent, AnimatePresence } from "framer-motion";
 
 import DetailView from '../components/work/DetailView';
 import Thumbnail from '../components/work/Thumbnail';
-import CardRefector from '../components/work/CardRefactor';
-
 
 import "./Work.css";
 

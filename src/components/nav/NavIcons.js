@@ -18,13 +18,13 @@ const NavIcons = () => {
     return (
         <div className='icons-container'>
             <a href='https://github.com/ettrafto'>
-                <img src='/icons/inverseGithub.webp'/>
+                <img src='/icons/inverseGithub.webp' alt="GitHub" />
             </a>
             <a href='https://www.linkedin.com/in/evan-trafton'>
-                <img src='/icons/inverseLinkedIn.webp'/>
+                <img src='/icons/inverseLinkedIn.webp' alt="LinkedIn" />
             </a>
-            <a onClick={openModal}>
-                <img src='/icons/inverseResume.webp'/>
+            <a href="#resume" onClick={(event) => { event.preventDefault(); openModal(); }}>
+                <img src='/icons/inverseResume.webp' alt="Resume" />
             </a>
             {isModalOpen && <Modal onClose={closeModal} />}
         </div>
