@@ -1,0 +1,3 @@
+# Cloudflare Pages (and Netlify): keep the URL and serve the SPA shell
+# for client routes such as /work. Real files are still served first.
+/*    /index.html   200
