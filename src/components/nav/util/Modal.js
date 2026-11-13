@@ -25,7 +25,7 @@ const Modal = ({ onClose }) => {
                 </a>
 
                 <div className='resume-content'>
-                    <img src='/images/resume.webp'/>
+                    <img src='/images/resume.webp' alt="Resume" />
                 </div>
             </div>
         </div>

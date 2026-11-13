@@ -1,5 +1,3 @@
-import FeaturedProject from '../../home/FeaturedProject';
-
 const projects = [
   {
     id: "10",

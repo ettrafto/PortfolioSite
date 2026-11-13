@@ -124,9 +124,9 @@ const NavBar = () => {
             <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
             <li className="external-links">
-              <a target="_blank" href="https://github.com/ettrafto"><img src="/icons/inverseGithub.webp" alt="GitHub" /></a>
-              <a target="_blank" href="https://www.linkedin.com/in/evan-trafton"><img src="/icons/inverseLinkedIn.webp" alt="LinkedIn" /></a>
-              <a onClick={openModal}><img src="/icons/inverseResume.webp" alt="Resume" /></a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/ettrafto"><img src="/icons/inverseGithub.webp" alt="GitHub" /></a>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/evan-trafton"><img src="/icons/inverseLinkedIn.webp" alt="LinkedIn" /></a>
+              <a href="#resume" onClick={(event) => { event.preventDefault(); openModal(); }}><img src="/icons/inverseResume.webp" alt="Resume" /></a>
             </li>
           </motion.ul>
         )}

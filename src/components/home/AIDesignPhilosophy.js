@@ -16,9 +16,6 @@ const PhilosophyIcon = ({ src }) => (
   <img src={src} alt="" className="ai-philosophy-icon" aria-hidden />
 );
 
-/* Alias for backwards compatibility - use PhilosophyIcon with src instead */
-const PhilosophyIconPlaceholder = () => <PhilosophyIcon src={PHILOSOPHY_ICONS[0]} />;
-
 const PhilosophyRow = ({ icon, children, showDivider }) => (
   <div className={`ai-philosophy-row ${showDivider ? "ai-philosophy-row-with-divider" : ""}`}>
     <div className="ai-philosophy-row-icon">{icon}</div>

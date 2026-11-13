@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion, useIsPresent } from "framer-motion";
 
-import UnderContsrtuction from '../components/contact/util/UnderConstruction';
 import './About.css';
 
 
